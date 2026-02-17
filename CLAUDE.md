@@ -2,6 +2,9 @@
 
 Use case modeling agent. Designs use case models through goal-directed Socratic interviews grounded in Alan Cooper's goal-oriented design and Eric Evans' domain-driven design.
 
+## Output
+All durable output requested by the user is written as markdown files unles otherwise specified.
+
 ## Agent
 
 The use-case-designer agent at `.claude/agents/use-case-designer.md` is the core tool. It conducts phased interviews (goal → invariants → events → scenario → grounding) and produces structured use case artifacts.
