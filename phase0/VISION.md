@@ -1,17 +1,31 @@
-# Phase0: Bounded Context Discovery Through Socratic Extraction
+# Phase0: Domain Discovery Through Socratic Extraction
 
 **Date:** 2026-02-17
 **Status:** Vision / Pre-design
 
+**Phase0** is a domain discovery tool. It produces vision statements for systems under design through Socratic extraction — the same process a facilitator uses at a blank whiteboard with domain experts.
+
 ---
 
-## The Problem
+## What Phase0 Produces
+
+Phase0 produces a **vision statement** for the system under design. The vision statement answers three questions:
+
+1. **Who does this system serve?** — primary actors
+2. **What do they value?** — conditional goals (desired end states + value conditions)
+3. **What forces are at play?** — tensions created by values meeting reality, and the supporting actors those tensions spawn
+
+Everything downstream — use cases, bounded contexts, domain events, protocols — is elaboration of the vision. The vision is the foundation. Phase0 produces the foundation.
+
+---
+
+## Why Phase0 Exists
 
 The use-case-designer agent is excellent at what it does — but it assumes someone already walked into the room knowing the system boundary, the actors, and roughly which use cases exist. That's a lot of pre-chewed knowledge.
 
-In reality, that knowledge doesn't exist yet. A facilitator stands at a blank whiteboard with domain experts and asks: *"What problem are you trying to solve?"*
+In reality, that knowledge doesn't exist yet. There is no vision. A facilitator stands at a blank whiteboard with domain experts and extracts one through Socratic questioning.
 
-Phase0 is everything that happens before the first use case is written.
+Phase0 is the zeroth thing you need before anything else makes sense. The process is domain discovery. The product is a vision statement.
 
 ---
 
@@ -73,19 +87,21 @@ The use-case-designer agent was initially conceived as a facilitator, but it's a
 
 This means the facilitator doesn't need to be *built*. It needs to be **equipped** — with guidance on how to conduct a Phase0 discovery session, and with specialist agents it can dispatch. The CLAUDE.md and guidance files are already the mechanism for equipping it.
 
-### The Pipeline
+### The Lenses (Not a Pipeline)
+
+The discovery process has distinct **lenses** — ways of looking at the domain — but they are not sequential stages. Looking through one lens changes what you see through another. The facilitator (the main conversation) shifts between lenses fluidly, following the conversation wherever it leads.
 
 ```
 MAIN CONVERSATION  ← the facilitator (already exists)
 │
 ├── equipped with: Phase0 guidance documents
-│     ├── discovery process phases
+│     ├── discovery lenses and when to shift between them
 │     ├── Socratic questioning techniques
 │     ├── when to invoke which specialist
 │     └── how to read historian notes for context recovery
 │
-├── dispatches specialist agents as needed:
-│     ├── System Discovery Agent     → system boundary, problem statements
+├── dispatches specialist agents to formalize discoveries:
+│     ├── Domain Narrative Agent     → system boundary, domain story
 │     ├── Actor Discovery Agent      → refined actors with drives
 │     ├── Tension Mapping Agent      → bounded context candidates
 │     ├── Use Case Designer Agent    → structured use cases (exists today)
@@ -95,21 +111,74 @@ MAIN CONVERSATION  ← the facilitator (already exists)
       └── Historian Agent  ← always listening, always writing
 ```
 
-The specialist agents are **subagents** — invoked by the facilitator when the conversation reaches a point where structured extraction is needed. The facilitator handles the fluid, nonlinear, backtracking-heavy conversational work. The specialists handle the disciplined, template-driven formalization work.
+**The lenses feed each other in every direction:**
 
-### Why This Decomposition Works
+- Actor discovery surfaces use cases: "If the Driver's drive is 'complete route efficiently,' there must be a route-assignment process." (actors → use cases)
+- Use case design spawns actors: "Wait — who makes this decision? That's not the same person who..." (use cases → actors)
+- Tension mapping redefines system boundaries: "The lost-package problem means logistics and warehouse are separate contexts." (tensions → domain narrative)
+- Actor refinement reveals tensions: "The Sender and the Recipient both care about the package but for different reasons — that's a conflict." (actors → tensions)
+- Domain narrative suggests actors: "In our warehouse, the night crew does receiving and the day crew does picking." (narrative → actors)
 
-In a real group session, the facilitator bounces between levels constantly. Discovering an actor might surface a tension. A tension might redefine the system boundary. A use case walkthrough might split an actor into two. This fluidity is natural in conversation — and the main Claude conversation already supports it.
-
-What the main conversation is *bad* at is disciplined, template-driven production of formal artifacts. That's what the specialist agents do. The use-case-designer agent doesn't need to be a good facilitator — it needs to be a good formalizer that takes conversational insights and crystallizes them into structured documents.
+The specialist agents are **formalizers**, not facilitators. The facilitator (main conversation) handles the fluid, nonlinear, backtracking-heavy conversational work. When enough raw material has accumulated around a particular lens, the facilitator dispatches a specialist to crystallize it into a structured artifact.
 
 This separation mirrors the real world: the facilitator at the whiteboard is loose, adaptive, responsive. The person writing up the meeting notes into formal specs afterward is rigorous, structured, template-driven. These are different skills, and forcing one agent to do both is why the use-case-designer was initially conceived as a facilitator when it's really a specialist.
+
+### The Entry Point: Actors and Goals, From First Principles
+
+Cooper doesn't care how it's done, or what's broken. If it wasn't broken you wouldn't have hired Cooper. So we start from first principles:
+
+1. **Who is involved?** → primary actors
+2. **What are their goals?** → desired end states
+
+That's it. That's the entry point. Not problem statements, not domain narratives, not "what keeps you up at night." Those are facilitation techniques — useful for getting conversation started, but not modeling concepts. The modeling starts with actors and goals.
+
+### Conditional Goals: The Foundational Concept
+
+A primary actor's goal is a **conditional goal**: a desired end state plus the values the actor holds about how they exist in that state. A conditional goal is a **value statement**.
+
+**The desired state** describes where the actor wants to *be*, not how they get there. "Arrive at a new floor" leaks an implementation detail (it implies travel). The real end state is "be on a different floor." If a genie could teleport the Passenger, the goal is satisfied. Apply the gift test: "I want to have a guitar" is a goal. "I want to buy a guitar" is a task disguised as a goal. If someone gifts you the guitar, you don't care that you didn't buy it.
+
+**The value conditions** are what the actor values about being in that state. The Passenger values their physical integrity, their time, their psychological comfort. The conditional goal is: be on a different floor — safely, promptly, without trauma, with all my limbs. These are not acceptance criteria bolted on by an engineer. They are the actor's **values**. They *are* the goal. A Passenger who reaches floor 5 missing an arm did not achieve their goal.
+
+**The value conditions are where the entire system design comes from.** The destination ("floor 5") tells you nothing about system design. The values tell you everything. Each value condition meets reality and creates a tension. Those tensions spawn supporting actors with drives. A spec says "elevator must not free-fall." A value says "I don't want to lose my limbs." The spec is one implementation of the value — designing from values keeps the solution space open.
+
+**Drives** belong to supporting actors. A drive is a reason to participate. Drives are born from tensions between the *value conditions* on a primary actor's goal and the forces of reality.
+
+**The elevator example — the full derivation:**
+
+| Actor | Type | Goal or Drive | Why they exist |
+|-------|------|--------------|----------------|
+| **Passenger** | Primary | **Conditional goal:** be on a different floor — safely, promptly, without trauma | The system exists to serve them |
+| **Owner** | Supporting | **Drive:** economic interest (minimize cost) | Elevators cost money; someone must own and maintain them |
+| **Inspector** | Supporting | **Drive:** public safety | Spawned by the tension between Owner's economic drive and Passenger's *safety value*. The state's interest in public welfare demands a third party |
+| **Scheduler** | Supporting | **Drive:** efficiency (optimize throughput) | Spawned by the Passenger's *promptness value* colliding with building capacity — why hotels bias upper floors in the morning and offices bias lower |
+
+**The derivation chain:**
+
+```
+Primary actor
+  → conditional goal (desired state + value conditions)
+    → value conditions meet reality → tensions
+      → tensions spawn supporting actors (each with a drive)
+        → system design (invariants, use cases, bounded contexts)
+```
+
+Everything in the system traces back to primary actor values. Every supporting actor has a genealogy — trace it back to a specific value condition on a specific primary actor's goal. If you can't trace that lineage, the actor shouldn't exist in the model.
+
+**The discovery order follows from the derivation chain:**
+
+1. **Who are the primary actors?** — Cooper's first question
+2. **What are their conditional goals?** — desired state + value conditions
+3. **What tensions do those value conditions create when they meet reality?**
+4. **What supporting actors do those tensions spawn?** — each with a drive explaining their participation
+
+Notice: the Inspector doesn't exist because "regulations require inspections." The Inspector exists because the Passenger's safety value collides with the Owner's economic drive, and that tension *demands* resolution by a party whose drive is public welfare. The regulation is an implementation detail — the tension is the modeling concept.
 
 ---
 
 ## Why Socratic Extraction Works
 
-Most "domain modeling" tools are **top-down** — you declare contexts and fill them in. Phase0 is **bottom-up extraction** through conversation, which is how discovery actually works with domain experts.
+Most "domain modeling" tools are **top-down** — you declare contexts and fill them in. Domain discovery is **bottom-up extraction** through conversation, which is how discovery actually works with domain experts.
 
 The domain expert doesn't know what a bounded context is. They know that "the warehouse team and the delivery team use the word 'shipment' to mean completely different things." That contradition *is* a context boundary, discovered through dialogue rather than declared by architects.
 
@@ -190,11 +259,11 @@ The last row is crucial. The historian captures things that aren't ready to beco
 
 ## What This Means for the Repository
 
-The use-case-designer-agent repo becomes Phase0 — a broader bounded-context discovery system where use case design is one stage in a larger extraction pipeline. The existing agent, guidance, and samples remain valid; they just become one layer in a deeper stack.
+The use-case-designer-agent repo becomes a domain discovery system where use case design is one stage in a larger extraction process. The existing agent, guidance, and samples remain valid; they just become one layer in a deeper stack.
 
 ### Immediate Next Steps
 
 1. **Formalize this vision** into guidance documents that parallel the existing `UC-MODEL-DESIGN-PHASES.md` but cover the full discovery lifecycle.
 2. **Design the Actor Discovery Agent** first — the noun-refinement process (qualify → refine → separate) is concrete enough to build now and provides the clearest bridge to the existing use-case-designer.
-3. **Restructure the repo** to reflect that use-case design is one capability within Phase0, not the whole system.
-4. **Eat our own dogfood** — use the Socratic method to discover Phase0's own bounded contexts, actors, and use cases.
+3. **Restructure the repo** to reflect that use-case design is one capability within domain discovery, not the whole system.
+4. **Eat our own dogfood** — use domain discovery to discover its own bounded contexts, actors, and use cases.
