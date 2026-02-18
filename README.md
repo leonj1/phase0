@@ -32,7 +32,7 @@ A use case model is a set of interconnected artifacts:
 | `domains/DOMAIN-EVENTS.md` | Published events that cross context boundaries |
 | `GLOSSARY.md` | Canonical vocabulary for the model |
 
-See [UC-MODEL-ARTIFACTS.md](.claude/guidance/UC-MODEL-ARTIFACTS.md) for full descriptions of each artifact and their relationships.
+See [DOMAIN-MODEL-ARTIFACTS.md](.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md) for full descriptions of each artifact and their relationships.
 
 ## Key ideas
 
@@ -81,7 +81,7 @@ The model is built in phases — sequential in tendency, not in practice. Discov
 4. **Model the domain** — Formalize bounded contexts and domain events
 5. **Refine** — Remove implementation leaks, verify cross-references, reconcile with reality
 
-See [UC-MODEL-DESIGN-PHASES.md](.claude/guidance/UC-MODEL-DESIGN-PHASES.md) for the full process guide.
+See [SYSTEM-DESIGN-PHASES.md](.claude/guidance/SYSTEM-DESIGN-PHASES.md) for the full process guide.
 
 ## Guidance documents
 
@@ -89,6 +89,6 @@ See [UC-MODEL-DESIGN-PHASES.md](.claude/guidance/UC-MODEL-DESIGN-PHASES.md) for 
 |----------|---------------|
 | [UC-PHILOSOPHY.md](.claude/guidance/UC-PHILOSOPHY.md) | Core modeling principles |
 | [UC-TEMPLATE.md](.claude/guidance/UC-TEMPLATE.md) | Structural contract for use cases |
-| [UC-MODEL-ARTIFACTS.md](.claude/guidance/UC-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
-| [UC-MODEL-DESIGN-PHASES.md](.claude/guidance/UC-MODEL-DESIGN-PHASES.md) | How the design process unfolds |
+| [DOMAIN-MODEL-ARTIFACTS.md](.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
+| [SYSTEM-DESIGN-PHASES.md](.claude/guidance/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
 | [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](.claude/guidance/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems — drives become system prompts, orchestrators serve goals, tool restrictions enforce actor separation |

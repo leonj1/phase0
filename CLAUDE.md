@@ -15,8 +15,8 @@ Read before designing use cases:
 
 - `.claude/guidance/UC-PHILOSOPHY.md` — core modeling principles
 - `.claude/guidance/UC-TEMPLATE.md` — structural contract for use cases
-- `.claude/guidance/UC-MODEL-ARTIFACTS.md` — what artifacts to produce and when
-- `.claude/guidance/UC-MODEL-DESIGN-PHASES.md` — how the design process unfolds
+- `.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md` — what artifacts to produce and when
+- `.claude/guidance/SYSTEM-DESIGN-PHASES.md` — how the design process unfolds
 
 ## Sample model
 
