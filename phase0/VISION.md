@@ -3,7 +3,7 @@
 **Date:** 2026-02-17
 **Status:** Vision / Pre-design
 
-**Phase0** is a domain discovery tool. It produces vision statements for systems under design through Socratic extraction — the same process a facilitator uses at a blank whiteboard with domain experts.
+**Phase0** is a domain discovery and design tool. Through the Socratic method, the agent facilitator extracts knowledge from a domain expert (the user). A team of specialized agents builds goal-directed usecase models and a bounded context model from which sophisticated agentic systems can be implemented. The system under design emerges through Socratic questioning that distills the truth from an untested set of assumptions.
 
 ---
 
