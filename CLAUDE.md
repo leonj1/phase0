@@ -29,3 +29,15 @@ Read before designing use cases:
 - Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
 - Actors: capitalize role names (User, Orchestrator)
 - Every use case follows TEMPLATE.md exactly — same sections, same ordering
+- Prefer sections, bullets, numbered lists, or prose over tables.
+
+## Renaming and refactoring
+
+When renaming or moving files, always search the entire project for references to the old name/path and update them. Verify with a final grep that zero stale references remain before reporting the task complete.
+
+## Multi-agent orchestration
+
+When spawning sub-agents via the Task tool, keep role boundaries clear:
+- The orchestrator dispatches work and merges results. It does not apply editorial judgment.
+- Editorial personas, judgment rules, and review standards belong in the sub-agent prompts, not the orchestrator.
+- Verify sub-agents have the tool permissions they need (especially Write and Edit) before delegating file-writing tasks.

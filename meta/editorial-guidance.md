@@ -13,3 +13,6 @@ If the target project has a `CLAUDE.md` at `{sourceDir}/CLAUDE.md`, read it for 
 - Sentence-case headings — not Title Case.
 - Numbered steps for tasks, bullets for options.
 - Self-contained pages — link to supporting concepts but include enough context for readers who never follow links.
+
+## Style guidlines
+- prefer bullets, numbered lists, or prose over tables.
