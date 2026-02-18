@@ -22,8 +22,8 @@ A use case model is a set of interconnected artifacts:
 
 | Artifact | Purpose |
 |----------|---------|
-| `PHILOSOPHY.md` | Guiding principles — the constitution of the model |
-| `TEMPLATE.md` | Structural contract for individual use cases |
+| `UC-PHILOSOPHY.md` | Guiding principles — the constitution of the model |
+| `UC-TEMPLATE.md` | Structural contract for individual use cases |
 | `UC-{id}-{slug}.md` | Individual use cases — one goal, one primary actor |
 | `ACTOR-CATALOG.md` | Every actor, their drives, and where they appear |
 | `SHARED-INVARIANTS.md` | Cross-cutting rules that apply system-wide |
@@ -36,8 +36,8 @@ See [UC-MODEL-ARTIFACTS.md](.claude/guidance/UC-MODEL-ARTIFACTS.md) for full des
 
 ## Key ideas
 
-- **Actors have drives.** An actor is not a tool. A tool does exactly what you tell it. An actor makes decisions shaped by what it cares about. Drives make actors predictable in a modeling sense.
-- **Goals over tasks.** Use cases describe desired end states, not step sequences. Goals survive implementation changes.
+- **Primary actors have goals; supporting actors have drives.** A primary actor has a conditional goal — a desired end state plus value conditions (what the actor values about being in that state). The system exists to serve it. A supporting actor has a drive — a reason to participate, born from tensions between value conditions and reality. Both make actors predictable in a modeling sense: you know what a primary actor wants to achieve, and you know what a supporting actor will optimize for.
+- **Goals over tasks.** A goal is a desired end state plus value conditions — what the actor values about being in that state. Use the gift test: if a shortcut satisfies it, you wrote a task, not a goal. Value conditions are where system design comes from.
 - **Invariants over preconditions.** Domain rules hold continuously — not just at entry.
 - **Intent over mechanics.** Scenario steps say what is accomplished, not how.
 - **Extract, don't invent.** The user knows the domain. The agent knows how to structure it.
@@ -91,3 +91,4 @@ See [UC-MODEL-DESIGN-PHASES.md](.claude/guidance/UC-MODEL-DESIGN-PHASES.md) for 
 | [UC-TEMPLATE.md](.claude/guidance/UC-TEMPLATE.md) | Structural contract for use cases |
 | [UC-MODEL-ARTIFACTS.md](.claude/guidance/UC-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
 | [UC-MODEL-DESIGN-PHASES.md](.claude/guidance/UC-MODEL-DESIGN-PHASES.md) | How the design process unfolds |
+| [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](.claude/guidance/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems — drives become system prompts, orchestrators serve goals, tool restrictions enforce actor separation |
