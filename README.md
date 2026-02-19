@@ -1,3 +1,5 @@
+![wiki-writer](https://raw.githubusercontent.com/marklauter/phase0/refs/heads/main/images/phase0.png)
+
 # use-case-designer-agent
 
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) agent that designs use case models through goal-directed Socratic interviews. Grounded in Alan Cooper's goal-oriented design and Eric Evans' domain-driven design.
