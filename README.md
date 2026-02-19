@@ -1,10 +1,12 @@
-![wiki-writer](https://raw.githubusercontent.com/marklauter/phase0/refs/heads/main/images/phase0.png)
+![phase0](https://raw.githubusercontent.com/marklauter/phase0/refs/heads/main/images/phase0.png)
 
-# use-case-designer-agent
+# Phase0 — In the beginning...
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) agent that designs use case models through goal-directed Socratic interviews. Grounded in Alan Cooper's goal-oriented design and Eric Evans' domain-driven design.
+Most design starts with "what should the system do?" Phase0 starts earlier — with what the actor values about the world they want to be in. Goals crack when they meet reality, and the cracks are where architecture comes from.
 
-You describe your system. The agent asks questions, structures your answers, and produces a complete use case model — actors with drives, invariants, domain events, bounded contexts, and scenarios that express intent rather than mechanics.
+You describe your system. A Socratic agent asks questions — one phase at a time — structures your answers, and produces a complete use case model: actors with goals and drives, invariants, domain events, bounded contexts, and scenarios that express intent rather than mechanics.
+
+Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Grounded in Alan Cooper's goal-oriented design and Eric Evans' domain-driven design.
 
 ## How it works
 
