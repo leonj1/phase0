@@ -62,7 +62,7 @@ For each, ask: what state does the actor want to be in? What do they value about
 
 ### Further reading
 
-- UC-PHILOSOPHY.md, "Goals are conditional" section — the full treatment of conditional goals, the gift test, and why value conditions drive system design.
+- usecase-philosophy.md, "Goals are conditional" section — the full treatment of conditional goals, the gift test, and why value conditions drive system design.
 - VISION.md, "Conditional Goals: The Foundational Concept" — the elevator derivation in full.
 
 ---
@@ -139,7 +139,7 @@ Test each with: "What tension demands this actor, and what drive resolves it?"
 
 ### Further reading
 
-- UC-PHILOSOPHY.md, "Primary actors have goals; supporting actors have drives" through "Goal conflicts spawn actors" — the full theoretical treatment.
+- usecase-philosophy.md, "Primary actors have goals; supporting actors have drives" through "Goal conflicts spawn actors" — the full theoretical treatment.
 - VISION.md, "The Entry Point: Actors and Goals, From First Principles" — includes the complete elevator derivation table and chain.
 
 ---
@@ -227,7 +227,7 @@ Rules for the interviewer:
 
 - VISION.md, "The Natural Group Process" — the four rounds described in full with examples.
 - VISION.md, "Why Socratic Extraction Works" — four reasons the method outperforms top-down declaration.
-- UC-PHILOSOPHY.md, "Extract, don't invent" — the Socratic principle in modeling terms.
+- usecase-philosophy.md, "Extract, don't invent" — the Socratic principle in modeling terms.
 
 ---
 
@@ -329,6 +329,6 @@ Check your work:
 
 ### Further reading
 
-- UC-TEMPLATE.md — the complete structural contract.
+- usecase-template.md — the complete structural contract.
 - samples/wiki-agent/UC-01-populate-new-wiki.md — a fully designed use case.
-- UC-PHILOSOPHY.md, "Intent over mechanics" and "Obstacles over exceptions" — the principles behind the template.
+- usecase-philosophy.md, "Intent over mechanics" and "Obstacles over exceptions" — the principles behind the template.

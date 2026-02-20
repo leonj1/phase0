@@ -36,7 +36,7 @@ Students already know how to build software. This track teaches them domain-driv
 
 ### Source material
 
-- `UC-PHILOSOPHY.md` -- invariants, events, bounded contexts, intent over mechanics, markdown as wire format
+- `usecase-philosophy.md` -- invariants, events, bounded contexts, intent over mechanics, markdown as wire format
 - `DOMAIN-MODEL-ARTIFACTS.md` -- artifact types and when they emerge
 - `samples/wiki-agent/domains/` -- DC-01 through DC-06, DOMAIN-EVENTS.md
 - `samples/wiki-agent/USE-CASE-CATALOG.md` -- bounded contexts table

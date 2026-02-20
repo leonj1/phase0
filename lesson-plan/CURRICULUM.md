@@ -105,8 +105,8 @@ The curriculum draws from these documents in the repository:
 
 | Document | What it provides |
 |----------|-----------------|
-| [UC-PHILOSOPHY.md](../.claude/guidance/UC-PHILOSOPHY.md) | Core modeling principles — the 12 ideas the curriculum teaches |
-| [UC-TEMPLATE.md](../.claude/guidance/UC-TEMPLATE.md) | Structural contract for use cases |
+| [usecase-philosophy.md](../.claude/guidance/usecase-philosophy.md) | Core modeling principles — the 12 ideas the curriculum teaches |
+| [usecase-template.md](../.claude/guidance/usecase-template.md) | Structural contract for use cases |
 | [DOMAIN-MODEL-ARTIFACTS.md](../.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
 | [SYSTEM-DESIGN-PHASES.md](../.claude/guidance/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
 | [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](../.claude/guidance/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems |

@@ -29,7 +29,7 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 ### Source material
 
-- UC-PHILOSOPHY.md, "Goals are conditional" section
+- usecase-philosophy.md, "Goals are conditional" section
 - VISION.md, "Conditional Goals: The Foundational Concept" section
 
 ---
@@ -62,7 +62,7 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 ### Source material
 
-- UC-PHILOSOPHY.md, "Primary actors have goals; supporting actors have drives" through "Goal conflicts spawn actors"
+- usecase-philosophy.md, "Primary actors have goals; supporting actors have drives" through "Goal conflicts spawn actors"
 - VISION.md, "The Entry Point: Actors and Goals, From First Principles" (includes the full elevator derivation table)
 
 ---
@@ -96,7 +96,7 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 - VISION.md, "The Natural Group Process" section (all four rounds)
 - VISION.md, "Why Socratic Extraction Works"
-- UC-PHILOSOPHY.md, "Extract, don't invent"
+- usecase-philosophy.md, "Extract, don't invent"
 
 ---
 
@@ -118,7 +118,7 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 ### Activity sequence
 
-1. **Teach** (20 min) — walk through UC-TEMPLATE.md section by section. Explain why Goal comes first (goals over tasks), why Invariants precede Scenario (rules hold continuously), why Obstacles have recovery strategies (goals, not exceptions).
+1. **Teach** (20 min) — walk through usecase-template.md section by section. Explain why Goal comes first (goals over tasks), why Invariants precede Scenario (rules hold continuously), why Obstacles have recovery strategies (goals, not exceptions).
 2. **Demonstrate** (25 min) — walk through UC-01 Populate New Wiki from the wiki-agent sample. Show how each template section looks when filled in. Point out: the goal is a desired state ("empty wiki → complete documentation"), scenario steps express intent ("commissioning orchestrator collects all exploration reports"), obstacles are threats to the goal ("developmental editor fails — synthesis cannot be completed"), domain events name what was produced ("WikiPopulated").
 3. **Exercise** (20 min) — map the elevator system's "transport passenger" use case to the template. Write: goal statement with value conditions, 2-3 invariants, 3 scenario steps (intent, not mechanics), 2 obstacles with recovery strategies.
 4. **Debrief** (10 min) — review use cases. Check: does the goal pass the gift test? Do scenario steps express intent? Are obstacles framed as threats to the goal?
@@ -127,6 +127,6 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 ### Source material
 
-- UC-TEMPLATE.md (full document)
+- usecase-template.md (full document)
 - samples/wiki-agent/UC-01-populate-new-wiki.md
-- UC-PHILOSOPHY.md, "Intent over mechanics" and "Obstacles over exceptions"
+- usecase-philosophy.md, "Intent over mechanics" and "Obstacles over exceptions"

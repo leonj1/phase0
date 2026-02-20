@@ -90,7 +90,7 @@ Remember: look for contradictions in language. What word means different things 
 
 ### Further reading
 
-- `UC-PHILOSOPHY.md` -- the full treatment of invariants, events, bounded contexts, and intent over mechanics
+- `usecase-philosophy.md` -- the full treatment of invariants, events, bounded contexts, and intent over mechanics
 - `DOMAIN-MODEL-ARTIFACTS.md` -- what artifacts to produce and when they emerge
 - `samples/wiki-agent/domains/` -- all six bounded contexts and the domain events catalog
 - `samples/wiki-agent/USE-CASE-CATALOG.md` -- how bounded contexts and events fit into the catalog

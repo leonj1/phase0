@@ -6,7 +6,7 @@ A conditional goal is the foundational modeling concept in Phase0. It is a desir
 
 ## The entry point: actors and goals
 
-Alan Cooper's goal-directed design begins with two questions:
+In *The Inmates Are Running the Asylum*, Alan Cooper does not care how it is done, or what is broken. If it was not broken you would not have hired Cooper. So you start from first principles — two questions:
 
 1. **Who is involved?** — primary actors.
 2. **What are their goals?** — desired end states.
@@ -66,7 +66,23 @@ A **drive** is a supporting actor's reason to participate. Drives are born from 
 
 A single drive cannot serve competing concerns. The building Owner's drive is economic — minimize cost. That drive alone is insufficient to protect the Passenger's safety value. The tension between the Owner's economic drive and the Passenger's safety value demands resolution by a third party. That is where the Inspector comes from.
 
-This is not about malice. The Owner is not trying to hurt Passengers. But separation of actors is the structural answer to conflicts of interest.
+This is not about malice. The Owner is not trying to hurt Passengers. But a single drive cannot serve competing concerns. Separation of actors is the structural answer — not malice, but insufficiency.
+
+---
+
+## Drives bridge classical and AI actors
+
+The drive concept applies equally to human actors and AI agents.
+
+Classical actors have drives rooted in human motivation. The Owner's drive is economic — minimize cost. The Inspector's drive is institutional — protect public safety. These drives are predictable: you know what each actor will optimize for, and therefore where they will fall short.
+
+AI agents have drives rooted in behavioral tendency. A Creator's drive is production — fill pages with content. A Proofreader's drive is critique — find what is wrong. A Deduplicator's drive is filtering — prevent duplicates. These drives are just as predictable as their classical counterparts. The Creator will optimize for coverage and completeness. The Proofreader will optimize for finding flaws. Each will fall short where its drive does not reach.
+
+The framework is the same in both worlds. Drives tell you what an actor will optimize for. They also tell you where the actor needs help — where a complementary drive must pick up what this actor's drive cannot cover.
+
+**The actor-tool distinction.** A tool has no drive. `grep` does exactly what you tell it. An actor makes decisions shaped by what it cares about. The test for actor-hood: does this entity pursue a goal and make decisions in service of that goal? If it does, it is an actor with a drive. If it executes deterministically with no judgment, it is a tool.
+
+**The separation principle.** When a single drive cannot protect all the concerns at play, you need separate actors. The Owner's cost-minimization drive is insufficient to protect public safety — so the Inspector exists. The Creator's production drive is insufficient to guarantee accuracy — so the Proofreader exists. In each case, the supporting actor is born from a specific, nameable insufficiency — not from an org chart, not from a job description, but from the gap between what one drive optimizes for and what the primary actor's values demand.
 
 ---
 

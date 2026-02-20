@@ -34,7 +34,7 @@ Running example: an elevator system. Case study: the wiki-agent model at `sample
 
 ### Source material
 
-- `UC-PHILOSOPHY.md` -- "Goals are conditional," "Value conditions drive the entire system design," derivation chain diagram
+- `usecase-philosophy.md` -- "Goals are conditional," "Value conditions drive the entire system design," derivation chain diagram
 - `phase0/VISION.md` -- "Conditional Goals: The Foundational Concept," the full elevator derivation table
 - `samples/wiki-agent/USE-CASE-CATALOG.md` -- the User's goals section
 - `samples/wiki-agent/ACTOR-CATALOG.md` -- User goals and experience goals, actor appearance matrix
@@ -69,7 +69,7 @@ Running example: an elevator system. Case study: the wiki-agent model at `sample
 
 ### Source material
 
-- `UC-PHILOSOPHY.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors"
+- `usecase-philosophy.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors"
 - `phase0/VISION.md` -- "Round 3: What goes wrong?", "The Entry Point: Actors and Goals, From First Principles" (includes the elevator derivation table and chain)
 - `samples/wiki-agent/ACTOR-CATALOG.md` -- Proofreaders section (four editorial lenses), separation rationale for Content Mutators
 - `samples/wiki-agent/USE-CASE-CATALOG.md` -- domain description, actor drives paragraph
@@ -107,5 +107,5 @@ Running example: an elevator system. Case study: the wiki-agent model at `sample
 ### Source material
 
 - `phase0/VISION.md` -- "The Natural Group Process" (all four rounds), "Who Holds the Threads?" (the historian role), "The Agentic Architecture," "Why Socratic Extraction Works"
-- `UC-PHILOSOPHY.md` -- "Extract, don't invent"
+- `usecase-philosophy.md` -- "Extract, don't invent"
 - `SYSTEM-DESIGN-PHASES.md` -- "On backtracking"

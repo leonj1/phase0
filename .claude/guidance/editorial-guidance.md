@@ -14,5 +14,10 @@ If the target project has a `CLAUDE.md` at `{sourceDir}/CLAUDE.md`, read it for 
 - Numbered steps for tasks, bullets for options.
 - Self-contained pages — link to supporting concepts but include enough context for readers who never follow links.
 
-## Style guidlines
-- prefer bullets, numbered lists, or prose over tables.
+## Tone — phase0 vision articles
+
+Authoritative, declarative, polished. The voice of a practitioner who has done this — confident, precise, not hedging.
+
+## Style guidelines
+
+- Prefer bullets, numbered lists, or prose over tables.

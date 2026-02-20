@@ -81,7 +81,7 @@ Pick a product you use daily -- a phone app, a tool at work, a household applian
 
 ### Further reading
 
-- `.claude/guidance/UC-PHILOSOPHY.md` -- "Goals are conditional," "Value conditions drive the entire system design"
+- `.claude/guidance/usecase-philosophy.md` -- "Goals are conditional," "Value conditions drive the entire system design"
 - `phase0/VISION.md` -- "Conditional Goals: The Foundational Concept"
 - `samples/wiki-agent/ACTOR-CATALOG.md` -- User goals and experience goals
 
@@ -174,7 +174,7 @@ Present your tension map as a table. Then check each actor's genealogy: can you 
 
 ### Further reading
 
-- `.claude/guidance/UC-PHILOSOPHY.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors," "Single responsibility for actors"
+- `.claude/guidance/usecase-philosophy.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors," "Single responsibility for actors"
 - `phase0/VISION.md` -- "The Entry Point: Actors and Goals, From First Principles" (includes the elevator derivation table), "Round 3: What goes wrong?"
 - `samples/wiki-agent/ACTOR-CATALOG.md` -- Proofreaders (four editorial lenses), Content Mutator separation rationale
 
@@ -288,5 +288,5 @@ Count what you surfaced: how many primary actors? How many value conditions? How
 ### Further reading
 
 - `phase0/VISION.md` -- "The Natural Group Process" (all four rounds), "Who Holds the Threads?" (the historian role), "Why Socratic Extraction Works"
-- `.claude/guidance/UC-PHILOSOPHY.md` -- "Extract, don't invent"
+- `.claude/guidance/usecase-philosophy.md` -- "Extract, don't invent"
 - `.claude/guidance/SYSTEM-DESIGN-PHASES.md` -- "On backtracking"
