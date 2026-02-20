@@ -40,8 +40,8 @@ A use case model is a set of interconnected artifacts:
 
 | Artifact | Purpose |
 |----------|---------|
-| `UC-PHILOSOPHY.md` | Guiding principles — the constitution of the model |
-| `UC-TEMPLATE.md` | Structural contract for individual use cases |
+| `usecase-philosophy.md` | Guiding principles — the constitution of the model |
+| `usecase-template.md` | Structural contract for individual use cases |
 | `UC-{id}-{slug}.md` | Individual use cases — one goal, one primary actor |
 | `ACTOR-CATALOG.md` | Every actor, their drives, and where they appear |
 | `SHARED-INVARIANTS.md` | Cross-cutting rules that apply system-wide |
@@ -60,7 +60,7 @@ See [DOMAIN-MODEL-ARTIFACTS.md](.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md) for 
 - **Intent over mechanics.** Scenario steps say what is accomplished, not how.
 - **Extract, don't invent.** The user knows the domain. The agent knows how to structure it.
 
-See [UC-PHILOSOPHY.md](.claude/guidance/UC-PHILOSOPHY.md) for all 12 principles.
+See [usecase-philosophy.md](.claude/guidance/usecase-philosophy.md) for all 12 principles.
 
 ## Prerequisites
 
@@ -83,7 +83,7 @@ See [UC-PHILOSOPHY.md](.claude/guidance/UC-PHILOSOPHY.md) for all 12 principles.
 
 3. **Start designing.** Tell the agent about a system you want to model. It will begin the interview process and guide you through each phase.
 
-The agent reads [UC-PHILOSOPHY.md](.claude/guidance/UC-PHILOSOPHY.md) and [UC-TEMPLATE.md](.claude/guidance/UC-TEMPLATE.md) before every session to maintain consistency across use cases.
+The agent reads [usecase-philosophy.md](.claude/guidance/usecase-philosophy.md) and [usecase-template.md](.claude/guidance/usecase-template.md) before every session to maintain consistency across use cases.
 
 ## Sample model
 
@@ -105,8 +105,8 @@ See [SYSTEM-DESIGN-PHASES.md](.claude/guidance/SYSTEM-DESIGN-PHASES.md) for the 
 
 | Document | What it covers |
 |----------|---------------|
-| [UC-PHILOSOPHY.md](.claude/guidance/UC-PHILOSOPHY.md) | Core modeling principles |
-| [UC-TEMPLATE.md](.claude/guidance/UC-TEMPLATE.md) | Structural contract for use cases |
+| [usecase-philosophy.md](.claude/guidance/usecase-philosophy.md) | Core modeling principles |
+| [usecase-template.md](.claude/guidance/usecase-template.md) | Structural contract for use cases |
 | [DOMAIN-MODEL-ARTIFACTS.md](.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
 | [SYSTEM-DESIGN-PHASES.md](.claude/guidance/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
 | [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](.claude/guidance/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems — drives become system prompts, orchestrators serve goals, tool restrictions enforce actor separation |
