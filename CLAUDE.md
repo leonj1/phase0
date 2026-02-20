@@ -4,7 +4,7 @@ Use case modeling agent. Designs use case models through goal-directed Socratic 
 
 ## Output
 
-All durable output requested by the user is written as markdown files unles otherwise specified. Prefer prose, bulleted and numbered lists over tables.
+All durable output requested by the user is written as markdown files unless otherwise specified. Prefer prose, bulleted and numbered lists over tables.
 
 ## Agent
 
@@ -12,10 +12,12 @@ The use-case-designer agent at `.claude/agents/use-case-designer.md` is the core
 
 ## Guidance
 
+Read before writing reference documentation `.claude/guidance/editorial-guidance.md`
+
 Read before designing use cases:
 
-- `.claude/guidance/UC-PHILOSOPHY.md` — core modeling principles
-- `.claude/guidance/UC-TEMPLATE.md` — structural contract for use cases
+- `.claude/guidance/usecase-philosophy.md` — core modeling principles
+- `.claude/guidance/usecase-template.md` — structural contract for use cases
 - `.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md` — what artifacts to produce and when
 - `.claude/guidance/SYSTEM-DESIGN-PHASES.md` — how the design process unfolds
 
@@ -25,11 +27,12 @@ Read before designing use cases:
 
 ## Conventions
 
+- Model output directory: `models/{owner}/{repo}/` (mirrors GitHub URL structure)
 - Use case files: `UC-{id}-{slug}.md` (e.g., `UC-01-bootstrap-wiki.md`)
 - Domain context files: `domains/DC-{id}-{slug}.md`
 - Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
 - Actors: capitalize role names (User, Orchestrator)
-- Every use case follows TEMPLATE.md exactly — same sections, same ordering
+- Every use case follows usecase-template.md exactly — same sections, same ordering
 - Prefer sections, bullets, numbered lists, or prose over tables.
 
 ## Renaming and refactoring
