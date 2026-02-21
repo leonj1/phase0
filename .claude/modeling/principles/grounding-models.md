@@ -1,8 +1,3 @@
----
-name: grounding-models
-description: Shared vocabulary and principles for domain modeling — goals, drives, tensions, conditional goals, invariants, domain events. Every agent in the design cycle loads this. Lens-specific depth lives in discovering-actors, modeling-usecases, and mapping-contexts.
----
-
 # Grounding models
 
 Core principles for domain modeling, grounded in Alan Cooper's goal-directed design and Eric Evans' domain-driven design. Every agent in the design cycle shares this vocabulary and these principles.

@@ -1,9 +1,4 @@
----
-name: modeling-actors
-description: Actor lens depth — conditional goals, value conditions, the derivation chain, tensions, actor genealogy, single responsibility. Load when discovering or challenging actors, goals, and drives.
----
-
-# Actor lens philosophy
+# Discovering actors
 
 Deep principles for actor discovery. Builds on the shared vocabulary in grounding-models.
 

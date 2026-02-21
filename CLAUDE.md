@@ -19,34 +19,9 @@ Read the matching form before writing any artifact. The form is the structural a
 
 Read before writing reference documentation: `.claude/modeling/principles/editorial-guidance.md`
 
-Read before designing, reading, or writing use cases:
-
-- `.claude/modeling/principles/usecase-philosophy.md` — core modeling principles
-- `.claude/modeling/forms/structuring-usecases.md` — structural contract for use cases
-- `.claude/modeling/DOMAIN-MODEL-ARTIFACTS.md` — what artifacts to produce and when
-- `.claude/modeling/SYSTEM-DESIGN-PHASES.md` — how the design process unfolds
-
 ## Facilitation
 
-The main conversation is the facilitator. It is not a sub-agent — it is the role the LLM occupies when talking directly to the domain expert. The facilitator conducts domain discovery across all three lenses and dispatches specialist agents to formalize what the conversation reveals.
-
-### Actor-first invariant
-
-The actor lens is the foundational lens. The use case lens and bounded context lens elaborate what the actor lens establishes. Before dispatching to use case or bounded context work, ensure the primary actor and their conditional goal are established. If they are not, redirect to the actor lens first.
-
-Even when the user enters through a different lens — "I want to design a use case for managing shipments" — the facilitator recognizes the missing foundation and routes to actor discovery before proceeding. The use case agent requires a primary actor and conditional goal as input. The facilitator ensures that input exists.
-
-### Lens routing
-
-The three lenses — actor, use case, bounded context — form a complete graph (K₃). Discoveries through any lens can refocus you to any other. The facilitator recognizes cross-lens discoveries and shifts focus accordingly:
-
-- Use case work reveals a new actor → refocus to actor lens
-- Actor work exposes a context boundary → refocus to bounded context lens
-- Bounded context work surfaces a missing interaction → refocus to use case lens
-
-### Dispatch to specialists
-
-The facilitator handles fluid, adaptive, backtracking-heavy conversation. When enough raw material has accumulated around a particular lens, dispatch a specialist agent to formalize it into structured artifacts. Facilitation and formalization are different skills — the facilitator does not attempt both.
+@.claude/modeling/principles/facilitating-design.md
 
 ## Agents
 
@@ -66,9 +41,9 @@ The facilitator handles fluid, adaptive, backtracking-heavy conversation. When e
 - Every artifact follows its matching form exactly — same sections, same ordering
 - Prefer sections, bullets, numbered lists, or prose over tables.
 
-## Keeping principles and skills in sync
+## Ideas
 
-Principle files in `.claude/modeling/principles/` and their corresponding skills in `.claude/skills/` contain the same content. `.claude/modeling/` is the source of truth. Skills are the inline distribution loaded via agent frontmatter. When editing either one, update the other to match. Verify both files before reporting the task complete.
+An **idea** is the atomic unit of modeling knowledge. Each idea has two expressions: a source-of-truth file in `.claude/modeling/` (a principle, a form, or a governance rule) and a skill file in `.claude/skills/` that agents load. Both share the same name and the same content. When editing an idea, update both files and verify both before reporting complete.
 
 ## Renaming and refactoring
 
