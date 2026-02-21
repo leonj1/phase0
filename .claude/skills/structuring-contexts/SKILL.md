@@ -1,3 +1,8 @@
+---
+name: structuring-contexts
+description: Structural contract for bounded context documents. Defines the artifact shape for both reading and writing context files. Load when writing or reviewing bounded context documents.
+---
+
 # Structuring contexts
 
 Structural contract for bounded context documents. Defines the artifact shape for both reading and writing context files. Load when writing or reviewing bounded context documents.

@@ -1,3 +1,8 @@
+---
+name: structuring-actors
+description: Structural contract for actor documents. Defines the artifact shape for both reading and writing actor files. Load when writing or reviewing actor documents.
+---
+
 # Structuring actors
 
 Structural contract for actor documents. Defines the artifact shape for both reading and writing actor files. Load when writing or reviewing actor documents.

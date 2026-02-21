@@ -1,3 +1,8 @@
+---
+name: structuring-invariants
+description: Structural contract for invariant documents. Defines the artifact shape for both reading and writing invariant files. Load when writing or reviewing invariant documents.
+---
+
 # Structuring invariants
 
 Structural contract for invariant documents. Defines the artifact shape for both reading and writing invariant files. Load when writing or reviewing invariant documents.

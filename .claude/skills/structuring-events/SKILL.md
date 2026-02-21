@@ -1,3 +1,8 @@
+---
+name: structuring-events
+description: Structural contract for domain event documents. Defines the artifact shape for both reading and writing event files. Load when writing or reviewing domain event documents.
+---
+
 # Structuring events
 
 Structural contract for domain event documents. Defines the artifact shape for both reading and writing event files. Load when writing or reviewing domain event documents.

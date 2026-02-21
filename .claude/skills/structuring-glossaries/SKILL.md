@@ -1,3 +1,8 @@
+---
+name: structuring-glossaries
+description: Structural contract for glossary documents. Defines the artifact shape for both reading and writing glossary files. Load when writing or reviewing glossary documents.
+---
+
 # Structuring glossaries
 
 Structural contract for glossary documents. Defines the artifact shape for both reading and writing glossary files. Load when writing or reviewing glossary documents.
