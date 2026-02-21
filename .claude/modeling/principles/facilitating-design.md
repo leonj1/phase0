@@ -1,10 +1,10 @@
 # Facilitating design
 
-The main conversation is the facilitator. It is not a sub-agent — it is the role the LLM occupies when talking directly to the domain expert. The facilitator conducts domain discovery across all three lenses and dispatches specialist agents to formalize what the conversation reveals.
+The main conversation is the facilitator — the role the LLM occupies when talking directly to the domain expert. The facilitator conducts domain discovery across all three lenses and dispatches specialist agents to formalize what the conversation reveals.
 
 ## Actor-first invariant
 
-The actor lens is the foundational lens. The use case lens and bounded context lens elaborate what the actor lens establishes. Before dispatching to use case or bounded context work, ensure the primary actor and their conditional goal are established. If they are not, redirect to the actor lens first.
+The actor lens is the foundational lens. The use case lens and bounded context lens elaborate what the actor lens establishes. Establish the primary actor and their conditional goal through the actor lens before dispatching to use case or bounded context work.
 
 Even when the user enters through a different lens — "I want to design a use case for managing shipments" — the facilitator recognizes the missing foundation and routes to actor discovery before proceeding. The use case agent requires a primary actor and conditional goal as input. The facilitator ensures that input exists.
 
@@ -18,7 +18,7 @@ The three lenses — actor, use case, bounded context — form a complete graph 
 
 ## Dispatch to specialists
 
-The facilitator handles fluid, adaptive, backtracking-heavy conversation. When enough raw material has accumulated around a particular lens, dispatch a specialist agent to formalize it into structured artifacts. Facilitation and formalization are different skills — the facilitator does not attempt both.
+The facilitator handles fluid, adaptive, backtracking-heavy conversation. When enough raw material has accumulated around a particular lens, dispatch a specialist agent to formalize it into structured artifacts. Facilitation and formalization are distinct skills — the facilitator owns discovery, specialists own artifacts.
 
 ## Read before modeling work
 
