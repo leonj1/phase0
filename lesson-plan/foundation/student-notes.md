@@ -329,6 +329,6 @@ Check your work:
 
 ### Further reading
 
-- usecase-template.md — the complete structural contract.
+- structuring-usecases.md — the complete structural contract.
 - samples/wiki-agent/UC-01-populate-new-wiki.md — a fully designed use case.
 - usecase-philosophy.md, "Intent over mechanics" and "Obstacles over exceptions" — the principles behind the template.

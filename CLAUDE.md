@@ -6,6 +6,14 @@ Use case modeling agent. Designs use case models through goal-directed Socratic 
 
 All durable output requested by the user is written as markdown files unless otherwise specified. Prefer prose, bulleted and numbered lists over tables.
 
+## Forms
+
+`.claude/forms/` contains structural contracts — the canonical shapes for artifacts that humans and agents produce and consume. Each form defines the sections, ordering, and placeholder guidance for one artifact type.
+
+- Read the matching form before writing any artifact. The form is the structural authority — same sections, same ordering.
+- Forms are named after their matching structuring skill (e.g., `structuring-usecases` skill → `structuring-usecases.md` form).
+- When a new artifact type is introduced, create a form for it in `.claude/forms/` and a corresponding structuring skill in `.claude/skills/`.
+
 ## Agents
 
 - **`designing-usecases`** at `.claude/agents/designing-usecases.md` — the primary agent. Discovers domain structure through Socratic interview and writes use case artifacts. Preloads philosophy, template, and editorial skills.
@@ -14,10 +22,10 @@ All durable output requested by the user is written as markdown files unless oth
 
 Read before writing reference documentation `.claude/guidance/editorial-guidance.md`
 
-Read before designing use cases:
+Read before designing, reading, or writing use cases:
 
 - `.claude/guidance/usecase-philosophy.md` — core modeling principles
-- `.claude/guidance/usecase-template.md` — structural contract for use cases
+- `.claude/forms/structuring-usecases.md` — structural contract for use cases
 - `.claude/guidance/DOMAIN-MODEL-ARTIFACTS.md` — what artifacts to produce and when
 - `.claude/guidance/SYSTEM-DESIGN-PHASES.md` — how the design process unfolds
 
@@ -32,7 +40,7 @@ Read before designing use cases:
 - Domain context files: `domains/DC-{id}-{slug}.md`
 - Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
 - Actors: capitalize role names (User, Orchestrator)
-- Every use case follows the structuring-usecases skill exactly — same sections, same ordering
+- Every artifact follows its matching form exactly — same sections, same ordering
 - Prefer sections, bullets, numbered lists, or prose over tables.
 
 ## Renaming and refactoring
