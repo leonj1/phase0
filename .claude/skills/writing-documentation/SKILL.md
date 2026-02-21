@@ -22,3 +22,4 @@ Authoritative, declarative, polished. The voice of a practitioner who has done t
 ## Style guidelines
 
 - Prefer bullets, numbered lists, or prose over tables.
+- Instructions and templates use positive language — say what to do, what to aim for. Negative assertions (what to avoid, what violates principles) belong to proofreaders.

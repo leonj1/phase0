@@ -1,26 +1,24 @@
 ---
 name: modeling-usecases
-description: Use case lens depth — invariants, obstacles, intent over mechanics. Load when structuring interactions, writing scenarios, or challenging use case content.
+description: Use case lens depth — continuous invariants, goal obstacles with recovery strategies, intent-driven scenarios. Load when structuring interactions, writing scenarios, or challenging use case content.
 ---
 
 # Use case lens philosophy
 
 Deep principles for use case construction. Builds on the shared vocabulary in modeling-philosophy.
 
-## Invariants over preconditions
+## Invariants are continuous constraints
 
-Domain rules are not entry gates you check once. They are constraints that must hold continuously — before, during, and after execution. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.
+Domain rules must hold continuously — before, during, and after execution. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.
 
-Express constraints as invariants, not as preconditions or validation steps.
+Express constraints as invariants that hold at every moment of the interaction.
 
-## Obstacles over exceptions
+## Obstacles are threats to the goal
 
-When something goes wrong, describe the threat to the goal — not the error code. "Source code is unreachable" tells you what's at risk. "Exit code 128" tells you nothing about what to do next.
+When something goes wrong, describe the threat to goal satisfaction. "Source code is unreachable" tells you what is at risk. Each obstacle includes a recovery strategy: a way to protect the goal or degrade gracefully when it cannot be fully achieved.
 
-Frame failures as goal obstacles with recovery strategies, not try/catch blocks.
+## Scenario steps express intent
 
-## Intent over mechanics
-
-Scenario steps express what is accomplished, not how. "Wiki content is verified against current source" gives an actor room to find the best path. "Run grep on lines 1-50 of each file" does not.
+Scenario steps express what is accomplished. "Wiki content is verified against current source" gives an actor room to find the best path. Step ordering reflects what the actor values — arrange the interaction so that the actor's values are protected at every point.
 
 The actor's job is to satisfy intent. The use case's job is to express it clearly.

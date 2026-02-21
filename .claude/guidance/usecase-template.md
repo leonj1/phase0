@@ -2,7 +2,7 @@
 
 ## Goal
 
-{Desired end state the actor is trying to reach. Express *why*, not *what*. Goals are stable — they survive model upgrades, tool changes, and prompt rewrites. Ask "what state of the world does the actor want?"}
+{Desired end state the actor is trying to reach. Express the state of the world the actor wants to exist in. Goals are stable — they survive model upgrades, tool changes, and prompt rewrites.}
 
 ## Context
 
@@ -19,13 +19,13 @@
 
 ## Invariants
 
-{Domain rules that must hold continuously — before, during, and after this use case. Not entry gates checked once. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.}
+{Domain rules that must hold continuously — before, during, and after this use case. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.}
 
 - {invariant}
 
 ## Success outcome
 
-{Observable state of the world when the goal is satisfied. Expressed in domain terms, not implementation details.}
+{Observable state of the world when the goal is satisfied. Expressed in domain terms.}
 
 - {outcome}
 
@@ -37,7 +37,7 @@
 
 ## Scenario
 
-{Steps express intent and outcomes, not mechanics. "Wiki content is verified against current source" gives an actor room to find the best path. "Run grep on lines 1-50" does not. Step ordering reflects what the actor values — arrange the interaction so that the actor's values are protected at each point, not just at the end. Domain events (marked with -->) signal meaningful state transitions — these are the published language between bounded contexts.}
+{Steps express intent and outcomes. "Wiki content is verified against current source" gives an actor room to find the best path. Step ordering reflects what the actor values — arrange the interaction so that the actor's values are protected at every point. Domain events (marked with -->) signal meaningful state transitions — these are the published language between bounded contexts.}
 
 1. **{Actor}** — {Intent / outcome}
    --> {DomainEvent}
@@ -46,7 +46,7 @@
 
 ## Goal obstacles
 
-{Conditions that threaten goal satisfaction, not alternate flows or branch points. Keyed to scenario steps. Describe what is at risk — "source code is unreachable" — not what branched. Each obstacle includes a recovery strategy: a way to protect the goal or degrade gracefully, not a different path through the scenario.}
+{Conditions that threaten goal satisfaction. Keyed to scenario steps. Describe what is at risk — "source code is unreachable." Each obstacle includes a recovery strategy: a way to protect the goal or degrade gracefully when it cannot be fully achieved.}
 
 ### {Step}a — {What threatens the goal}
 
