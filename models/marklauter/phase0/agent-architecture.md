@@ -28,6 +28,16 @@ One per lens. These are writers that need deep interpretive knowledge of their l
 - **Actor cataloger** — actor lens. Maintains the actor catalog (ACTOR-CATALOG.md). Needs to understand goals, drives, tensions, separation rationale.
 - **Domain context writer** — bounded context lens. Writes domain context definitions (DC-{id}-{slug}.md) and the domain events catalog. Needs to understand term boundaries, ubiquitous language, event crossing.
 
+### Lens proofreaders (3)
+
+One per lens. The lens specialist's drive is production — write the artifact. The proofreader's drive is critique — find what violates the lens principles. They hold the negative space that the template deliberately omits.
+
+The template guides authors with positive assertions: "expressed in domain terms," "steps express intent and outcomes," "invariants hold continuously." The proofreader catches what those assertions leave unsaid:
+
+- **Use case proofreader** — scans for implementation detail leaks in goals and outcomes, mechanical step ordering (steps follow system workflow rather than actor values), precondition/postcondition framing instead of continuous invariants, alternate-flow framing instead of goal obstacles with recovery strategies.
+- **Actor proofreader** — scans for actors without genealogy (no traceable tension), goals that are tasks (fail the gift test), missing value conditions, actors holding competing responsibilities.
+- **Bounded context proofreader** — scans for shared language across contexts that should be partitioned, missing protocols at crossing points, events that cross boundaries without being named as domain events.
+
 ### Librarian
 
 A single cross-cutting agent that maintains all reference and catalog artifacts. Its drive is keeping the model's reference artifacts current and consistent.
