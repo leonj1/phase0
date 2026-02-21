@@ -83,7 +83,7 @@ Incorporate feedback into the artifact. If the feedback exposes a gap in the int
 
 ## Naming conventions
 
-- File names: `UC-{number}-{short-kebab-name}.md` (e.g., `UC-01-bootstrap-wiki.md`)
+- File names: `UC-{number}-{short-kebab-name}.md` (e.g., `UC-01-populate-new-wiki.md`)
 - Use case IDs: `UC-{number}` (e.g., `UC-01`)
 - Domain events: PastTense (e.g., `WikiPageCreated`, `DriftDetected`)
 - Actors: capitalize role names using "doer" nouns that describe what the actor does (User, Commissioning orchestrator, Researchers, Proofreaders, Creators, Correctors).

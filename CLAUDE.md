@@ -17,7 +17,7 @@ All durable output requested by the user is written as markdown files unless oth
 
 Read the matching form before writing any artifact. The form is the structural authority — same sections, same ordering. When a new artifact type is introduced, create a form in `.claude/modeling/forms/` and a corresponding structuring skill in `.claude/skills/`.
 
-Read before writing reference documentation: `.claude/modeling/principles/editorial-guidance.md`
+Read before writing reference documentation: `.claude/modeling/principles/writing-documentation.md`
 
 ## Facilitation
 
@@ -34,7 +34,7 @@ Read before writing reference documentation: `.claude/modeling/principles/editor
 ## Conventions
 
 - Model output directory: `models/{owner}/{repo}/` (mirrors GitHub URL structure)
-- Use case files: `UC-{id}-{slug}.md` (e.g., `UC-01-bootstrap-wiki.md`)
+- Use case files: `UC-{id}-{slug}.md` (e.g., `UC-01-populate-new-wiki.md`)
 - Domain context files: `domains/DC-{id}-{slug}.md`
 - Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
 - Actors: capitalize role names (User, Orchestrator)
