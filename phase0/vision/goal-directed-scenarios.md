@@ -8,7 +8,7 @@ Traditional use case scenarios describe tasks — a sequence of operations that 
 
 Traditional use cases have preconditions and postconditions. Preconditions are entry gates — checked once before the scenario begins. Postconditions are exit assertions — verified after the scenario ends. Between entry and exit, anything goes.
 
-This is insufficient. A domain rule that must hold is not a gate you check once. It is a constraint that must hold continuously — before, during, and after execution. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.
+Phase0 expresses constraints as invariants — rules that hold continuously, before, during, and after execution. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.
 
 An elevator that free-falls for three floors and then catches itself has violated the safety invariant — even though the Passenger arrives at the correct floor. A precondition "elevator is operational" checked at entry would not have caught this. The constraint is continuous: the elevator must be safe at every moment of the journey.
 
