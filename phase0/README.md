@@ -21,10 +21,6 @@ The `vision/` folder contains the Phase0 vision as a set of standalone articles.
 - [The agentic architecture](vision/agentic-architecture.md) — how Phase0 is built: the facilitator, the lenses, and the specialist agents
 - [The historian](vision/historian.md) — who holds the threads when the conversation runs long
 
-**The product:**
-
-- [The vision statement artifact](vision/vision-statement-artifact.md) — what Phase0 actually produces, its structure, and how you know when it is done
-
 ## Source document
 
 [VISION.md](VISION.md) is the original discussion notes from which these articles were refined. It remains as the source of truth for verification.

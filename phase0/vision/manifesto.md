@@ -19,8 +19,6 @@ Phase0 produces a **vision statement** for the system under design. The vision s
 
 Everything downstream — use cases, bounded contexts, domain events, protocols — is elaboration of the vision. The vision is the foundation. Phase0 produces the foundation.
 
-For a detailed description of the vision statement as an artifact, see [The vision statement artifact](vision-statement-artifact.md).
-
 ---
 
 ## Why Phase0 exists
@@ -55,4 +53,3 @@ These articles develop the ideas introduced here:
 - [The Socratic method](socratic-method.md) — why Socratic extraction works and the specific techniques it employs
 - [The agentic architecture](agentic-architecture.md) — how Phase0 is built: the facilitator, the lenses, and the specialist agents
 - [The historian](historian.md) — who holds the threads when the conversation runs long
-- [The vision statement artifact](vision-statement-artifact.md) — what Phase0 actually produces, and how you know when it is done

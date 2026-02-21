@@ -62,7 +62,7 @@ For each, ask: what state does the actor want to be in? What do they value about
 
 ### Further reading
 
-- usecase-philosophy.md, "Goals are conditional" section — the full treatment of conditional goals, the gift test, and why value conditions drive system design.
+- discovering-actors.md, "Goals are conditional" section — the full treatment of conditional goals, the gift test, and why value conditions drive system design.
 - VISION.md, "Conditional Goals: The Foundational Concept" — the elevator derivation in full.
 
 ---
@@ -139,7 +139,8 @@ Test each with: "What tension demands this actor, and what drive resolves it?"
 
 ### Further reading
 
-- usecase-philosophy.md, "Primary actors have goals; supporting actors have drives" through "Goal conflicts spawn actors" — the full theoretical treatment.
+- grounding-models.md, "Primary actors have goals; supporting actors have drives" — the shared vocabulary for goals and drives.
+- discovering-actors.md, "Goal conditions create tensions; tensions spawn supporting actors" through "Goal conflicts spawn actors" — tension-to-actor genealogy.
 - VISION.md, "The Entry Point: Actors and Goals, From First Principles" — includes the complete elevator derivation table and chain.
 
 ---
@@ -227,7 +228,7 @@ Rules for the interviewer:
 
 - VISION.md, "The Natural Group Process" — the four rounds described in full with examples.
 - VISION.md, "Why Socratic Extraction Works" — four reasons the method outperforms top-down declaration.
-- usecase-philosophy.md, "Extract, don't invent" — the Socratic principle in modeling terms.
+- grounding-models.md, "Extract, don't invent" — the Socratic principle in modeling terms.
 
 ---
 
@@ -331,4 +332,4 @@ Check your work:
 
 - structuring-usecases.md — the complete structural contract.
 - models/marklauter/github-wiki-manager/UC-01-populate-new-wiki.md — a fully designed use case.
-- usecase-philosophy.md, "Intent over mechanics" and "Obstacles over exceptions" — the principles behind the template.
+- modeling-usecases.md, "Scenario steps express intent" and "Obstacles are threats to the goal" — the principles behind the template.

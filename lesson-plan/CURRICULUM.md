@@ -105,7 +105,10 @@ The curriculum draws from these documents in the repository:
 
 | Document | What it provides |
 |----------|-----------------|
-| [usecase-philosophy.md](../.claude/modeling/principles/usecase-philosophy.md) | Core modeling principles — the 12 ideas the curriculum teaches |
+| [grounding-models.md](../.claude/modeling/principles/grounding-models.md) | Shared vocabulary — goals, drives, tensions, domain events |
+| [discovering-actors.md](../.claude/modeling/principles/discovering-actors.md) | Actor lens — conditional goals, derivation chain, actor genealogy |
+| [modeling-usecases.md](../.claude/modeling/principles/modeling-usecases.md) | Use case lens — invariants, obstacles, intent-driven scenarios |
+| [mapping-contexts.md](../.claude/modeling/principles/mapping-contexts.md) | Bounded context lens — boundaries, protocols |
 | [structuring-usecases.md](../.claude/modeling/forms/structuring-usecases.md) | Structural contract for use cases |
 | [DOMAIN-MODEL-ARTIFACTS.md](../.claude/modeling/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
 | [SYSTEM-DESIGN-PHASES.md](../.claude/modeling/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |

@@ -90,7 +90,9 @@ Remember: look for contradictions in language. What word means different things 
 
 ### Further reading
 
-- `usecase-philosophy.md` -- the full treatment of invariants, events, bounded contexts, and intent over mechanics
+- `modeling-usecases.md` -- invariants as continuous constraints, scenario steps express intent
+- `grounding-models.md` -- domain events, markdown as wire format
+- `mapping-contexts.md` -- bounded contexts over shared models
 - `DOMAIN-MODEL-ARTIFACTS.md` -- what artifacts to produce and when they emerge
 - `models/marklauter/github-wiki-manager/domains/` -- all six bounded contexts and the domain events catalog
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- how bounded contexts and events fit into the catalog

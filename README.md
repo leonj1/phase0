@@ -40,7 +40,10 @@ A use case model is a set of interconnected artifacts:
 
 | Artifact | Purpose |
 |----------|---------|
-| `usecase-philosophy.md` | Guiding principles — the constitution of the model |
+| `grounding-models.md` | Shared vocabulary — goals, drives, tensions, domain events |
+| `discovering-actors.md` | Actor lens — conditional goals, derivation chain, actor genealogy |
+| `modeling-usecases.md` | Use case lens — invariants, obstacles, intent-driven scenarios |
+| `mapping-contexts.md` | Bounded context lens — context boundaries, protocols |
 | `structuring-usecases.md` | Structural contract for individual use cases |
 | `UC-{id}-{slug}.md` | Individual use cases — one goal, one primary actor |
 | `ACTOR-CATALOG.md` | Every actor, their drives, and where they appear |
@@ -60,7 +63,7 @@ See [DOMAIN-MODEL-ARTIFACTS.md](.claude/modeling/DOMAIN-MODEL-ARTIFACTS.md) for 
 - **Intent over mechanics.** Scenario steps say what is accomplished, not how.
 - **Extract, don't invent.** The user knows the domain. The agent knows how to structure it.
 
-See [usecase-philosophy.md](.claude/modeling/principles/usecase-philosophy.md) for all 12 principles.
+See the modeling principles: [grounding-models.md](.claude/modeling/principles/grounding-models.md) (shared vocabulary), [discovering-actors.md](.claude/modeling/principles/discovering-actors.md) (actor lens), [modeling-usecases.md](.claude/modeling/principles/modeling-usecases.md) (use case lens), [mapping-contexts.md](.claude/modeling/principles/mapping-contexts.md) (bounded context lens).
 
 ## Prerequisites
 
@@ -83,7 +86,7 @@ See [usecase-philosophy.md](.claude/modeling/principles/usecase-philosophy.md) f
 
 3. **Start designing.** Tell the agent about a system you want to model. It will begin the interview process and guide you through each phase.
 
-The agent reads [usecase-philosophy.md](.claude/modeling/principles/usecase-philosophy.md) and [structuring-usecases.md](.claude/modeling/forms/structuring-usecases.md) before every session to maintain consistency across use cases.
+The agent loads [grounding-models.md](.claude/modeling/principles/grounding-models.md), [modeling-usecases.md](.claude/modeling/principles/modeling-usecases.md), [structuring-usecases.md](.claude/modeling/forms/structuring-usecases.md), and [writing-documentation.md](.claude/modeling/principles/writing-documentation.md) before every session to maintain consistency across use cases.
 
 ## Sample model
 
@@ -105,7 +108,10 @@ See [SYSTEM-DESIGN-PHASES.md](.claude/modeling/SYSTEM-DESIGN-PHASES.md) for the 
 
 | Document | What it covers |
 |----------|---------------|
-| [usecase-philosophy.md](.claude/modeling/principles/usecase-philosophy.md) | Core modeling principles |
+| [grounding-models.md](.claude/modeling/principles/grounding-models.md) | Shared modeling vocabulary (Cooper + Evans) |
+| [discovering-actors.md](.claude/modeling/principles/discovering-actors.md) | Actor lens — conditional goals, derivation chain |
+| [modeling-usecases.md](.claude/modeling/principles/modeling-usecases.md) | Use case lens — invariants, obstacles, scenarios |
+| [mapping-contexts.md](.claude/modeling/principles/mapping-contexts.md) | Bounded context lens — boundaries, protocols |
 | [structuring-usecases.md](.claude/modeling/forms/structuring-usecases.md) | Structural contract for use cases |
 | [DOMAIN-MODEL-ARTIFACTS.md](.claude/modeling/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
 | [SYSTEM-DESIGN-PHASES.md](.claude/modeling/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
