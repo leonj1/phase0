@@ -64,7 +64,7 @@ Two modes, controlled by the user with guidance from the facilitator:
 
 ## Implementation status
 
-The `designing-usecases` agent (`.claude/agents/designing-usecases.md`) is the first implementation. It combines the use case lens Socratic interviewer and use case writer into a single agent — will split as the architecture matures. Preloads four skills: `modeling-philosophy`, `modeling-usecases`, `structuring-usecases`, `writing-documentation`.
+The `designing-usecases` agent (`.claude/agents/designing-usecases.md`) is the first implementation. It combines the use case lens Socratic interviewer and use case writer into a single agent — will split as the architecture matures. Preloads four skills: `grounding-models`, `modeling-usecases`, `structuring-usecases`, `writing-documentation`.
 
 ## Open questions
 

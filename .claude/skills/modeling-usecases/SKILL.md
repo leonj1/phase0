@@ -5,7 +5,7 @@ description: Use case lens depth — continuous invariants, goal obstacles with 
 
 # Use case lens philosophy
 
-Deep principles for use case construction. Builds on the shared vocabulary in modeling-philosophy.
+Deep principles for use case construction. Builds on the shared vocabulary in grounding-models.
 
 ## Invariants are continuous constraints
 

@@ -5,7 +5,7 @@ description: Actor lens depth — conditional goals, value conditions, the deriv
 
 # Actor lens philosophy
 
-Deep principles for actor discovery. Builds on the shared vocabulary in modeling-philosophy.
+Deep principles for actor discovery. Builds on the shared vocabulary in grounding-models.
 
 ## Goals and drives — examples
 

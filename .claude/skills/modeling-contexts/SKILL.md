@@ -5,7 +5,7 @@ description: Bounded context lens depth — context boundaries, ubiquitous langu
 
 # Bounded context lens philosophy
 
-Deep principles for bounded context discovery. Builds on the shared vocabulary in modeling-philosophy.
+Deep principles for bounded context discovery. Builds on the shared vocabulary in grounding-models.
 
 ## Bounded contexts over shared models
 
