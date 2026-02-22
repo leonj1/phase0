@@ -105,13 +105,13 @@ The curriculum draws from these documents in the repository:
 
 | Document | What it provides |
 |----------|-----------------|
-| [grounding-models.md](../.claude/modeling/principles/grounding-models.md) | Shared vocabulary — goals, drives, tensions, domain events |
-| [discovering-actors.md](../.claude/modeling/principles/discovering-actors.md) | Actor lens — conditional goals, derivation chain, actor genealogy |
-| [modeling-usecases.md](../.claude/modeling/principles/modeling-usecases.md) | Use case lens — invariants, obstacles, intent-driven scenarios |
-| [mapping-contexts.md](../.claude/modeling/principles/mapping-contexts.md) | Bounded context lens — boundaries, protocols |
-| [structuring-usecases.md](../.claude/modeling/forms/structuring-usecases.md) | Structural contract for use cases |
-| [DOMAIN-MODEL-ARTIFACTS.md](../.claude/modeling/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
-| [SYSTEM-DESIGN-PHASES.md](../.claude/modeling/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
-| [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](../.claude/modeling/principles/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems |
+| [grounding-models.md](../.claude/modeling-contracts/principles/grounding-models.md) | Shared vocabulary — goals, drives, tensions, domain events |
+| [discovering-actors.md](../.claude/modeling-contracts/principles/discovering-actors.md) | Actor lens — conditional goals, derivation chain, actor genealogy |
+| [modeling-usecases.md](../.claude/modeling-contracts/principles/modeling-usecases.md) | Use case lens — invariants, obstacles, intent-driven scenarios |
+| [mapping-contexts.md](../.claude/modeling-contracts/principles/mapping-contexts.md) | Bounded context lens — boundaries, protocols |
+| [structuring-usecases.md](../.claude/modeling-contracts/forms/structuring-usecases.md) | Structural contract for use cases |
+| [DOMAIN-MODEL-ARTIFACTS.md](../.claude/modeling-contracts/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
+| [SYSTEM-DESIGN-PHASES.md](../.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
+| [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](../.claude/modeling-contracts/principles/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems |
 | [VISION.md](../phase0/VISION.md) | Phase0 domain discovery vision |
 | [models/marklauter/github-wiki-manager/](../models/marklauter/github-wiki-manager/) | Complete reference model |
