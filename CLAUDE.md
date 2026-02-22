@@ -13,6 +13,7 @@ All durable output requested by the user is written as markdown files unless oth
 - **`principles/`** — core beliefs and philosophical prose that creators follow when producing content
 - **`governance/`** — verification rules that reviewers follow when checking content
 - **`forms/`** — structural contracts for artifacts. Each form defines the sections, ordering, and placeholder guidance for one artifact type. Forms are named after their matching structuring skill (e.g., `structuring-usecases` skill → `structuring-usecases.md` form).
+- **`../scripts/`** — deterministic helper scripts that agents call via Bash. Judgment stays in the agent; mechanics stay in the script.
 - Process documents at the root describe the design workflow.
 
 Read the matching form before writing any artifact. The form is the structural authority — same sections, same ordering. When a new artifact type is introduced, create a form in `.claude/modeling/forms/` and a corresponding structuring skill in `.claude/skills/`.
@@ -25,7 +26,7 @@ Read before writing reference documentation: `.claude/modeling/principles/writin
 
 ## Agents
 
-- **`designing-usecases`** at `.claude/agents/designing-usecases.md` — use case lens specialist. Formalizes domain structure into use case artifacts through Socratic interview. Takes a primary actor and conditional goal as input. Preloads philosophy, forms, and editorial skills.
+- **`designing-usecases`** at `.claude/agents/designing-usecases.md` — use case lens specialist. Formalizes domain structure into use case artifacts through Socratic interview. Takes a primary actor and conditional goal as input. Preloads philosophy, forms, preservation, and editorial contracts.
 
 ## Sample model
 
@@ -41,6 +42,7 @@ Read before writing reference documentation: `.claude/modeling/principles/writin
 - Invariant files: `invariants/{nn}-{slug}.md` (e.g., `invariants/01-source-repo-readonly.md`)
 - Index files: `{topic}/index.md` in each artifact folder (e.g., `actors/index.md`)
 - Note files: `notes/{ISO-datetime}-{slug}.md` (e.g., `notes/2026-02-21T1430-historian-as-skill.md`)
+- Todo files: `todos/{slug}.md` (e.g., `todos/stub-historian-actor.md`) — ephemeral, deleted when done
 - Glossary: `GLOSSARY.md` at model root
 - Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
 - Actors: capitalize role names (User, Orchestrator)

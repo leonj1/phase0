@@ -43,6 +43,8 @@ A use case model lives at `models/{owner}/{repo}/` and is organized into topic d
 - **`contexts/`** — one file per bounded context (`{nn}-{slug}.md`). Semantic boundaries, ubiquitous language, events produced and consumed.
 - **`events/`** — one file per domain event (`{nn}-{slug}.md`). Meaningful state transitions that cross context boundaries.
 - **`invariants/`** — one file per shared invariant (`{nn}-{slug}.md`). Domain rules that hold continuously across multiple use cases.
+- **`notes/`** — one file per observation (`{ISO-datetime}-{slug}.md`). Durable ideas, tensions, and questions that belong to the model's history.
+- **`todos/`** — one file per work item (`{slug}.md`). Ephemeral action items, deleted when done.
 - Each topic folder contains an **`index.md`** that indexes its artifacts. Gives agents enough context to select which full artifacts to read.
 - **`GLOSSARY.md`** — canonical vocabulary for the model.
 
@@ -118,6 +120,8 @@ See [SYSTEM-DESIGN-PHASES.md](.claude/modeling/SYSTEM-DESIGN-PHASES.md) for the 
 - [structuring-catalogs.md](.claude/modeling/forms/structuring-catalogs.md) — index documents
 - [structuring-glossaries.md](.claude/modeling/forms/structuring-glossaries.md) — glossary documents
 - [structuring-agents.md](.claude/modeling/forms/structuring-agents.md) — agent definition files
+- [structuring-notes.md](.claude/modeling/forms/structuring-notes.md) — note documents
+- [structuring-todos.md](.claude/modeling/forms/structuring-todos.md) — todo documents
 
 **Process:**
 

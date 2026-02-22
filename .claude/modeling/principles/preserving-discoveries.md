@@ -22,6 +22,8 @@ Every turn that produces a discovery produces a file write. The agent determines
 
 3. **Loose observation, question, or tangent** — write a note. Use `.claude/scripts/create-note.sh` to capture the discovery to `notes/` with enough context to map it back to the model.
 
+4. **Actionable work item** — write a todo. When a discovery implies concrete follow-up work — stub an actor, revise a scenario, reconcile a glossary term — capture it to `todos/{slug}.md`. The todo is ephemeral; it disappears when the work is done.
+
 ## Judgment
 
 Not every utterance is a discovery. The agent distinguishes between:
@@ -29,6 +31,7 @@ Not every utterance is a discovery. The agent distinguishes between:
 - Conversational scaffolding (clarifying questions, acknowledgments, restating for confirmation) — no write needed.
 - Refinements to existing understanding (sharper phrasing, better examples, revised scope) — update the working artifact.
 - New structural elements (a previously unknown actor, use case, event, invariant, or context boundary) — stub the new artifact.
+- Actionable follow-up work (stub a missing artifact, revise a scenario, add a glossary term) — write a todo.
 - Ideas that don't yet have a home (open questions, design tensions, hypotheses, cross-cutting observations) — write a note.
 
 ## Loading this skill
