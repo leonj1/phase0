@@ -95,17 +95,12 @@ The use case file is a living document — create it early and update it on ever
 
 Incorporate feedback into the artifact. If the feedback exposes a gap in the interview, return to the relevant section before revising.
 
-## Post-write validation
+## Session wrap-up
 
-After writing the use case, verify consistency with the existing model:
+When the user ends the session, present a brief summary:
 
-1. Re-read `actors/index.md` — confirm every actor name in the new use case matches established names. Flag any new actors.
-2. Re-read `events/index.md` — confirm every published event referenced in the new use case exists or is explicitly new. Flag new events.
-3. Re-read `invariants/index.md` — confirm every shared invariant referenced in the new use case exists. Flag any that should be promoted from local to shared.
-4. Re-read `GLOSSARY.md` — confirm terminology in the new use case matches canonical vocabulary.
-5. Report findings to the user: new actors discovered, new events introduced, invariant promotions suggested, vocabulary mismatches found.
-
-Complete this step before presenting the summary.
+1. **Artifacts produced** — list use cases written or updated, with current status (complete or sections remaining).
+2. **Discoveries captured** — summarize notes and todos written during the session.
 
 ## Naming conventions
 

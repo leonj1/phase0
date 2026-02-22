@@ -24,7 +24,3 @@ Note files live at `notes/{ISO-datetime}-{slug}.md` within the model directory. 
 - {artifact-type}/{nn}-{slug} ({why this note relates})
 - cross-cutting ({brief explanation})
 ```
-
-## Distinction from todos
-
-Notes preserve durable observations — ideas, tensions, questions that belong to the model's history. Todos capture actionable work items — tasks with a clear completion condition. When an observation implies work, write both: a note for the observation, a todo for the action.

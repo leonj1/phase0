@@ -25,6 +25,8 @@ Every turn that produces a discovery produces a file write. The agent determines
 
 4. **Actionable work item** — write a todo. When a discovery implies concrete follow-up work — stub an actor, revise a scenario, reconcile a glossary term — capture it to `todos/{slug}.md`. The todo is ephemeral; it disappears when the work is done.
 
+5. **Observation that implies work** — write both. When a single discovery is both a durable observation and actionable work, write a note for the observation and a todo for the action. Write the note first — the todo's References section points to the note.
+
 ## Judgment
 
 Not every utterance is a discovery. The agent distinguishes between:

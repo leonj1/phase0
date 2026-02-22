@@ -27,7 +27,3 @@ Todo files live at `todos/{slug}.md` within the model directory. One file per wo
 ## Lifecycle
 
 Todos are ephemeral. They exist to capture work that needs doing and disappear when the work is done. A completed todo is deleted outright. The artifact it pointed to is the durable record of the work.
-
-## Distinction from notes
-
-Notes preserve durable observations — ideas, tensions, questions that belong to the model's history. Todos capture actionable work items — tasks with a clear completion condition. When an observation implies work, write both: a note for the observation, a todo for the action.
