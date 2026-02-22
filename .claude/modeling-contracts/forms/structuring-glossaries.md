@@ -1,10 +1,8 @@
 # Structuring glossaries
 
-The glossary is a single file that defines every term with precise meaning that spans the model. Terms scoped to one bounded context live in that context's ubiquitous language section instead.
+The glossary is a single file at `GLOSSARY.md` in the model root. Terms scoped to one bounded context live in that context's ubiquitous language section instead.
 
 ## Structure
-
-The glossary is a single file that defines every term with precise meaning within the model. The glossary lives at `GLOSSARY.md` in the model root.
 
 ```markdown
 # Glossary

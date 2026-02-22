@@ -20,7 +20,7 @@ An actor's drive becomes its system prompt — not a job description, but a beha
 
 Traditional design produces specs that developers interpret. Phase0 produces a model that *is* the agent architecture — the actors are the agents, the drives are the prompts, the events are the wire protocol. No translation step.
 
-See [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](.claude/modeling-contracts/principles/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) for the full mapping from domain model to agent system.
+See [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](retired/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) for the full mapping from domain model to agent system.
 
 ## How it works
 
@@ -81,7 +81,7 @@ See the modeling principles: [grounding-models.md](.claude/modeling-contracts/pr
 
 3. **Start designing.** Tell the agent about a system you want to model. It will begin the interview process and guide you through each phase.
 
-The agent loads [grounding-models.md](.claude/modeling-contracts/principles/grounding-models.md), [modeling-usecases.md](.claude/modeling-contracts/principles/modeling-usecases.md), [structuring-usecases.md](.claude/modeling-contracts/forms/structuring-usecases.md), and [writing-documentation.md](.claude/modeling-contracts/principles/writing-documentation.md) before every session to maintain consistency across use cases.
+The agent loads modeling contracts automatically through skill injection — skills use `!`cat`` directives to inject contract content at activation time, so agents always have the latest principles and forms without manual loading.
 
 ## Sample model
 
@@ -89,12 +89,12 @@ A complete reference model is included at [models/marklauter/github-wiki-agent/]
 
 ## Design process
 
-The model is built in phases — sequential in tendency, not in practice. Discovery at any phase can revise earlier work.
+The model is built through three lenses — actor, use case, bounded context — that form a complete graph. Discovery through any lens can refocus to any other.
 
-1. **Establish principles** — Write PHILOSOPHY.md and TEMPLATE.md
-2. **Design individual use cases** — Socratic interviews, one at a time
-3. **Consolidate** — Extract shared actors, invariants, and domain events
-4. **Model the domain** — Formalize bounded contexts and domain events
+1. **Actor lens** — Discover who the system serves, their conditional goals, and the tensions that spawn supporting actors
+2. **Use case lens** — Design interactions one at a time through Socratic interviews
+3. **Bounded context lens** — Map where meanings partition and define protocols at crossing points
+4. **Consolidate** — Extract shared actors, invariants, and domain events
 5. **Refine** — Remove implementation leaks, verify cross-references, reconcile with reality
 
 See [SYSTEM-DESIGN-PHASES.md](.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md) for the full process guide.
@@ -108,7 +108,7 @@ See [SYSTEM-DESIGN-PHASES.md](.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md
 - [modeling-usecases.md](.claude/modeling-contracts/principles/modeling-usecases.md) — use case lens: invariants, obstacles, scenarios
 - [mapping-contexts.md](.claude/modeling-contracts/principles/mapping-contexts.md) — bounded context lens: boundaries, domain events
 - [writing-documentation.md](.claude/modeling-contracts/principles/writing-documentation.md) — tone, style, and editorial guidance
-- [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](.claude/modeling-contracts/principles/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) — how domain models become agentic systems
+- [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](retired/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) — how domain models become agentic systems
 
 **Forms** — structural contracts for artifact types:
 

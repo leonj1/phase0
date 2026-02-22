@@ -19,7 +19,7 @@ Actor files live at `actors/{nn}-{slug}.md` within the model directory. `{nn}` i
 
 ## Description
 
-{One paragraph. What this actor is, why it exists as a separate entity, and what behavioral trait defines it. For supporting actors, trace the genealogy — which tension between a primary actor's goal and reality demanded this actor? For abstract types, describe the shared behavioral trait that children inherit. For sub-systems, describe what capability the system depends on.}
+{One paragraph. What this actor is, why it exists as a separate entity, and what defines it. For abstract types, describe the shared behavioral trait that children inherit. For sub-systems, describe what capability the system depends on.}
 ```
 
 The sections below vary by category. Include the sections that match this actor's category.
@@ -29,7 +29,7 @@ The sections below vary by category. Include the sections that match this actor'
 ```markdown
 ## Goals
 
-{Life goals — who the actor wants to be. Aspirational and stable across all use cases.}
+{Life goals — who the actor wants to be. Stable across all use cases.}
 
 - {goal}
 
@@ -41,7 +41,7 @@ The sections below vary by category. Include the sections that match this actor'
 
 ## End goals
 
-{What the actor wants to accomplish, per use case. Each entry names the use case and states the desired end state.}
+{Per use case. Each entry names the use case and states the desired end state.}
 
 - use-cases/{nn}-{slug} — {desired end state for this use case}
 ```
@@ -65,7 +65,7 @@ The sections below vary by category. Include the sections that match this actor'
 
 ## Separation rationale
 
-{Why this actor exists separately. Name the drive that is insufficient to protect the primary actor's goal, and the drive this actor brings to fill that gap.}
+{Why this actor exists separately. Name the insufficient drive and the drive this actor brings.}
 
 ## Children
 
@@ -79,7 +79,7 @@ The sections below vary by category. Include the sections that match this actor'
 ```markdown
 ## Capabilities
 
-{What this sub-system provides to the system. This section replaces Drive — sub-systems have capabilities.}
+{What this sub-system provides. This section replaces Drive — sub-systems have capabilities, not drives.}
 
 - {capability}
 ```

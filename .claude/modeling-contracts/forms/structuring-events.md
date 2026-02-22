@@ -18,16 +18,16 @@ Event files live at `events/{nn}-{slug}.md` within the model directory. `{nn}` i
 
 ## Description
 
-{One paragraph. What happened and why it matters. State the fact in past tense — "The wiki directory has been populated..." — then explain the significance: what becomes possible, what other work this enables, where the model stands after this transition.}
+{One paragraph. What happened and why it matters. Past tense.}
 
 ## Payload
 
-{Data the event carries. Each item is a noun or noun phrase — the fact the event carries.}
+{Data the event carries. Each item is a noun or noun phrase.}
 
 - {datum}
 - {datum}
 
-## Notes
+## Notes (optional)
 
-- {Design decisions, open questions, cross-references to other events or use cases}
+- {Design decisions, open questions, cross-references. Omit this section when empty.}
 ```

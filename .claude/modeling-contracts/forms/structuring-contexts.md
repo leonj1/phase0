@@ -11,11 +11,11 @@ Context files live at `contexts/{nn}-{slug}.md` within the model directory. `{nn
 
 ## Purpose
 
-{One paragraph. What this bounded context owns — the region of the domain it governs. State the semantic boundary, the core responsibility, and any key preconditions or exclusions that distinguish this context from adjacent ones.}
+{One paragraph. What this bounded context owns.}
 
 ## Ubiquitous language
 
-{Terms with precise meaning within this context. Each term exists here because it means something specific that may differ from the same word in another context.}
+{Terms with precise meaning within this context.}
 
 - **{Term}** — {What it means within this context.}
 
@@ -27,13 +27,13 @@ Context files live at `contexts/{nn}-{slug}.md` within the model directory. `{nn
 
 ## Events produced
 
-{Domain events this context emits. The meaningful state transitions that other contexts may react to.}
+{Domain events this context emits.}
 
 - events/{nn}-{slug} ({EventName}) — {When it occurs and what it signifies.}
 
 ## Events consumed
 
-{Domain events this context reacts to. Events produced by other contexts that trigger or inform behavior here.}
+{Domain events this context reacts to.}
 
 - events/{nn}-{slug} ({EventName}) — {What this context does in response.}
 
@@ -45,7 +45,7 @@ Context files live at `contexts/{nn}-{slug}.md` within the model directory. `{nn
 - **Feeds:** contexts/{nn}-{slug} — {What this context provides and why the other context needs it.}
 - **Shares with:** contexts/{nn}-{slug} — {What is shared and the protocol that governs it.}
 
-## Notes
+## Notes (optional)
 
-- {Design decisions, open questions, cross-references to actors or invariants.}
+- {Design decisions, open questions, cross-references. Omit this section when empty.}
 ```

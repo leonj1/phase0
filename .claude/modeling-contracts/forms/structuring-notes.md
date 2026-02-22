@@ -1,6 +1,6 @@
 # Structuring notes
 
-A note file captures a loose observation, question, or tangent that surfaced during design work — enough context to map it back to the model, but not yet formalized into a structured artifact.
+A note file captures a durable observation, question, or tangent that surfaced during design work — enough context to map it back to the model. Notes remain in place even after their content has been used to produce other artifacts.
 
 ## Structure
 

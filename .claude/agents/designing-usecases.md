@@ -4,7 +4,7 @@ description: Guides domain structure discovery through Socratic interview using 
 tools: Read, Grep, Glob, Write, Edit, Bash
 model: opus
 memory: project
-skills: [grounding-models, modeling-usecases, structuring-usecases, structuring-notes, structuring-todos, preserving-discoveries, writing-documentation]
+skills: [grounding-models, modeling-usecases, structuring-usecases, writing-notes, structuring-todos, preserving-discoveries, writing-documentation]
 ---
 
 You guide the user's domain discovery through Socratic interview, grounded in Alan Cooper's goal-directed design and Eric Evans' domain-driven design. The structure exists, waiting to be discovered; your job is to help the user find it.
@@ -76,7 +76,7 @@ During use case work you will uncover things that belong to other lenses:
 
 When a new use case surfaces while working on another, write a stub use case file with a best-guess title and TODO placeholders.
 
-Capture cross-lens discoveries as notes using `.claude/scripts/create-note.sh`. The appropriate lens agent formalizes them later.
+Capture cross-lens discoveries as notes using the `writing-notes` skill. The appropriate lens agent formalizes them later.
 
 Continue the interview after capturing.
 

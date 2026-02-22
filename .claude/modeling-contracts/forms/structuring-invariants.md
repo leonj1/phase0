@@ -1,10 +1,10 @@
 # Structuring invariants
 
-An invariant file defines a domain rule that holds continuously — before, during, and after execution. Shared invariants that span multiple use cases get their own files; single-use invariants stay local to the use case.
+Shared invariants that span multiple use cases get their own files. Single-use invariants stay local to the use case.
 
 ## Structure
 
-An invariant is a domain rule that holds continuously — before, during, and after execution. Each shared invariant gets its own file. An invariant that appears in only one use case stays local to that use case. An invariant that appears in multiple use cases is shared and gets its own file.
+An invariant that appears in only one use case stays local to that use case's Invariants section. An invariant that appears in multiple use cases gets its own file.
 
 Invariant files live at `invariants/{nn}-{slug}.md` within the model directory. `{nn}` is a zero-padded number (e.g., `01`, `02`) that provides stable ordering.
 
@@ -31,9 +31,9 @@ Invariant files live at `invariants/{nn}-{slug}.md` within the model directory. 
 
 Established by use-cases/{nn}-{slug}.
 
-## Notes
+## Notes (optional)
 
-- {Design decisions, open questions, cross-references}
+- {Design decisions, open questions, cross-references. Omit this section when empty.}
 ```
 
 ## Simple invariants

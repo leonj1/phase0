@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Creates a note file following the structuring-notes contract.
+# Creates a note file following the note form (structuring-notes.md).
 # Usage: create-note.sh <model-dir> <slug> <topic> <context> <body> <references>
 #
 # Example:
@@ -24,20 +24,11 @@ NOTES_DIR="${MODEL_DIR}/notes"
 
 mkdir -p "$NOTES_DIR"
 
-cat > "${NOTES_DIR}/${FILENAME}" <<EOF
-# ${TOPIC}
-
-## Context
-
-${CONTEXT}
-
-## Body
-
-${BODY}
-
-## References
-
-${REFERENCES}
-EOF
+{
+  printf '# %s\n\n' "$TOPIC"
+  printf '## Context\n\n%s\n\n' "$CONTEXT"
+  printf '## Body\n\n%s\n\n' "$BODY"
+  printf '## References\n\n%s\n' "$REFERENCES"
+} > "${NOTES_DIR}/${FILENAME}"
 
 echo "${NOTES_DIR}/${FILENAME}"

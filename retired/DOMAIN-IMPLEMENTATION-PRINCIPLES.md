@@ -33,8 +33,8 @@ The orchestrator's "prompt" is the command file — the skill or slash command t
 Three categories, each with a distinct role:
 
 - **Agents** embody drives. They are supporting actors — their identity comes from the system prompt, which expresses a drive born from a tension on the primary actor's goal. An agent *is* an actor.
-- **Reference material** informs agents. Editorial guidance is rules ("prefer active voice"). Wiki instructions are a map ("the sidebar lives here, pages follow this naming convention"). Project conventions are constraints. None of these are capabilities — they are context an agent reads to do its work. Reference material is preloaded into agents via the `skills:` field as a delivery mechanism, but it is not conceptually a skill.
-- **Skills** are user-invocable workflows — the slash commands (`/init-wiki`, `/proofread-wiki`, `/save`). Each skill maps to a use case entry point. The user triggers them. The orchestrator executes them.
+- **Reference material** informs agents. Editorial guidance is rules ("prefer active voice"). Wiki instructions are a map ("the sidebar lives here, pages follow this naming convention"). Project conventions are constraints. None of these are capabilities — they are context an agent reads to do its work. Reference material lives in `.claude/modeling-contracts/` and is injected into agents via skills that use the `!`cat`` directive.
+- **Skills** are injection loaders and user-invocable workflows. Each skill's YAML front matter defines when it triggers. The body uses `!`cat`` to inject content from the modeling contracts at activation time. Skills carry no duplicated content — the modeling file is the single source of truth.
 
 Two agents can share the same reference material and produce different outputs because their drives differ. The creator reading editorial guidance produces pages. The proofreader reading the same guidance produces findings. The material is the same. The drive determines what happens.
 
@@ -94,24 +94,22 @@ The distinction matters: process events are prompt context passed through the or
 
 A **contract** is the atomic unit of modeling knowledge. Each contract has two expressions that share the same name:
 
-- The **modeling file** in `.claude/modeling-contracts/` (a principle, a form, or a governance rule) is the structural contract — it defines what to produce or what to verify.
-- The **skill file** in `.claude/skills/` is the behavioral contract — it defines who the agent becomes when it loads the skill.
+- The **modeling file** in `.claude/modeling-contracts/` (a principle, a form, or a governance rule) is the single source of truth — it defines what to produce or what to verify, and carries the authoritative prose.
+- The **skill file** in `.claude/skills/` is a thin loader — YAML front matter for triggering, plus a `!`cat`` directive that injects the modeling file's content at activation time. Skills carry no duplicated body content.
 
-Together, the structural contract and the behavioral contract form one complete obligation. Forms are communication contracts — they govern what the output looks like. Skills are behavioral contracts — they govern who you are while producing it. Governance rules, when they exist, are verification contracts — they govern how you check that the obligation was honored.
+The modeling file is the only place to edit contract content. The skill's YAML `description` is the source of truth for triggering language. Agents receive contract content by listing skills in their `skills:` array — the skill injects the modeling file when the agent loads.
 
-The three contract types cover the full lifecycle of an artifact: the skill shapes the agent's judgment, the form shapes the artifact's structure, and the governance rule shapes the review. Not every contract has all three expressions today. Most have a form and a skill. The `governance/` directory is the architectural placeholder for hard enforcement — verification rules that proofreaders apply to check whether contracts were honored. Until those rules exist, enforcement is soft: agents read contracts and follow them. The structure is ready for the moment soft compliance is not enough.
+Governance rules, when they exist, are verification contracts — they govern how you check that the obligation was honored. The `governance/` directory is the architectural placeholder for hard enforcement. Until those rules exist, enforcement is soft: agents read contracts and follow them. The structure is ready for the moment soft compliance is not enough.
 
-## Forms and skills are complementary contracts
+## Forms and skills serve different concerns
 
-Forms are communication contracts. Skills are behavioral contracts. Together they define the complete obligation: what an agent produces and who it is while producing it.
+Forms and behavioral principles are independently loadable concerns. A form defines the shape of an artifact — sections, ordering, placeholder guidance. A behavioral principle defines how to think about the domain — when invariants are continuous, why obstacles are goal threats, why steps express intent.
 
-A form defines the shape of an artifact — sections, ordering, placeholder guidance. It is structural authority. Any agent that writes a use case reads the use case form and follows it exactly. The form doesn't care who's writing. It cares what the output looks like.
+An agent writing a use case needs both: the behavioral principle to make good modeling decisions during the interview, and the form to produce a correctly shaped artifact. A governance agent reviewing a use case only needs the form — it's checking structure, not conducting discovery.
 
-A skill defines the behavioral stance an agent adopts — the goals, judgment, and responsibilities of a role. It is behavioral authority. The historian skill doesn't prescribe artifact structure. It prescribes when to write, what to capture, and how aggressively to preserve discoveries.
+The designing-usecases agent loads `structuring-usecases` (the form — what a use case file looks like) and `modeling-usecases` (the behavioral principle — how to think about use cases). One shapes the output. The other shapes the judgment.
 
-An agent loading a structuring skill and a behavioral skill is an actor who knows both what to produce and how to think while producing it. The designing-usecases agent loads `structuring-usecases` (the form contract — what a use case file looks like) and `modeling-usecases` (the behavioral contract — how to think about use cases). One shapes the output. The other shapes the judgment.
-
-Every structured artifact the system produces has a canonical form in `.claude/modeling-contracts/forms/`. The form defines the shape. Agents consume the form as a template. They never hardcode the structure. Adding a field to an artifact is a one-line change to the form, not a hunt through every agent that writes that artifact type.
+Every structured artifact the system produces has a canonical form in `.claude/modeling-contracts/forms/`. The form defines the shape. Agents consume the form through skill injection. Adding a field to an artifact is a one-line change to the form — every agent that loads the skill gets the update automatically.
 
 ## Actors map to skills
 

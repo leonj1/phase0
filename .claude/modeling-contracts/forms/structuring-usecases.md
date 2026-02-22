@@ -11,7 +11,7 @@ Use case files live at `use-cases/{nn}-{slug}.md` within the model directory. `{
 
 ## Goal
 
-{Desired end state the actor is trying to reach. Express the state of the world the actor wants to exist in. Goals are stable — they survive model upgrades, tool changes, and prompt rewrites.}
+{One paragraph.}
 
 ## Context
 
@@ -22,59 +22,45 @@ Use case files live at `use-cases/{nn}-{slug}.md` within the model directory. `{
 
 ## Actor responsibilities
 
-{Which actor owns each concern — what it produces, what it consumes, what judgment it applies. Internal data contracts between actors are defined here.}
-
 - **{actor-name}** — {what it owns, what it produces, what it consumes}
 
 ## Invariants
 
-{Domain rules that must hold continuously — before, during, and after this use case. An actor that violates an invariant mid-scenario has failed, even if the final output looks correct.}
-
-- {invariant}
+- {invariant statement}. Reference shared invariants by path when applicable.
 
 ## Success outcome
-
-{Observable state of the world when the goal is satisfied. Expressed in domain terms.}
 
 - {outcome}
 
 ## Failure outcome
 
-{Observable state when the goal remains unmet. What is preserved? What is the user told?}
-
 - {outcome}
 
 ## Scenario
 
-{Steps express intent and outcomes. "Wiki content is verified against current source" gives an actor room to find the best path. Step ordering reflects what the actor values — arrange the interaction so that the actor's values are protected at every point. Domain events (marked with -->) signal meaningful state transitions.}
-
-1. **{Actor}** — {Intent / outcome}
+1. **{Actor}** — {intent}
    --> {DomainEvent}
-2. **{Actor}** — {Intent / outcome}
-3. **{Actor}** — {Intent / outcome}
+2. **{Actor}** — {intent}
+3. **{Actor}** — {intent}
 
 ## Goal obstacles
 
-{Conditions that threaten goal satisfaction. Keyed to scenario steps. Describe what is at risk — "source code is unreachable." Each obstacle includes a recovery strategy: a way to protect the goal or degrade gracefully.}
+### Step {n}a — {threat}
 
-### {Step}a — {What threatens the goal}
-
-1. **{Actor}** — {Response}
-2. **{Actor}** — {Recovery or graceful degradation}
+1. **{Actor}** — {response}
+2. **{Actor}** — {recovery}
 
 ## Domain events
 
-{Events this use case produces. Published events cross bounded context boundaries or are observable to the user — each has its own file in events/. Internal events coordinate within this use case and are defined here only.}
-
 ### Published
 
-- **{EventName}** (events/{nn}-{slug}) — {when it occurs and what it signifies}
+- **{EventName}** (events/{nn}-{slug}) — {significance}
 
 ### Internal
 
-- **{EventName}** — {when it occurs and what it signifies}
+- **{EventName}** — {significance}
 
-## Notes
+## Notes (optional)
 
-- {Design decisions, open questions, cross-references to other use cases}
+- {Design decisions, open questions, cross-references. Omit this section when empty.}
 ```

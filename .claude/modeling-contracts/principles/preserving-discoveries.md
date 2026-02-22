@@ -20,7 +20,7 @@ Every turn that produces a discovery produces a file write. The agent determines
 
 2. **New artifact surfaces** — write a stub file. Use the matching structuring contract to create a minimal file with a best-guess title and TODO placeholders for each section. The artifact exists in the queue even if skeletal. Title and content will be revised later.
 
-3. **Loose observation, question, or tangent** — write a note. Use `.claude/scripts/create-note.sh` to capture the discovery to `notes/` with enough context to map it back to the model.
+3. **Loose observation, question, or tangent** — write a note using the `writing-notes` contract. Capture enough context to map the discovery back to the model.
 
 4. **Actionable work item** — write a todo. When a discovery implies concrete follow-up work — stub an actor, revise a scenario, reconcile a glossary term — capture it to `todos/{slug}.md`. The todo is ephemeral; it disappears when the work is done.
 
