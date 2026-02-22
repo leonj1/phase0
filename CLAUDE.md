@@ -48,10 +48,12 @@ Read before writing reference documentation: `.claude/modeling/principles/writin
 
 ## Ideas
 
-An **idea** is the atomic unit of modeling knowledge. Each idea has two expressions: a source-of-truth file in `.claude/modeling/` (a principle, a form, or a governance rule) and a skill file in `.claude/skills/` that agents load. Both share the same name.
+An **idea** is the atomic unit of modeling knowledge. Each idea has two expressions: a modeling file in `.claude/modeling/` (a principle, a form, or a governance rule) and a skill file in `.claude/skills/` that agents load. Both share the same name.
 
-- The **source-of-truth file** carries the full content: an H1 title, an opening description paragraph, and the body.
-- The **skill file** carries YAML front matter (`name`, `description`) that replaces the H1 title and opening paragraph. The body begins at the first line of net-new content — no heading, no repeated description.
+- The **skill file** carries YAML front matter (`name`, `description`) and the body. The `description` is optimized for skill triggering and is the source of truth for the opening paragraph.
+- The **modeling file** carries an H1 title, an opening description paragraph that matches the skill's YAML `description` exactly, and the same body.
+
+When the skill description and the modeling description diverge, the skill description wins — but meaningful content in the modeling description that would be lost must be preserved by inserting it into the body as a new section.
 
 When editing an idea, update both files and verify both before reporting complete.
 
