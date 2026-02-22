@@ -90,13 +90,29 @@ But agents within a use case need to exchange information. This happens through 
 
 The distinction matters: process events are prompt context passed through the orchestrator. Domain events are artifacts written to disk or external systems. Never pass raw subagent output between agents — transform it into a structured event first. The template is the form. The filled-in content is the memo.
 
-## Forms are the single source of truth for artifact structure
+## Forms and skills are complementary contracts
 
-Every structured artifact the system produces — config files, reports, issue bodies, domain events — has a canonical form in `.claude/forms/`. The form defines the shape. Scripts and agents consume the form as a template, substituting placeholders with real values. They never hardcode the structure.
+Forms are communication contracts. Skills are behavioral contracts. Together they define the complete obligation: what an agent produces and who it is while producing it.
 
-This means adding a field to a config file is a one-line change to the form, not a hunt through every script that writes configs. It means an issue body filed by UC-02 and a fallback file written when GitHub is down share the same structure because they share the same form. It means a human can read the form and know exactly what the artifact looks like without tracing through code.
+A form defines the shape of an artifact — sections, ordering, placeholder guidance. It is structural authority. Any agent that writes a use case reads the use case form and follows it exactly. The form doesn't care who's writing. It cares what the output looks like.
 
-If a script writes a structured file, it should `sed` a form. If an agent produces a structured report, its prompt should include the form as a template. The form is the schema. The output is an instance.
+A skill defines the behavioral stance an agent adopts — the goals, judgment, and responsibilities of a role. It is behavioral authority. The historian skill doesn't prescribe artifact structure. It prescribes when to write, what to capture, and how aggressively to preserve discoveries.
+
+An agent loading a structuring skill and a behavioral skill is an actor who knows both what to produce and how to think while producing it. The designing-usecases agent loads `structuring-usecases` (the form contract — what a use case file looks like) and `modeling-usecases` (the behavioral contract — how to think about use cases). One shapes the output. The other shapes the judgment.
+
+Every structured artifact the system produces has a canonical form in `.claude/modeling/forms/`. The form defines the shape. Agents consume the form as a template. They never hardcode the structure. Adding a field to an artifact is a one-line change to the form, not a hunt through every agent that writes that artifact type.
+
+## Actors map to skills
+
+An actor is a role with goals and responsibilities. A skill is a behavioral contract an agent loads. The mapping is natural — when an agent loads a skill, it adopts that actor's hat, taking on the role's goals, judgment, and responsibilities.
+
+A single agent can embody multiple actors by loading multiple skills. The designing-usecases agent that also loads a historian skill becomes an interviewer, a modeler, and a historian simultaneously — each role's goals active at once. It doesn't pass messages between separate agents for each concern. It wears all the hats.
+
+The actor document describes the role — goals, responsibilities, tensions. The skill file encodes the behavioral contract an agent loads to inhabit that role. The actor is the "who and why." The skill is the "how."
+
+This streamlines execution. Claude's architecture gives each subagent its own context window. Splitting complementary roles across agents burns context on coordination — structured messages, relay through the orchestrator, synthesizing results. When a single agent holds multiple roles, the work happens in one context window with zero handoff overhead.
+
+Not every actor should become a skill. The mapping works when drives are complementary. A creator and a proofreader have opposing drives (production vs critique) and must remain separate agents. An interviewer and a historian have aligned drives (discovery and preservation) and combine naturally. The test: if the drives would compromise each other in a single context, separate them. If they reinforce each other, combine them.
 
 ## Markdown is the wire format
 

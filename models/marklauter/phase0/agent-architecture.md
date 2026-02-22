@@ -66,7 +66,16 @@ Two modes, controlled by the user with guidance from the facilitator:
 
 The `designing-usecases` agent (`.claude/agents/designing-usecases.md`) is the first implementation. It combines the use case lens Socratic interviewer and use case writer into a single agent — will split as the architecture matures. Preloads four skills: `grounding-models`, `modeling-usecases`, `structuring-usecases`, `writing-documentation`.
 
+## Actors map to skills
+
+An actor is a role — goals, drives, responsibilities. A skill is a behavioral contract an agent loads. Loading a skill is putting on a hat. The agent adopts the actor's goals and judgment alongside its own.
+
+This resolves the proliferation problem in the architecture above. The designing-usecases agent doesn't need separate Socratic interviewer, use case writer, and historian agents. It loads three skills and embodies all three roles in one context window. No coordination overhead, no message passing, no context burned on relay.
+
+The boundary is drive compatibility. Complementary drives (discovery + preservation, interviewing + modeling) combine in one agent. Opposing drives (production vs critique) stay in separate agents. A creator who can also proofread will compromise between the two. A modeler who also captures notes will not — both drives serve the same goal.
+
+This also answers the artifact contract question: yes, specialists and the Librarian share the same structuring skills. The skill is the contract. Who loads it determines what they do with it — the specialist writes artifacts, the Librarian maintains indexes. Same hat, different wearer.
+
 ## Open questions
 
-- Do lens specialists share artifact contract skills with the Librarian? (e.g., the use case writer and the Librarian both need the use case contract.)
 - Where does the Librarian's work get triggered — by the synthesizer, the facilitator, or both?
