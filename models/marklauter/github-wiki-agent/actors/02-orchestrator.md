@@ -18,17 +18,17 @@ Coordination.
 
 ## Children
 
-- [Commissioning orchestrator](03-commissioning-orchestrator.md) — commissioning
-- [Oversight orchestrator](04-oversight-orchestrator.md) — oversight
-- [Fulfillment orchestrator](05-fulfillment-orchestrator.md) — fulfillment
-- [Alignment orchestrator](06-alignment-orchestrator.md) — alignment
+- 03-commissioning-orchestrator — commissioning
+- 04-oversight-orchestrator — oversight
+- 05-fulfillment-orchestrator — fulfillment
+- 06-alignment-orchestrator — alignment
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/01-populate-new-wiki
+- use-cases/02-review-wiki-quality
+- use-cases/03-revise-wiki
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Notes
 

@@ -13,24 +13,24 @@ Owns the provisioning and decommissioning of project workspaces. A workspace is 
 
 ## Use cases
 
-- [Provision workspace](../use-cases/05-provision-workspace.md) — Clone repos and write config for a new project workspace.
-- [Decommission workspace](../use-cases/06-decommission-workspace.md) — Remove a project workspace with safety checks for unpublished work.
+- use-cases/05-provision-workspace — Clone repos and write config for a new project workspace.
+- use-cases/06-decommission-workspace — Remove a project workspace with safety checks for unpublished work.
 
 ## Events produced
 
-- [WorkspaceProvisioned](../events/06-workspace-provisioned.md) — Raised when repos have been cloned and the workspace config has been written.
-- [WorkspaceDecommissioned](../events/07-workspace-decommissioned.md) — Raised when a workspace has been safely removed after passing all safety checks.
+- events/06-workspace-provisioned — Raised when repos have been cloned and the workspace config has been written.
+- events/07-workspace-decommissioned — Raised when a workspace has been safely removed after passing all safety checks.
 
 ## Events consumed
 
-This context consumes no events from other contexts. Workspace provisioning and decommissioning are initiated directly by the [User](../actors/01-user.md).
+This context consumes no events from other contexts. Workspace provisioning and decommissioning are initiated directly by the actors/01-user.
 
 ## Integration points
 
-- **Feeds:** [Wiki Creation](01-wiki-creation.md) — workspace must exist before wiki creation.
-- **Feeds:** [Editorial Review](02-editorial-review.md) — workspace must exist before editorial operations.
-- **Feeds:** [Wiki Revision](03-wiki-revision.md) — workspace must exist before revision operations.
-- **Feeds:** [Drift Detection](04-drift-detection.md) — workspace must exist before drift detection.
+- **Feeds:** 01-wiki-creation — workspace must exist before wiki creation.
+- **Feeds:** 02-editorial-review — workspace must exist before editorial operations.
+- **Feeds:** 03-wiki-revision — workspace must exist before revision operations.
+- **Feeds:** 04-drift-detection — workspace must exist before drift detection.
 
 ## Notes
 

@@ -2,9 +2,9 @@
 
 ## Context
 
-- **Bounded context:** [Wiki Revision](../contexts/03-wiki-revision.md)
-- **Producer:** [Revise Wiki](../use-cases/03-revise-wiki.md)
-- **Consumers:** [User](../actors/01-user.md) (remediation results are ready for review)
+- **Bounded context:** contexts/03-wiki-revision
+- **Producer:** use-cases/03-revise-wiki
+- **Consumers:** actors/01-user (remediation results are ready for review)
 - **Materialization:** Summary presented to user; wiki files corrected on disk; GitHub issues closed
 
 ## Description

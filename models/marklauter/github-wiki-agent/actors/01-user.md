@@ -26,21 +26,21 @@ The User is the primary actor in every use case. Every wiki operation begins wit
 
 ## End goals
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md) — a new wiki is populated with complete documentation grounded in source code.
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md) — every real documentation problem is exposed as an actionable GitHub issue.
-- [Revise wiki](../use-cases/03-revise-wiki.md) — recommended corrections are applied so the wiki content is fixed.
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md) — every factual claim is brought in line with current sources of truth.
-- [Provision workspace](../use-cases/05-provision-workspace.md) — a workspace is set up so wiki operations can begin.
-- [Decommission workspace](../use-cases/06-decommission-workspace.md) — the workspace is removed cleanly, with no silent loss of unpublished work.
+- use-cases/01-populate-new-wiki — a new wiki is populated with complete documentation grounded in source code.
+- use-cases/02-review-wiki-quality — every real documentation problem is exposed as an actionable GitHub issue.
+- use-cases/03-revise-wiki — recommended corrections are applied so the wiki content is fixed.
+- use-cases/04-sync-wiki-with-source-changes — every factual claim is brought in line with current sources of truth.
+- use-cases/05-provision-workspace — a workspace is set up so wiki operations can begin.
+- use-cases/06-decommission-workspace — the workspace is removed cleanly, with no silent loss of unpublished work.
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
-- [Provision workspace](../use-cases/05-provision-workspace.md)
-- [Decommission workspace](../use-cases/06-decommission-workspace.md)
+- use-cases/01-populate-new-wiki
+- use-cases/02-review-wiki-quality
+- use-cases/03-revise-wiki
+- use-cases/04-sync-wiki-with-source-changes
+- use-cases/05-provision-workspace
+- use-cases/06-decommission-workspace
 
 ## Notes
 

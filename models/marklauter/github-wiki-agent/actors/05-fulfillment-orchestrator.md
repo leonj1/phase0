@@ -18,7 +18,7 @@ Fulfillment.
 
 ## Abstract parent
 
-[Orchestrator](02-orchestrator.md)
+02-orchestrator
 
 ## Separation rationale
 
@@ -26,7 +26,7 @@ The coordination drive shared by all orchestrators is insufficient to protect th
 
 ## Appears in
 
-- [Revise wiki](../use-cases/03-revise-wiki.md)
+- use-cases/03-revise-wiki
 
 ## Notes
 

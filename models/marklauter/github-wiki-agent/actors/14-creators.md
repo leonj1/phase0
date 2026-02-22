@@ -18,7 +18,7 @@ Production.
 
 ## Abstract parent
 
-[Content Mutator](13-content-mutator.md)
+13-content-mutator
 
 ## Agent type
 
@@ -30,7 +30,7 @@ The wiki modification drive shared by all content mutators is insufficient to pr
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
+- use-cases/01-populate-new-wiki
 
 ## Notes
 

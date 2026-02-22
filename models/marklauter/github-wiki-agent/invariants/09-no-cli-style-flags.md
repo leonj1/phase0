@@ -10,12 +10,12 @@ This system is conversational. Flags bypass the judgment and confirmation that m
 
 ## Scope
 
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Decommission workspace](../use-cases/06-decommission-workspace.md)
+- use-cases/03-revise-wiki
+- use-cases/06-decommission-workspace
 
 ## Origin
 
-Established by [Provision workspace](../use-cases/05-provision-workspace.md).
+Established by use-cases/05-provision-workspace.
 
 ## Notes
 

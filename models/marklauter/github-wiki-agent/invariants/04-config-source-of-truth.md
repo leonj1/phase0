@@ -10,17 +10,17 @@ A single, scannable artifact anchors workspace identity. This eliminates ambigui
 
 ## Scope
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
-- [Provision workspace](../use-cases/05-provision-workspace.md)
-- [Decommission workspace](../use-cases/06-decommission-workspace.md)
+- use-cases/01-populate-new-wiki
+- use-cases/02-review-wiki-quality
+- use-cases/03-revise-wiki
+- use-cases/04-sync-wiki-with-source-changes
+- use-cases/05-provision-workspace
+- use-cases/06-decommission-workspace
 
 ## Origin
 
-Established by [Provision workspace](../use-cases/05-provision-workspace.md).
+Established by use-cases/05-provision-workspace.
 
 ## Notes
 
-- Also a sub-rule of [Multi-repo workspace architecture](01-multi-repo-workspace-architecture.md).
+- Also a sub-rule of 01-multi-repo-workspace-architecture.

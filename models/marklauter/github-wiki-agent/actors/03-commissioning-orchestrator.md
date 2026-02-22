@@ -18,7 +18,7 @@ Commissioning.
 
 ## Abstract parent
 
-[Orchestrator](02-orchestrator.md)
+02-orchestrator
 
 ## Separation rationale
 
@@ -26,7 +26,7 @@ The coordination drive shared by all orchestrators is insufficient to protect th
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
+- use-cases/01-populate-new-wiki
 
 ## Notes
 

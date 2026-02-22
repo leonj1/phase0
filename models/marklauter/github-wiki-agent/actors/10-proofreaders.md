@@ -25,7 +25,7 @@ Critique.
 
 ## Abstract parent
 
-[Assessor](08-assessor.md)
+08-assessor
 
 ## Agent type
 
@@ -37,7 +37,7 @@ The read-only judgment drive shared by all assessors is insufficient to protect 
 
 ## Appears in
 
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
+- use-cases/02-review-wiki-quality
 
 ## Notes
 

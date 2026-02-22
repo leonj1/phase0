@@ -21,9 +21,9 @@ Git provides repository cloning, change detection, and the post-hoc approval gat
 
 ## Used by
 
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md) — approval gate via diff/revert.
-- [Provision workspace](../use-cases/05-provision-workspace.md) — cloning.
-- [Decommission workspace](../use-cases/06-decommission-workspace.md) — safety checks for unpublished work.
+- use-cases/04-sync-wiki-with-source-changes — approval gate via diff/revert.
+- use-cases/05-provision-workspace — cloning.
+- use-cases/06-decommission-workspace — safety checks for unpublished work.
 
 ## Notes
 

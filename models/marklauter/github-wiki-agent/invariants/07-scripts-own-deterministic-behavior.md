@@ -10,14 +10,14 @@ Scripts are testable, predictable, and immune to prompt drift. Separating determ
 
 ## Scope
 
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Provision workspace](../use-cases/05-provision-workspace.md)
-- [Decommission workspace](../use-cases/06-decommission-workspace.md)
+- use-cases/02-review-wiki-quality
+- use-cases/03-revise-wiki
+- use-cases/05-provision-workspace
+- use-cases/06-decommission-workspace
 
 ## Origin
 
-Established by [Provision workspace](../use-cases/05-provision-workspace.md).
+Established by use-cases/05-provision-workspace.
 
 ## Notes
 

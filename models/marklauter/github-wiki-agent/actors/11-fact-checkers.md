@@ -18,7 +18,7 @@ Verification.
 
 ## Abstract parent
 
-[Assessor](08-assessor.md)
+08-assessor
 
 ## Separation rationale
 
@@ -26,7 +26,7 @@ The read-only judgment drive shared by all assessors is insufficient to protect 
 
 ## Appears in
 
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Notes
 

@@ -10,13 +10,13 @@ A one-to-one mapping between repository and workspace eliminates conflict. Provi
 
 ## Scope
 
-- [Provision workspace](../use-cases/05-provision-workspace.md)
-- [Decommission workspace](../use-cases/06-decommission-workspace.md)
+- use-cases/05-provision-workspace
+- use-cases/06-decommission-workspace
 
 ## Origin
 
-Established by [Provision workspace](../use-cases/05-provision-workspace.md).
+Established by use-cases/05-provision-workspace.
 
 ## Notes
 
-- Also a sub-rule of [Multi-repo workspace architecture](01-multi-repo-workspace-architecture.md).
+- Also a sub-rule of 01-multi-repo-workspace-architecture.

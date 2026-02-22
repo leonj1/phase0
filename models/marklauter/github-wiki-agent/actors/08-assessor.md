@@ -18,16 +18,16 @@ Read-only judgment.
 
 ## Children
 
-- [Researchers](09-researchers.md) — comprehension
-- [Proofreaders](10-proofreaders.md) — critique
-- [Fact-checkers](11-fact-checkers.md) — verification
-- [Deduplicator](12-deduplicator.md) — filtering
+- 09-researchers — comprehension
+- 10-proofreaders — critique
+- 11-fact-checkers — verification
+- 12-deduplicator — filtering
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/01-populate-new-wiki
+- use-cases/02-review-wiki-quality
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Notes
 

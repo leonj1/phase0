@@ -26,7 +26,7 @@ The comprehension drive of researchers is insufficient to protect the User's goa
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
+- use-cases/01-populate-new-wiki
 
 ## Notes
 

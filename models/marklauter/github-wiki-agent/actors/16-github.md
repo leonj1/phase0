@@ -22,10 +22,10 @@ GitHub provides repository hosting and — through GitHub Issues — a durable e
 
 ## Used by
 
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md) — issue filing and deduplication.
-- [Revise wiki](../use-cases/03-revise-wiki.md) — issue reading, closing, and labeling.
-- [Provision workspace](../use-cases/05-provision-workspace.md) — repository validation.
+- use-cases/02-review-wiki-quality — issue filing and deduplication.
+- use-cases/03-revise-wiki — issue reading, closing, and labeling.
+- use-cases/05-provision-workspace — repository validation.
 
 ## Notes
 
-- GitHub Issues serves as the message queue between the editorial review context ([Wiki creation](../contexts/01-wiki-creation.md)) and the wiki revision context ([Wiki revision](../contexts/03-wiki-revision.md)). The issue body schema is the published protocol that crosses this boundary.
+- GitHub Issues serves as the message queue between the editorial review context (contexts/01-wiki-creation) and the wiki revision context (contexts/03-wiki-revision). The issue body schema is the published protocol that crosses this boundary.

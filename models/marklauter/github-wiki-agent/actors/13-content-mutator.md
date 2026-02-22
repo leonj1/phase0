@@ -23,14 +23,14 @@ Wiki modification.
 
 ## Children
 
-- [Creators](14-creators.md) — production
-- [Correctors](15-correctors.md) — remediation
+- 14-creators — production
+- 15-correctors — remediation
 
 ## Appears in
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/01-populate-new-wiki
+- use-cases/03-revise-wiki
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Notes
 

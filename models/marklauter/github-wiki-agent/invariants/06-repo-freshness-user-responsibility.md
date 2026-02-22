@@ -10,14 +10,14 @@ Freshness is a user intent — sometimes operating against a known-stale snapsho
 
 ## Scope
 
-- [Populate new wiki](../use-cases/01-populate-new-wiki.md)
-- [Review wiki quality](../use-cases/02-review-wiki-quality.md)
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/01-populate-new-wiki
+- use-cases/02-review-wiki-quality
+- use-cases/03-revise-wiki
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Origin
 
-Established by [Provision workspace](../use-cases/05-provision-workspace.md).
+Established by use-cases/05-provision-workspace.
 
 ## Notes
 

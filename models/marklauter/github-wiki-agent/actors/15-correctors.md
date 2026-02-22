@@ -18,7 +18,7 @@ Remediation.
 
 ## Abstract parent
 
-[Content Mutator](13-content-mutator.md)
+13-content-mutator
 
 ## Agent type
 
@@ -30,8 +30,8 @@ The wiki modification drive shared by all content mutators is insufficient to pr
 
 ## Appears in
 
-- [Revise wiki](../use-cases/03-revise-wiki.md)
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/03-revise-wiki
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Notes
 

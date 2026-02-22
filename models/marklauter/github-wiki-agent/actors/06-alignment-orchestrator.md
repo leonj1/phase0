@@ -18,7 +18,7 @@ Alignment.
 
 ## Abstract parent
 
-[Orchestrator](02-orchestrator.md)
+02-orchestrator
 
 ## Separation rationale
 
@@ -26,7 +26,7 @@ The coordination drive shared by all orchestrators is insufficient to protect th
 
 ## Appears in
 
-- [Sync wiki with source changes](../use-cases/04-sync-wiki-with-source-changes.md)
+- use-cases/04-sync-wiki-with-source-changes
 
 ## Notes
 

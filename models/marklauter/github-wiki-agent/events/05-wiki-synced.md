@@ -2,9 +2,9 @@
 
 ## Context
 
-- **Bounded context:** [Drift Detection](../contexts/04-drift-detection.md)
-- **Producer:** [Sync Wiki with Source Changes](../use-cases/04-sync-wiki-with-source-changes.md)
-- **Consumers:** [User](../actors/01-user.md) (sync results are ready for review)
+- **Bounded context:** contexts/04-drift-detection
+- **Producer:** use-cases/04-sync-wiki-with-source-changes
+- **Consumers:** actors/01-user (sync results are ready for review)
 - **Materialization:** Sync report on disk at `workspace/artifacts/{owner}/{repo}/reports/sync/{date-time}-sync-report.md`
 
 ## Description
