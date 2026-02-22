@@ -43,7 +43,7 @@ A use case model lives at `models/{owner}/{repo}/` and is organized into topic d
 - **`contexts/`** — one file per bounded context (`{nn}-{slug}.md`). Semantic boundaries, ubiquitous language, events produced and consumed.
 - **`events/`** — one file per domain event (`{nn}-{slug}.md`). Meaningful state transitions that cross context boundaries.
 - **`invariants/`** — one file per shared invariant (`{nn}-{slug}.md`). Domain rules that hold continuously across multiple use cases.
-- **`catalogs/`** — one index file per topic (`{topic}.md`). Gives agents enough context to select which full artifacts to read.
+- Each topic folder contains an **`index.md`** that indexes its artifacts. Gives agents enough context to select which full artifacts to read.
 - **`GLOSSARY.md`** — canonical vocabulary for the model.
 
 Each artifact type has a structural contract in `.claude/modeling/forms/`.
@@ -83,7 +83,7 @@ The agent loads [grounding-models.md](.claude/modeling/principles/grounding-mode
 
 ## Sample model
 
-A complete reference model is included at [models/marklauter/github-wiki-agent/](models/marklauter/github-wiki-agent/). It models a GitHub wiki management system across 8 use cases, 6 bounded contexts, 7 domain events, and 17 actors. Start with [catalogs/use-cases.md](models/marklauter/github-wiki-agent/catalogs/use-cases.md) for an overview.
+A complete reference model is included at [models/marklauter/github-wiki-agent/](models/marklauter/github-wiki-agent/). It models a GitHub wiki management system across 8 use cases, 6 bounded contexts, 7 domain events, and 17 actors. Start with [use-cases/index.md](models/marklauter/github-wiki-agent/use-cases/index.md) for an overview.
 
 ## Design process
 
@@ -115,7 +115,7 @@ See [SYSTEM-DESIGN-PHASES.md](.claude/modeling/SYSTEM-DESIGN-PHASES.md) for the 
 - [structuring-contexts.md](.claude/modeling/forms/structuring-contexts.md) — bounded context documents
 - [structuring-events.md](.claude/modeling/forms/structuring-events.md) — domain event documents
 - [structuring-invariants.md](.claude/modeling/forms/structuring-invariants.md) — invariant documents
-- [structuring-catalogs.md](.claude/modeling/forms/structuring-catalogs.md) — catalog documents
+- [structuring-catalogs.md](.claude/modeling/forms/structuring-catalogs.md) — index documents
 - [structuring-glossaries.md](.claude/modeling/forms/structuring-glossaries.md) — glossary documents
 - [structuring-agents.md](.claude/modeling/forms/structuring-agents.md) — agent definition files
 
