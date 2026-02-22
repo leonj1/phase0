@@ -22,7 +22,7 @@ Every term that has precise meaning within the use case model. If a word means s
 
 **Deduplication** — Comparing new findings against existing open GitHub issues labeled `documentation` to prevent filing duplicates; only drops a finding when it clearly matches an existing open issue about the same problem.
 
-**Domain event** — A meaningful state transition that crosses a bounded context boundary or is exposed to the user as an observable outcome; named, defined, and cataloged in the [events](catalogs/events.md) catalog.
+**Domain event** — A meaningful state transition that crosses a bounded context boundary or is exposed to the user as an observable outcome; named, defined, and indexed in events/index.
 
 **Drift** — A factual claim in the wiki that no longer matches its source of truth; the core domain problem the system exists to solve.
 

@@ -38,10 +38,10 @@ Every agent reads:
 
 1. The form for the artifact type being produced (the structuring skill that matches the output).
 2. Existing artifacts of the same type in the model directory, to maintain naming consistency, voice, and level of detail.
-3. Catalog files in the model directory, to understand what already exists and how artifacts cross-reference each other.
+3. Index files (`{topic}/index.md`) in the model directory, to understand what already exists and how artifacts cross-reference each other.
 4. `GLOSSARY.md` in the model directory, for canonical vocabulary.
 
-Agent-specific additions follow these four. For example, a use case agent also reads invariant files and domain context files. A bounded context agent also reads the events catalog.
+Agent-specific additions follow these four. For example, a use case agent also reads invariant files and domain context files. A bounded context agent also reads the events index.
 
 The section format:
 
@@ -52,7 +52,7 @@ Read these artifacts before starting work:
 
 1. The [structuring-{type}] form for {artifact type} structure.
 2. Existing {artifact type} files in the model directory — maintain naming consistency, voice, and level of detail.
-3. Catalog files in the model directory — understand what exists and how artifacts reference each other.
+3. Index files (`{topic}/index.md`) in the model directory — understand what exists and how artifacts reference each other.
 4. [GLOSSARY.md] in the model directory — canonical vocabulary.
 5. {Agent-specific addition with rationale.}
 ```
@@ -106,10 +106,10 @@ Cross-validation against existing model artifacts. The agent performs these chec
 
 Every agent verifies:
 
-1. Re-read catalog files in the model directory. Verify the new artifact's entries and cross-references are consistent with existing catalogs.
-2. Verify actor names match the actors catalog. Every actor referenced in the new artifact appears in the catalog with the same spelling and role.
-3. Verify domain event names match the events catalog. Every event referenced in the new artifact uses the canonical PastTense name.
-4. Verify invariant references match the invariants catalog. Every shared invariant referenced in the new artifact has a corresponding file.
+1. Re-read index files in the model directory. Verify the new artifact's entries and cross-references are consistent with existing indexes.
+2. Verify actor names match `actors/index.md`. Every actor referenced in the new artifact appears in the index with the same spelling and role.
+3. Verify domain event names match `events/index.md`. Every event referenced in the new artifact uses the canonical PastTense name.
+4. Verify invariant references match `invariants/index.md`. Every shared invariant referenced in the new artifact has a corresponding file.
 5. Verify terminology matches `GLOSSARY.md`. Key terms use the canonical spelling and meaning.
 
 Report any inconsistencies to the user before the session ends. Propose corrections to the user. Report every mismatch.
@@ -122,7 +122,7 @@ File naming and term naming rules relevant to this agent's output type.
 
 - File naming pattern with example.
 - Term naming conventions (e.g., PastTense for events, capitalized role names for actors).
-- All cross-references use relative markdown links.
+- All cross-references use the `{namespace}/{nn}-{slug}` identifier format.
 
 ## Rules
 

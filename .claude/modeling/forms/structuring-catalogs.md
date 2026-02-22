@@ -4,13 +4,13 @@ Structural contract for catalog documents — index format, entry layout, cross-
 
 ## Location
 
-A catalog is an index of artifacts that share a type. Each topic folder in the model has a matching catalog file under `catalogs/`. The catalog gives agents enough context to select which full artifacts to read.
+Each topic folder in the model contains an `index.md` that indexes the artifacts in that folder. The index gives agents enough context to select which full artifacts to read.
 
 ```
-models/{owner}/{repo}/catalogs/{topic}.md
+models/{owner}/{repo}/{topic}/index.md
 ```
 
-Where `{topic}` matches the folder name: `actors`, `contexts`, `events`, `invariants`, `use-cases`.
+Where `{topic}` is one of: `actors`, `contexts`, `events`, `invariants`, `use-cases`.
 
 ## Structure
 
@@ -21,17 +21,17 @@ Where `{topic}` matches the folder name: `actors`, `contexts`, `events`, `invari
 
 ## Entries
 
-- [{Name}](../topic/nn-slug.md) — {What it signifies, in one sentence.}
-  {Cross-references to related artifacts as relative markdown links.}
+- {nn}-{slug} — {What it signifies, in one sentence.}
+  {Cross-references to related artifacts as paths.}
 ```
 
 ## Entry format
 
 Each entry is a bullet with:
 
-1. **Link** — display name and relative path to the artifact file
+1. **Identifier** — the file's `{nn}-{slug}` (no extension, no namespace — the index is already in the folder)
 2. **Description** — one sentence describing what the artifact signifies — its meaning in the model
-3. **Cross-references** — related artifacts from other topic folders, as relative markdown links. The cross-reference labels vary by artifact type:
+3. **Cross-references** — related artifacts from other topic folders, using the `{namespace}/{nn}-{slug}` identifier format. The cross-reference labels vary by artifact type:
 
 ### Use cases
 
@@ -61,8 +61,8 @@ Entries are ordered by numeric prefix, matching the file ordering in the topic f
 
 ## Referencing style
 
-All cross-references use relative markdown links. Reference artifacts by their display name with a link to their path.
+Sibling artifacts (same folder) use the bare `{nn}-{slug}` identifier. Cross-topic references use the full `{namespace}/{nn}-{slug}` path. No markdown link syntax — the path is the identifier.
 
 ```markdown
-Producer: [Populate new wiki](../use-cases/01-populate-new-wiki.md).
+Producer: use-cases/01-populate-new-wiki.
 ```

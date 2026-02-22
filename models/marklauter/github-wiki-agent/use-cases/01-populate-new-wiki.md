@@ -13,7 +13,7 @@ A project's empty wiki is populated with a complete, well-structured set of docu
 
 ## Actor responsibilities
 
-See also: [Actors catalog](../catalogs/actors.md) for full actor definitions, drives, and the appearance matrix.
+See also: actors/index for full actor definitions, drives, and the appearance matrix.
 
 Each actor has a single drive. Separation exists because no single drive can protect all the concerns at play.
 
@@ -27,7 +27,7 @@ Each actor has a single drive. Separation exists because no single drive can pro
 
 ## Invariants
 
-See also: [Invariants catalog](../catalogs/invariants.md)
+See also: invariants/index
 
 - **New wikis only.** The wiki directory must contain no content pages. Structural files (Home.md, _Sidebar.md, _Footer.md) do not count as content. If content pages exist, `/init-wiki` refuses to operate. The system does not delete existing content — the user owns destructive actions.
 - **Source code is the single source of truth.** Every claim in a wiki page must be grounded in the actual source code. No page may be authored from the agent's training data alone. Creators must read the relevant source files before writing.

@@ -19,7 +19,7 @@ No agents are involved. The [User](../actors/01-user.md) drives the interaction 
 
 ## Invariants
 
-See also: [Invariants catalog](../catalogs/invariants.md)
+See also: invariants/index
 
 - **Decommissioning never provisions.** `/down` will not create, modify, or initialize any workspace state. Provisioning is exclusively the concern of [Provision workspace](05-provision-workspace.md).
 - **Unpublished work is never silently destroyed.** If the wiki working tree has uncommitted changes or unpushed commits, the system must inform the user and require explicit confirmation before proceeding. The system never skips the safety check.

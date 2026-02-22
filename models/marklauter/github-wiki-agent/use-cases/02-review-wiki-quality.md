@@ -13,7 +13,7 @@ Every real problem in the wiki — inaccuracies against source code, structural 
 
 ## Actor responsibilities
 
-See also: [Actors catalog](../catalogs/actors.md) for full actor definitions, drives, and the appearance matrix.
+See also: actors/index for full actor definitions, drives, and the appearance matrix.
 
 Each actor has a single drive. Separation exists because no single drive can protect all the concerns at play. The proofreader's critique drive is the complement to the production drive in [Populate new wiki](01-populate-new-wiki.md) — not because the creator is malicious, but because a single drive cannot serve competing concerns.
 
@@ -34,7 +34,7 @@ Each actor has a single drive. Separation exists because no single drive can pro
 
 ## Invariants
 
-See also: [Invariants catalog](../catalogs/invariants.md)
+See also: invariants/index
 
 - **Review-only — never edit wiki files.** The proofreader's output is exclusively GitHub issues (or local fallback files when [GitHub](../actors/16-github.md) is unreachable). A proofreader that "helpfully" fixes a problem it found has violated this invariant. This is the structural separation between review (critique drive) and [Revise wiki](03-revise-wiki.md) (remediation drive).
 - **One issue per finding.** Findings are never grouped into a single issue. Each issue is independently actionable. This matters downstream — [Revise wiki](03-revise-wiki.md) consumes individual issues.

@@ -13,7 +13,7 @@ Every factual claim in the wiki accurately reflects the current state of its sou
 
 ## Actor responsibilities
 
-See also: [Actors catalog](../catalogs/actors.md) for full actor definitions, drives, and the appearance matrix.
+See also: actors/index for full actor definitions, drives, and the appearance matrix.
 
 Each actor has a single drive. Separation exists because no single drive can protect all the concerns at play. Sync wiki with source changes is an abbreviated [Review wiki quality](02-review-wiki-quality.md) + [Revise wiki](03-revise-wiki.md) without the GitHub Issues message queue in the middle — the fact-checker replaces the proofreader's accuracy lens, and the corrector is reused from [Revise wiki](03-revise-wiki.md)'s remediation drive.
 
@@ -25,7 +25,7 @@ Each actor has a single drive. Separation exists because no single drive can pro
 
 ## Invariants
 
-See also: [Invariants catalog](../catalogs/invariants.md)
+See also: invariants/index
 
 - **Accuracy only — no editorial changes.** Sync wiki with source changes corrects facts. It does not tighten prose, fix grammar, reorganize structure, or standardize terminology. A fact-checker that flags a style problem has exceeded its mandate. A corrector that "improves" a sentence while correcting a fact has exceeded its mandate. Structure, line, and copy concerns belong to [Review wiki quality](02-review-wiki-quality.md).
 - **No new pages.** Sync wiki with source changes syncs existing pages. It does not create new wiki pages, even if source code introduces features not covered by any existing page. Flagging coverage gaps is [Review wiki quality](02-review-wiki-quality.md)'s structure lens concern, not sync wiki with source changes'.

@@ -25,17 +25,22 @@ Read before writing reference documentation: `.claude/modeling/principles/writin
 
 ## Agents
 
-- **`designing-usecases`** at `.claude/agents/designing-usecases.md` — use case lens specialist. Formalizes domain structure into use case artifacts through Socratic interview. Takes a primary actor and conditional goal as input. Preloads philosophy, template, and editorial skills.
+- **`designing-usecases`** at `.claude/agents/designing-usecases.md` — use case lens specialist. Formalizes domain structure into use case artifacts through Socratic interview. Takes a primary actor and conditional goal as input. Preloads philosophy, forms, and editorial skills.
 
 ## Sample model
 
-`models/marklauter/github-wiki-manager/` contains a complete reference model (GitHub wiki management system) demonstrating all artifact types. Use it as a guide for structure, voice, and level of detail.
+`models/marklauter/github-wiki-agent/` contains a complete reference model (GitHub wiki management system) demonstrating all artifact types. Use it as a guide for structure, voice, and level of detail.
 
 ## Conventions
 
 - Model output directory: `models/{owner}/{repo}/` (mirrors GitHub URL structure)
-- Use case files: `UC-{id}-{slug}.md` (e.g., `UC-01-populate-new-wiki.md`)
-- Domain context files: `domains/DC-{id}-{slug}.md`
+- Actor files: `actors/{nn}-{slug}.md` (e.g., `actors/01-user.md`)
+- Use case files: `use-cases/{nn}-{slug}.md` (e.g., `use-cases/01-populate-new-wiki.md`)
+- Context files: `contexts/{nn}-{slug}.md` (e.g., `contexts/01-wiki-creation.md`)
+- Event files: `events/{nn}-{slug}.md` (e.g., `events/01-wiki-populated.md`)
+- Invariant files: `invariants/{nn}-{slug}.md` (e.g., `invariants/01-source-repo-readonly.md`)
+- Index files: `{topic}/index.md` in each artifact folder (e.g., `actors/index.md`)
+- Glossary: `GLOSSARY.md` at model root
 - Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
 - Actors: capitalize role names (User, Orchestrator)
 - Every artifact follows its matching form exactly — same sections, same ordering

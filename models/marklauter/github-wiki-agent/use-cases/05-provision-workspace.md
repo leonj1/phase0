@@ -21,7 +21,7 @@ No agents are involved. The [User](../actors/01-user.md) drives the interaction 
 
 ## Invariants
 
-See also: [Invariants catalog](../catalogs/invariants.md)
+See also: invariants/index
 
 - **Provisioning never tears down.** `/up` will not remove, modify, or overwrite an existing workspace. Teardown is exclusively the concern of [Decommission workspace](06-decommission-workspace.md).
 - **Both repos must pre-exist on [GitHub](../actors/16-github.md).** The source repository and its wiki repository must both exist on [GitHub](../actors/16-github.md) before provisioning can complete. The wiki must have its Home page created via the [GitHub](../actors/16-github.md) UI — no CLI or API endpoint exists to create a wiki programmatically.

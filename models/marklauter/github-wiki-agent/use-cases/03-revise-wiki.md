@@ -13,7 +13,7 @@ Every actionable documentation problem tracked in GitHub Issues has its recommen
 
 ## Actor responsibilities
 
-See also: [Actors catalog](../catalogs/actors.md) for full actor definitions, drives, and the appearance matrix.
+See also: actors/index for full actor definitions, drives, and the appearance matrix.
 
 Each actor has a single drive. Separation exists because no single drive can protect all the concerns at play.
 
@@ -23,7 +23,7 @@ Each actor has a single drive. Separation exists because no single drive can pro
 
 ## Invariants
 
-See also: [Invariants catalog](../catalogs/invariants.md)
+See also: invariants/index
 
 - **Remediate, never create.** Correctors apply corrections to existing wiki content. They do not add new pages, new sections, or substantial new content. If a structural issue's recommendation calls for adding a new section, the corrector applies it. But the corrector never generates content beyond what the recommendation describes.
 - **Only close what you fixed.** An issue is closed only when the recommended correction has been applied to the wiki file and the edit tool reported success. An issue closed without the fix applied is a violation. This is the structural guarantee that issue closure tracks actual remediation.
