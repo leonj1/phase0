@@ -39,8 +39,8 @@ Case study: the wiki-agent model (6 use cases, 6 bounded contexts, 7 domain even
 
 ### Source material
 
-- `.claude/modeling-contracts/principles/mapping-contexts.md` -- bounded contexts over shared models, protocols at crossing points
-- `.claude/modeling-contracts/principles/grounding-models.md` -- domain events
+- `.claude/modeling-contracts/principles/context-lens.md` -- bounded contexts over shared models, protocols at crossing points
+- `.claude/modeling-contracts/principles/modeling-vocabulary.md` -- domain events
 - `models/marklauter/github-wiki-manager/domains/` -- all 6 domain context files (DC-01 through DC-06)
 - `models/marklauter/github-wiki-manager/domains/DOMAIN-EVENTS.md` -- the 7 published events
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- bounded contexts table
@@ -78,8 +78,8 @@ Case study: the wiki-agent model (6 use cases, 6 bounded contexts, 7 domain even
 
 ### Source material
 
-- `.claude/modeling-contracts/principles/modeling-usecases.md` -- invariants as continuous constraints, obstacles as threats to the goal
-- `.claude/modeling-contracts/principles/discovering-actors.md` -- value conditions drive system design
+- `.claude/modeling-contracts/principles/usecase-lens.md` -- invariants as continuous constraints, obstacles as threats to the goal
+- `.claude/modeling-contracts/principles/actor-lens.md` -- value conditions drive system design
 - `models/marklauter/github-wiki-manager/UC-04-sync-wiki-with-source-changes.md` -- invariants, goal obstacles, failure outcome, recovery strategies
 - `models/marklauter/github-wiki-manager/SHARED-INVARIANTS.md` -- cross-cutting invariants
 

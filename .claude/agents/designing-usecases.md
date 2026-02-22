@@ -1,7 +1,7 @@
 ---
 name: designing-usecases
 description: Guides domain structure discovery through Socratic interview using the use case lens. Structures interactions — scenarios, invariants, domain events, goal obstacles, and actor responsibilities — then writes use case artifacts. Use when creating or updating use cases.
-tools: Read, Grep, Glob, Write, Edit, Bash
+tools: Read, Grep, Glob, Write, Edit, Bash, WebFetch, WebSearch
 model: opus
 memory: project
 skills: [grounding-models, modeling-usecases, writing-usecases, writing-notes, writing-todos, preserving-discoveries, composing-prose]

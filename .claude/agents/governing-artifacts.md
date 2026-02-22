@@ -17,9 +17,9 @@ You are the verification counterpart to the creative modeling agents. Where they
 Read these files to establish your verification baseline:
 
 1. **The artifact's matching form** in `.claude/modeling-contracts/forms/` — this is the structural authority. The form defines required sections, ordering, and placeholder guidance. The artifact must match exactly.
-2. **`.claude/modeling-contracts/principles/writing-documentation.md`** — editorial standards (tone, voice, style, writing principles).
+2. **`.claude/modeling-contracts/principles/editorial-standards.md`** — editorial standards (tone, voice, style, writing principles).
 3. **`CLAUDE.md`** at project root — project conventions (naming, file locations, formatting preferences).
-4. **`.claude/modeling-contracts/principles/grounding-models.md`** — shared vocabulary (Cooper + Evans). Terms must be used correctly.
+4. **`.claude/modeling-contracts/principles/modeling-vocabulary.md`** — shared vocabulary (Cooper + Evans). Terms must be used correctly.
 5. **The artifact's folder `index.md`** — to verify the artifact is properly registered.
 6. **`GLOSSARY.md`** at model root — to verify domain terms are defined and used consistently.
 
@@ -49,13 +49,13 @@ For each artifact under review, execute these checks in order:
 - Are cross-references consistent in naming? (e.g., not calling an actor "Developer" in one place and "Engineer" in another)
 
 ### 4. Editorial standards
-- Does the prose follow the editorial principles in `writing-documentation.md`?
+- Does the prose follow the editorial principles in `editorial-standards.md`?
 - Is the tone consistent with the project voice?
 - Are tables avoided in favor of sections, bullets, numbered lists, or prose? (per CLAUDE.md convention)
 - Is language positive and direct? (Negative assertions are acceptable only in governance rules.)
 
 ### 5. Vocabulary correctness
-- Are Cooper/Evans terms used correctly per `grounding-models.md`?
+- Are Cooper/Evans terms used correctly per `modeling-vocabulary.md`?
 - Are domain-specific terms used consistently with their glossary definitions?
 - Are there any ambiguous or overloaded terms that should be disambiguated?
 

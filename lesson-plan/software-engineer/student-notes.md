@@ -90,9 +90,9 @@ Remember: look for contradictions in language. What word means different things 
 
 ### Further reading
 
-- `modeling-usecases.md` -- invariants as continuous constraints, scenario steps express intent
-- `grounding-models.md` -- domain events, markdown as wire format
-- `mapping-contexts.md` -- bounded contexts over shared models
+- `usecase-lens.md` -- invariants as continuous constraints, scenario steps express intent
+- `modeling-vocabulary.md` -- domain events, markdown as wire format
+- `context-lens.md` -- bounded contexts over shared models
 - `DOMAIN-MODEL-ARTIFACTS.md` -- what artifacts to produce and when they emerge
 - `models/marklauter/github-wiki-manager/domains/` -- all six bounded contexts and the domain events catalog
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- how bounded contexts and events fit into the catalog

@@ -29,7 +29,7 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 ### Source material
 
-- discovering-actors.md, "Goals are conditional" section
+- actor-lens.md, "Goals are conditional" section
 - VISION.md, "Conditional Goals: The Foundational Concept" section
 
 ---
@@ -62,8 +62,8 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 ### Source material
 
-- grounding-models.md, "Primary actors have goals; supporting actors have drives"
-- discovering-actors.md, "Goal conditions create tensions; tensions spawn supporting actors" through "Goal conflicts spawn actors"
+- modeling-vocabulary.md, "Primary actors have goals; supporting actors have drives"
+- actor-lens.md, "Goal conditions create tensions; tensions spawn supporting actors" through "Goal conflicts spawn actors"
 - VISION.md, "The Entry Point: Actors and Goals, From First Principles" (includes the full elevator derivation table)
 
 ---
@@ -97,7 +97,7 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 - VISION.md, "The Natural Group Process" section (all four rounds)
 - VISION.md, "Why Socratic Extraction Works"
-- grounding-models.md, "Extract, don't invent"
+- modeling-vocabulary.md, "Extract, don't invent"
 
 ---
 
@@ -130,4 +130,4 @@ Four lessons shared across all tracks. These build the conceptual vocabulary tha
 
 - usecase.md (full document)
 - models/marklauter/github-wiki-manager/UC-01-populate-new-wiki.md
-- modeling-usecases.md, "Scenario steps express intent" and "Obstacles are threats to the goal"
+- usecase-lens.md, "Scenario steps express intent" and "Obstacles are threats to the goal"

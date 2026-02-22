@@ -3,7 +3,7 @@ name: composing-prose
 description: Writing prose, proofreading, reviewing tone, editing for style, improving clarity. Loads editorial principles, tone, and style guidelines for producing or reviewing any prose output.
 ---
 
-!`cat .claude/modeling-contracts/principles/writing-documentation.md`
+!`cat .claude/modeling-contracts/principles/editorial-standards.md`
 
 ## When to apply
 

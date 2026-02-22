@@ -34,7 +34,7 @@ Running example: an elevator system. Case study: the wiki-agent model at `models
 
 ### Source material
 
-- `discovering-actors.md` -- "Goals are conditional," the derivation chain, and why value conditions drive system design
+- `actor-lens.md` -- "Goals are conditional," the derivation chain, and why value conditions drive system design
 - `phase0/VISION.md` -- "Conditional Goals: The Foundational Concept," the full elevator derivation table
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- the User's goals section
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- User goals and experience goals, actor appearance matrix
@@ -69,7 +69,7 @@ Running example: an elevator system. Case study: the wiki-agent model at `models
 
 ### Source material
 
-- `discovering-actors.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors"
+- `actor-lens.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors"
 - `phase0/VISION.md` -- "Round 3: What goes wrong?", "The Entry Point: Actors and Goals, From First Principles" (includes the elevator derivation table and chain)
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- Proofreaders section (four editorial lenses), separation rationale for Content Mutators
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- domain description, actor drives paragraph
@@ -107,5 +107,5 @@ Running example: an elevator system. Case study: the wiki-agent model at `models
 ### Source material
 
 - `phase0/VISION.md` -- "The Natural Group Process" (all four rounds), "Who Holds the Threads?" (the historian role), "The Agentic Architecture," "Why Socratic Extraction Works"
-- `grounding-models.md` -- "Extract, don't invent"
+- `modeling-vocabulary.md` -- "Extract, don't invent"
 - `SYSTEM-DESIGN-PHASES.md` -- "On backtracking"
