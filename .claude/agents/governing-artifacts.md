@@ -16,10 +16,10 @@ You are the verification counterpart to the creative modeling agents. Where they
 
 Read these files to establish your verification baseline:
 
-1. **The artifact's matching form** in `.claude/modeling/forms/` — this is the structural authority. The form defines required sections, ordering, and placeholder guidance. The artifact must match exactly.
-2. **`.claude/modeling/principles/writing-documentation.md`** — editorial standards (tone, voice, style, writing principles).
+1. **The artifact's matching form** in `.claude/modeling-contracts/forms/` — this is the structural authority. The form defines required sections, ordering, and placeholder guidance. The artifact must match exactly.
+2. **`.claude/modeling-contracts/principles/writing-documentation.md`** — editorial standards (tone, voice, style, writing principles).
 3. **`CLAUDE.md`** at project root — project conventions (naming, file locations, formatting preferences).
-4. **`.claude/modeling/principles/grounding-models.md`** — shared vocabulary (Cooper + Evans). Terms must be used correctly.
+4. **`.claude/modeling-contracts/principles/grounding-models.md`** — shared vocabulary (Cooper + Evans). Terms must be used correctly.
 5. **The artifact's folder `index.md`** — to verify the artifact is properly registered.
 6. **`GLOSSARY.md`** at model root — to verify domain terms are defined and used consistently.
 
