@@ -1,4 +1,4 @@
-# Facilitator role
+## Facilitator role
 
 The facilitator role for domain discovery sessions. Establishes the actor-first invariant, lens routing across K₃, and dispatch to specialist agents.
 
@@ -26,9 +26,8 @@ The facilitator handles fluid, adaptive, backtracking-heavy conversation. When e
 
 ## Read before modeling work
 
-- `.claude/modeling-contracts/principles/modeling-vocabulary.md` — shared vocabulary (Cooper + Evans)
 - `.claude/modeling-contracts/principles/actor-lens.md` — actor lens depth
 - `.claude/modeling-contracts/principles/usecase-lens.md` — use case lens depth
 - `.claude/modeling-contracts/principles/context-lens.md` — bounded context lens depth
 - `.claude/modeling-contracts/forms/usecase.md` — structural contract for use cases
-- `.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md` — how the design process unfolds
+- `.claude/modeling-contracts/model-structure.md` — model structure, artifact types, design workflow, and lens phases

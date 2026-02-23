@@ -267,7 +267,7 @@ The use-case-designer-agent repo becomes a domain discovery system where use cas
 
 ### Immediate Next Steps
 
-1. **Formalize this vision** into guidance documents that parallel the existing `SYSTEM-DESIGN-PHASES.md` but cover the full discovery lifecycle.
+1. **Formalize this vision** into guidance documents that parallel the existing `design-cycle.md` but cover the full discovery lifecycle.
 2. **Design the Actor Discovery Agent** first — the noun-refinement process (qualify → refine → separate) is concrete enough to build now and provides the clearest bridge to the existing use-case-designer.
 3. **Restructure the repo** to reflect that use-case design is one capability within domain discovery, not the whole system.
 4. **Eat our own dogfood** — use domain discovery to discover its own bounded contexts, actors, and use cases.

@@ -283,7 +283,7 @@ Check your work: does every actor referenced in your SE01 integration map and SE
 ### Further reading
 
 - `.claude/modeling-contracts/DOMAIN-MODEL-ARTIFACTS.md` -- artifact definitions, relationship map, emergence timing
-- `.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md` -- the 5 phases of model design
+- `design-cycle.md` -- the three lenses and their phases
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- entry point for navigation
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- actor definitions and appearance matrix
 - `models/marklauter/github-wiki-manager/domains/DOMAIN-EVENTS.md` -- published events

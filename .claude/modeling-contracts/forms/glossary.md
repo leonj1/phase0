@@ -1,4 +1,4 @@
-# Structuring glossaries
+## Structuring glossaries
 
 The glossary is a single file at `GLOSSARY.md` in the model root. Terms scoped to one bounded context live in that context's ubiquitous language section instead.
 

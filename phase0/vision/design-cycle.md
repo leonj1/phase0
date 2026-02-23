@@ -26,8 +26,6 @@ The actor lens is the entry point. All design starts here because everything els
 
 ### Use case lens
 
-> **Open:** The internal phases of this lens have not been developed yet.
-
 What interactions does the design demand?
 
 The use case lens examines the actors, goals, and tensions produced by the actor lens and asks: what does the system actually need to do? Use cases are not invented — they fall out. "The Dispatcher assigns routes" is not something you design; it is something the domain experts have been doing, and now you have given it a name.
@@ -35,8 +33,6 @@ The use case lens examines the actors, goals, and tensions produced by the actor
 Each use case describes one goal pursued by one primary actor. It is a desired end state and the conditions under which that state is achieved, threatened, or failed.
 
 ### Bounded context lens
-
-> **Open:** The internal phases of this lens have not been developed yet.
 
 Where do meanings partition, and what facts cross those boundaries?
 

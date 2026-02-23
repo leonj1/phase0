@@ -1,4 +1,4 @@
-# Modeling vocabulary
+## Modeling vocabulary
 
 The shared vocabulary for domain modeling — goals, drives, tensions, conditional goals, invariants, and domain events. Grounded in Alan Cooper's goal-directed design and Eric Evans' domain-driven design. Lens-specific depth lives in actor-lens, usecase-lens, and context-lens.
 

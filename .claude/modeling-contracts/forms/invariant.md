@@ -1,4 +1,4 @@
-# Structuring invariants
+## Structuring invariants
 
 Shared invariants that span multiple use cases get their own files. Single-use invariants stay local to the use case.
 

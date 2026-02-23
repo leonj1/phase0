@@ -1,4 +1,4 @@
-# Structuring events
+## Structuring events
 
 A domain event file records a meaningful state transition — what happened, what context produced it, who consumes it, and what data it carries.
 

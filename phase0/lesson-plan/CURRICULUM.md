@@ -111,7 +111,7 @@ The curriculum draws from these documents in the repository:
 | [context-lens.md](../.claude/modeling-contracts/principles/context-lens.md) | Bounded context lens — boundaries, protocols |
 | [usecase.md](../.claude/modeling-contracts/forms/usecase.md) | Structural contract for use cases |
 | [DOMAIN-MODEL-ARTIFACTS.md](../.claude/modeling-contracts/DOMAIN-MODEL-ARTIFACTS.md) | What artifacts to produce and when |
-| [SYSTEM-DESIGN-PHASES.md](../.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md) | How the design process unfolds |
+| [design-cycle.md](../vision/design-cycle.md) | How the design process unfolds |
 | [DOMAIN-IMPLEMENTATION-PRINCIPLES.md](../.claude/modeling-contracts/principles/DOMAIN-IMPLEMENTATION-PRINCIPLES.md) | How domain models become agentic systems |
 | [VISION.md](../phase0/VISION.md) | Phase0 domain discovery vision |
 | [models/marklauter/github-wiki-manager/](../models/marklauter/github-wiki-manager/) | Complete reference model |

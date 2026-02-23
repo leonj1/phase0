@@ -322,7 +322,7 @@ Use the wiki-agent USE-CASE-CATALOG.md as a structural reference.
 ### Further reading
 
 - `DOMAIN-MODEL-ARTIFACTS.md` -- full descriptions of every artifact type and when each emerges
-- `SYSTEM-DESIGN-PHASES.md` -- the five phases in detail, including what triggers backtracking at each phase
+- `design-cycle.md` -- the three lenses, their phases, and the K₃ feedback loop
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- the reference catalog to use as a structural model
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- reference actor catalog showing consolidation
 - `models/marklauter/github-wiki-manager/SHARED-INVARIANTS.md` -- reference shared invariants showing extraction

@@ -1,4 +1,4 @@
-# Structuring contexts
+## Structuring contexts
 
 A context file defines one bounded context — the semantic region it governs, the ubiquitous language within it, and its integration points with other contexts through domain events.
 

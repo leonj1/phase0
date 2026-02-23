@@ -113,7 +113,7 @@ Students already know how to build software. This track teaches them domain-driv
 ### Source material
 
 - `DOMAIN-MODEL-ARTIFACTS.md` -- artifact types, relationships, emergence points
-- `SYSTEM-DESIGN-PHASES.md` -- the 5 phases and backtracking
+- `design-cycle.md` -- the three lenses and the K₃ feedback loop
 - `models/marklauter/github-wiki-manager/USE-CASE-CATALOG.md` -- reference catalog
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- reference actor catalog
 - `models/marklauter/github-wiki-manager/SHARED-INVARIANTS.md` -- reference shared invariants

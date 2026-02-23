@@ -1,4 +1,4 @@
-# Use case lens
+## Use case lens
 
 The use case lens examines what interactions the design demands. Depth on continuous invariants, goal obstacles with recovery strategies, intent-driven scenarios, step ordering by value, actor responsibilities, and observable outcomes.
 

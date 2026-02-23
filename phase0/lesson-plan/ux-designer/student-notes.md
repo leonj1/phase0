@@ -289,4 +289,4 @@ Count what you surfaced: how many primary actors? How many value conditions? How
 
 - `phase0/VISION.md` -- "The Natural Group Process" (all four rounds), "Who Holds the Threads?" (the historian role), "Why Socratic Extraction Works"
 - `.claude/modeling-contracts/principles/modeling-vocabulary.md` -- "Extract, don't invent"
-- `.claude/modeling-contracts/SYSTEM-DESIGN-PHASES.md` -- "On backtracking"
+- `design-cycle.md` -- "On backtracking"

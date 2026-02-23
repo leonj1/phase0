@@ -1,4 +1,4 @@
-# Structuring use cases
+## Structuring use cases
 
 A use case file captures one goal pursued by one primary actor — the desired end state, the scenario that achieves it, the invariants that constrain it, and the obstacles that threaten it.
 

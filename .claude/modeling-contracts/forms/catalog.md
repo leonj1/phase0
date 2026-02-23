@@ -1,4 +1,4 @@
-# Structuring catalogs
+## Structuring catalogs
 
 Each topic folder contains an `index.md` that gives agents enough context to select which full artifacts to read — a one-sentence description per entry with cross-references to related artifacts.
 

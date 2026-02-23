@@ -108,4 +108,4 @@ Running example: an elevator system. Case study: the wiki-agent model at `models
 
 - `phase0/VISION.md` -- "The Natural Group Process" (all four rounds), "Who Holds the Threads?" (the historian role), "The Agentic Architecture," "Why Socratic Extraction Works"
 - `modeling-vocabulary.md` -- "Extract, don't invent"
-- `SYSTEM-DESIGN-PHASES.md` -- "On backtracking"
+- `design-cycle.md` -- "On backtracking"

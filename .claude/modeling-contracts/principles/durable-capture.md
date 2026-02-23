@@ -1,4 +1,4 @@
-# Durable capture
+## Durable capture
 
 The preservation contract for durable capture during design work. Every discovery — refinement, new artifact, loose observation, or actionable work item — is written to file in the turn it occurs.
 

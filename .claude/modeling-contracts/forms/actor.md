@@ -1,4 +1,4 @@
-# Structuring actors
+## Structuring actors
 
 An actor file captures who participates in the system and why. The form handles three categories — primary actors, supporting actors, and sub-systems — each with category-specific sections that reflect their distinct relationship to the system.
 

@@ -1,4 +1,4 @@
-# Structuring todos
+## Structuring todos
 
 A todo file captures a concrete, actionable work item that surfaced during design — specific enough for an agent or future session to pick up without additional context. Todos are ephemeral and deleted when the work is done.
 

@@ -1,4 +1,4 @@
-# Actor lens
+## Actor lens
 
 The actor lens discovers who the system serves and why each participant exists. Depth on conditional goals, value conditions, the tensions that spawn supporting actors, actor genealogy, and the single-responsibility principle for actors.
 

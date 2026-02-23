@@ -1,4 +1,4 @@
-# Editorial standards
+## Editorial standards
 
 Writing principles, tone, and style guidelines for producing or reviewing any prose output in the phase0 system.
 
@@ -17,9 +17,14 @@ Writing principles, tone, and style guidelines for producing or reviewing any pr
 
 Authoritative, declarative, polished. The voice of a practitioner who has done this — confident, precise, decisive.
 
+## Output format
+
+All durable output is written as markdown files unless otherwise specified.
+
 ## Style guidelines
 
 - Prefer bullets, numbered lists, or prose over tables.
 - Positive assertions in principles, forms, and instructions. Negative assertions belong to governance and proofreaders.
 - Em dash (`—`) for parenthetical breaks, definitions, and appositives. Use the em dash character, not double hyphens (`--`).
 - Avoid bold. Headings, bullets, and numbered lists already carry structure — bold adds visual noise without changing how LLMs process the content.
+- Capitalize actor role names in prose (User, Orchestrator).

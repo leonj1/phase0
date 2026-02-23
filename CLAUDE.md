@@ -1,67 +1,50 @@
 # CLAUDE.md
 
-Use case modeling agent. Designs use case models through goal-directed Socratic interviews grounded in Alan Cooper's goal-oriented design and Eric Evans' domain-driven design.
-
-## Output
-
-All durable output requested by the user is written as markdown files unless otherwise specified. Prefer prose, bulleted and numbered lists over tables.
+Domain discovery and design system. Guides a domain expert from an empty whiteboard to an implementation-ready system model through goal-directed Socratic dialogue. Three lenses — actor, use case, bounded context — form a complete graph (K₃) across which discoveries flow freely. Grounded in Alan Cooper's goal-directed design and Eric Evans' domain-driven design. The main conversation is the facilitator; specialist agents formalize what the conversation reveals.
 
 ## Modeling
 
 `.claude/modeling-contracts/` contains the instruction set for domain modeling.
 
-- **`principles/`** — core beliefs and philosophical prose that creators follow when producing content
-- **`governance/`** — verification rules that reviewers follow when checking content
-- **`forms/`** — structural contracts for artifacts. Each form defines the sections, ordering, and placeholder guidance for one artifact type. Forms are pure structure — no philosophy, no creation mechanics. They serve both reading and writing.
-- **`../scripts/`** — deterministic helper scripts that agents call via Bash. Judgment stays in the agent; mechanics stay in the script. Always use relative paths (e.g., `bash .claude/scripts/create-note.sh`) to match permission patterns in `settings.json`.
+- `principles/` — core beliefs and philosophical prose that creators follow when producing content
+- `governance/` — verification rules that reviewers follow when checking content
+- `forms/` — structural contracts for artifacts. Each form defines the sections, ordering, and placeholder guidance for one artifact type. Forms are pure structure — no philosophy, no creation mechanics. They serve both reading and writing.
+- `../scripts/` — deterministic helper scripts that agents call via Bash. Judgment stays in the agent; mechanics stay in the script. Always use relative paths (e.g., `bash .claude/scripts/create-note.sh`) to match permission patterns in `settings.json`.
 - Process documents at the root describe the design workflow.
 
 Read the matching form before writing any artifact. The form is the structural authority — same sections, same ordering. When a new artifact type is introduced, create a form in `.claude/modeling-contracts/forms/`, a creation script in `.claude/scripts/`, and corresponding reading and writing skills in `.claude/skills/`.
 
-Consult before writing durable prose: `.claude/modeling-contracts/principles/editorial-standards.md` (skill: `composing-prose`)
-
-## Facilitation
-
 @.claude/modeling-contracts/principles/facilitator-role.md
+
+@.claude/modeling-contracts/principles/modeling-vocabulary.md
+
+@.claude/modeling-contracts/principles/durable-capture.md
+
+@.claude/modeling-contracts/principles/editorial-standards.md
+
+@.claude/modeling-contracts/model-structure.md
 
 ## Agents
 
-- **`designing-usecases`** at `.claude/agents/designing-usecases.md` — use case lens specialist. Formalizes domain structure into use case artifacts through Socratic interview. Takes a primary actor and conditional goal as input. Preloads philosophy, forms, preservation, and editorial contracts.
+- `designing-usecases` at `.claude/agents/designing-usecases.md` — use case lens specialist. Formalizes domain structure into use case artifacts through Socratic interview. Takes a primary actor and conditional goal as input. Preloads philosophy, forms, preservation, and editorial contracts.
 
 ## Sample model
 
 `models/marklauter/github-wiki-agent/` contains a complete reference model (GitHub wiki management system) demonstrating all artifact types. Use it as a guide for structure, voice, and level of detail.
 
-## Conventions
-
-- Model output directory: `models/{owner}/{repo}/` (mirrors GitHub URL structure)
-- Actor files: `actors/{nn}-{slug}.md` (e.g., `actors/01-user.md`)
-- Use case files: `use-cases/{nn}-{slug}.md` (e.g., `use-cases/01-populate-new-wiki.md`)
-- Context files: `contexts/{nn}-{slug}.md` (e.g., `contexts/01-wiki-creation.md`)
-- Event files: `events/{nn}-{slug}.md` (e.g., `events/01-wiki-populated.md`)
-- Invariant files: `invariants/{nn}-{slug}.md` (e.g., `invariants/01-source-repo-readonly.md`)
-- Index files: `{topic}/index.md` in each artifact folder (e.g., `actors/index.md`)
-- Note files: `notes/{ISO-datetime}-{slug}.md` (e.g., `notes/2026-02-21T1430-historian-as-skill.md`)
-- Todo files: `todos/{slug}.md` (e.g., `todos/stub-historian-actor.md`) — ephemeral, deleted when done
-- Glossary: `GLOSSARY.md` at model root
-- Domain events: PastTense names (e.g., `WikiPopulated`, `FindingFiled`)
-- Actors: capitalize role names (User, Orchestrator)
-- Every artifact follows its matching form exactly — same sections, same ordering
-- Prefer sections, bullets, numbered lists, or prose over tables.
-
 ## Contracts
 
-A **contract** is the atomic unit of modeling knowledge. Each contract has two expressions that share the same name:
+A contract is the atomic unit of modeling knowledge. Each contract has two expressions that share the same name:
 
-- The **modeling file** in `.claude/modeling-contracts/` (a principle, a form, or a governance rule) is the single source of truth — it defines what to produce or what to verify, and carries the authoritative prose.
-- The **skill file** in `.claude/skills/` is a thin loader — YAML front matter for triggering, plus a `!`cat`` directive that injects the modeling file's content at activation time. Skills carry no duplicated body content.
+- The modeling file in `.claude/modeling-contracts/` (a principle, a form, or a governance rule) is the single source of truth — it defines what to produce or what to verify, and carries the authoritative prose.
+- The skill file in `.claude/skills/` is a thin loader — YAML front matter for triggering, plus a `!`cat`` directive that injects the modeling file's content at activation time. Skills carry no duplicated body content.
 
 The modeling file is the only place to edit contract content. The skill's YAML `description` is the source of truth for triggering language. Agents receive contract content by listing skills in their `skills:` array — the skill injects the modeling file when the agent loads.
 
-**Form contracts** map to a pair of skills:
+Form contracts map to a pair of skills:
 
-- **`reading-*`** — `!cat` to the form + discovery and navigation exposition. How to find and interpret artifacts of this type.
-- **`writing-*`** — `!cat` to the form + creation machinery (scripts, guidance). How to produce artifacts of this type.
+- `reading-*` — `!cat` to the form + discovery and navigation exposition. How to find and interpret artifacts of this type.
+- `writing-*` — `!cat` to the form + creation machinery (scripts, guidance). How to produce artifacts of this type.
 
 The form is the single source of truth for structure. The skills add operational knowledge — one for consumption, one for production. Three files, no duplication.
 
