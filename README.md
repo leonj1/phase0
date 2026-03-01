@@ -88,5 +88,7 @@ Phase0 is being used to discover its own actors, goals, and design. The primary 
    claude
    ```
 
-3. **Start designing.** Type `/getting-started` to learn how the process works, or just tell the facilitator about a system you want to model. Describe the problem, the people involved, what they care about. The facilitator will guide the discovery from there.
+3. **Start designing.** Type `/design` to activate the facilitator — a Socratic guide that conducts domain discovery and dispatches specialist agents to formalize what the conversation reveals. Describe the problem, the people involved, what they care about. The facilitator will guide the discovery from there.
+
+   Type `/getting-started` first if you want to learn how the process works before diving in.
 

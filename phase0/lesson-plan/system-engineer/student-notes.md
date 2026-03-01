@@ -63,7 +63,7 @@ Ask yourself: which crossing points have no protocol defined yet? That is where 
 
 ### Further reading
 
-- `.claude/contracts/principles/context-lens.md` -- bounded contexts and protocols at crossing points
+- `.claude/contracts/principles/lenses/context.md` -- bounded contexts and protocols at crossing points
 - `.claude/contracts/principles/modeling-foundation.md` -- domain events
 - `models/marklauter/github-wiki-manager/domains/` -- DC-01 through DC-06
 - `models/marklauter/github-wiki-manager/domains/DOMAIN-EVENTS.md` -- all 7 published events
@@ -154,8 +154,8 @@ For each obstacle:
 
 ### Further reading
 
-- `.claude/contracts/principles/usecase-lens.md` -- invariants as continuous constraints, obstacles as threats to the goal
-- `.claude/contracts/principles/actor-lens.md` -- value conditions drive system design
+- `.claude/contracts/principles/lenses/usecase.md` -- invariants as continuous constraints, obstacles as threats to the goal
+- `.claude/contracts/principles/lenses/actor.md` -- value conditions drive system design
 - `models/marklauter/github-wiki-manager/UC-04-sync-wiki-with-source-changes.md` -- invariants, goal obstacles, failure and success outcomes
 
 ---

@@ -16,14 +16,22 @@ graph TD
 
     %% ===== CONTRACTS: PRINCIPLES =====
     subgraph principles["contracts/principles"]
-        facilitator_role["facilitator-role.md"]
+        subgraph roles["contracts/principles/roles"]
+            facilitator["facilitator.md"]
+            onboarding["onboarding.md"]
+        end
         modeling_foundation["modeling-foundation.md"]
-        actor_lens["actor-lens.md"]
-        usecase_lens["usecase-lens.md"]
-        context_lens["context-lens.md"]
-        evaluation["evaluation.md"]
-        editorial["editorial-standards.md"]
-        durable_capture["durable-capture.md"]
+        durability["durability.md"]
+        subgraph best_practices["contracts/principles/best-practices"]
+            evaluation["evaluation.md"]
+            editorial["editorial.md"]
+            facilitation["facilitation.md"]
+        end
+        subgraph lenses["contracts/principles/lenses"]
+            actor_lens["actor.md"]
+            usecase_lens["usecase.md"]
+            context_lens["context.md"]
+        end
     end
 
     %% ===== CONTRACTS: FORMS =====
@@ -47,7 +55,7 @@ graph TD
         sk_modeling["modeling-usecases"]
         sk_mapping["mapping-contexts"]
         sk_evaluating["evaluating-artifacts"]
-        sk_composing["composing-prose"]
+        sk_enforcing["enforcing-style"]
         sk_preserving["preserving-discoveries"]
         sk_navigating["navigating-models"]
     end
@@ -75,12 +83,12 @@ graph TD
     end
 
     %% ===== CLAUDE.md @ references =====
-    CLAUDE -->|"@"| facilitator_role
+    CLAUDE -->|"@"| facilitator
     CLAUDE -->|"@"| modeling_foundation
     CLAUDE -->|"@"| contract
     CLAUDE -->|"@"| contract_structure
     CLAUDE -->|"@"| model_structure
-    CLAUDE -->|"@"| durable_capture
+    CLAUDE -->|"@"| durability
     CLAUDE -->|"@"| editorial
 
     %% ===== Meta cross-references =====
@@ -98,8 +106,8 @@ graph TD
     sk_modeling -->|"!cat"| usecase_lens
     sk_mapping -->|"!cat"| context_lens
     sk_evaluating -->|"!cat"| evaluation
-    sk_composing -->|"!cat"| editorial
-    sk_preserving -->|"!cat"| durable_capture
+    sk_enforcing -->|"!cat"| editorial
+    sk_preserving -->|"!cat"| durability
     sk_navigating -->|"!cat"| model_structure
 
     %% ===== Authoring skills load forms =====
@@ -119,7 +127,7 @@ graph TD
     ag_usecases --> sk_modeling
     ag_usecases --> sk_navigating
     ag_usecases --> sk_preserving
-    ag_usecases --> sk_composing
+    ag_usecases --> sk_enforcing
     ag_usecases --> sk_a_actor
     ag_usecases --> sk_a_catalog
     ag_usecases --> sk_a_usecase
@@ -174,7 +182,7 @@ graph TD
 
     %% ===== evaluating-style agent =====
     ag_style --> sk_evaluating
-    ag_style --> sk_composing
+    ag_style --> sk_enforcing
     ag_style --> sk_a_eval
     ag_style --> sk_a_glossary
     ag_style --> sk_a_actor

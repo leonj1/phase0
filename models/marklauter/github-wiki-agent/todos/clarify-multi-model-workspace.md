@@ -10,9 +10,9 @@ Discovered while adding skill injections to evaluator agents. The evaluating-sty
 
 ## References
 
-- .claude/contracts/principles/evaluation.md (shared evaluation contract — line 32 suggests glob fallback)
+- .claude/contracts/principles/best-practices/evaluation.md (shared evaluation contract — line 32 suggests glob fallback)
 - .claude/agents/evaluating-structure.md (Step 2 — globs models/*/*/)
 - .claude/agents/evaluating-references.md (Step 1 — globs under models/)
 - .claude/agents/evaluating-coherence.md (Loading step 1 — globs models/*/*/GLOSSARY.md)
 - .claude/agents/evaluating-style.md (Step 1 — globs models/**/*.md)
-- .claude/contracts/principles/facilitator-role.md (says to pass model path in dispatch)
+- .claude/contracts/principles/roles/facilitator.md (says to pass model path in dispatch)

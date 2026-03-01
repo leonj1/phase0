@@ -81,7 +81,7 @@ Pick a product you use daily -- a phone app, a tool at work, a household applian
 
 ### Further reading
 
-- `.claude/contracts/principles/actor-lens.md` -- "Goals are conditional," the derivation chain, and why value conditions drive system design
+- `.claude/contracts/principles/lenses/actor.md` -- "Goals are conditional," the derivation chain, and why value conditions drive system design
 - `phase0/VISION.md` -- "Conditional Goals: The Foundational Concept"
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- User goals and experience goals
 
@@ -174,7 +174,7 @@ Present your tension map as a table. Then check each actor's genealogy: can you 
 
 ### Further reading
 
-- `.claude/contracts/principles/actor-lens.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors," "Single responsibility for actors"
+- `.claude/contracts/principles/lenses/actor.md` -- "Goal conditions create tensions; tensions spawn supporting actors," "Goal conflicts spawn actors," "Single responsibility for actors"
 - `phase0/VISION.md` -- "The Entry Point: Actors and Goals, From First Principles" (includes the elevator derivation table), "Round 3: What goes wrong?"
 - `models/marklauter/github-wiki-manager/ACTOR-CATALOG.md` -- Proofreaders (four editorial lenses), Content Mutator separation rationale
 
