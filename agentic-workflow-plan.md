@@ -2,11 +2,7 @@
 
 ## Context
 
-A software development team managing ~30 projects across two domains:
-- **Email and M2M messaging**
-- **Software security** (identity server/token server, policy server — PAP, PEP, PDP, etc.)
-
-Goal: eliminate humans from feature coding, bug fixing, and refactoring. Replace with Claude-based agentic workflows.
+A software development team managing ~30 projects. Goal: eliminate humans from feature coding, bug fixing, and refactoring. Replace with Claude-based agentic workflows.
 
 ### Stack
 - .NET, TypeScript, React, Terraform
@@ -16,7 +12,7 @@ Goal: eliminate humans from feature coding, bug fixing, and refactoring. Replace
 - Some domain concepts span repos
 
 ### Current workflow
-- Work items in Jira; GitLab issues as message queue for agentic work (avoids polluting backlogs)
+- Work items in project management tool; git platform issues as message queue for agentic work (avoids polluting backlogs)
 - PRs get automated tests, security checks, lint, AI code review, and human review
 - Review is ~30% mechanical, ~70% judgment — goal is to flip those values with architectural tests, better linting, and better testing
 
@@ -57,7 +53,7 @@ Foundation work that makes everything else possible.
 The pipeline:
 
 ```
-GitLab issue created (labeled "agent-work")
+Git issue created (labeled "agent-work")
   → webhook triggers CI job
     → Claude Code CLI checks out repo, reads CLAUDE.md
       → reads issue, reproduces bug, writes fix + test
@@ -81,7 +77,7 @@ Features require more context — user intent, design decisions, interaction wit
 
 ## Open questions
 
-1. **GitLab CI as the orchestrator** — SaaS or self-managed? Affects webhook/trigger options.
+1. **CI/CD as the orchestrator** — SaaS or self-managed? Affects webhook/trigger options.
 
 2. **Claude Code CLI vs. Claude API** — Claude Code CLI is the fastest path (already knows how to navigate repos, run tests, make changes, runs headless in CI). The alternative is building a custom agent with the Claude Agent SDK (more control, more work).
 
