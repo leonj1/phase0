@@ -7,7 +7,14 @@
       "Bash(git -C:*)",
       "Bash(wc:*)",
       "Bash(ls:*)",
-      "Bash(bash .claude/scripts/*)"
+      "Bash(bash .claude/scripts/*)",
+      "Agent(designing-usecases)",
+      "Agent(discovering-actors)",
+      "Agent(evaluating-coherence)",
+      "Agent(evaluating-references)",
+      "Agent(evaluating-structure)",
+      "Agent(evaluating-style)",
+      "Agent(mapping-contexts)"
     ]
   }
 }
