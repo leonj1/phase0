@@ -1,204 +1,136 @@
 # Dependency graph
 
-The full dependency graph of the Phase0 instruction set — from the /design command through contracts, skills, and agents.
+The full dependency graph of the Phase0 instruction set — from the /design command through contracts, skills, and agents. Expressed as grouped adjacency lists: each node appears once with all its connections, organized by layer. Shared dependencies are factored out to avoid repetition; per-node entries list only the delta.
 
-```mermaid
-graph TD
-    %% ===== ENTRY POINT =====
-    DESIGN["/design command"]
+## Edge types
 
-    %% ===== CONTRACTS: META =====
-    subgraph meta["contracts/meta"]
-        contract["contract.md"]
-        contract_structure["contract-structure.md"]
-        model_structure["model-structure.md"]
-    end
+- **includes** — the node loads or incorporates the target at activation time.
+- **references** — implicit or conditional dependency (not always loaded).
 
-    %% ===== CONTRACTS: PRINCIPLES =====
-    subgraph principles["contracts/principles"]
-        subgraph roles["contracts/principles/roles"]
-            facilitator["facilitator.md"]
-            onboarding["onboarding.md"]
-        end
-        modeling_foundation["modeling-foundation.md"]
-        durability["durability.md"]
-        subgraph best_practices["contracts/principles/best-practices"]
-            evaluation["evaluation.md"]
-            editorial["editorial.md"]
-            facilitation["facilitation.md"]
-        end
-        subgraph lenses["contracts/principles/lenses"]
-            actor_lens["actor.md"]
-            usecase_lens["usecase.md"]
-            context_lens["context.md"]
-        end
-    end
+## Entry point
 
-    %% ===== CONTRACTS: FORMS =====
-    subgraph forms["contracts/forms"]
-        f_actor["actor.md"]
-        f_catalog["catalog.md"]
-        f_context["context.md"]
-        f_evaluation["evaluation.md"]
-        f_event["event.md"]
-        f_glossary["glossary.md"]
-        f_invariant["invariant.md"]
-        f_note["note.md"]
-        f_todo["todo.md"]
-        f_usecase["usecase.md"]
-    end
+/design command
+  includes: principles/roles/facilitator.md, principles/best-practices/facilitation.md
+  references: principles/roles/onboarding.md, principles/modeling-foundation.md
 
-    %% ===== SKILLS =====
-    subgraph skills_behavioral["skills — behavioral"]
-        sk_grounding["grounding-models"]
-        sk_discovering["discovering-actors"]
-        sk_modeling["modeling-usecases"]
-        sk_mapping["mapping-contexts"]
-        sk_evaluating["evaluating-artifacts"]
-        sk_enforcing["enforcing-style"]
-        sk_preserving["preserving-discoveries"]
-        sk_navigating["navigating-models"]
-    end
+## Contracts — meta (3)
 
-    subgraph skills_authoring["skills — authoring"]
-        sk_a_actor["authoring-actors"]
-        sk_a_catalog["authoring-catalogs"]
-        sk_a_context["authoring-contexts"]
-        sk_a_eval["authoring-evaluations"]
-        sk_a_event["authoring-events"]
-        sk_a_glossary["authoring-glossaries"]
-        sk_a_invariant["authoring-invariants"]
-        sk_a_note["authoring-notes"]
-        sk_a_todo["authoring-todos"]
-        sk_a_usecase["authoring-usecases"]
-    end
+Self-description: what contracts are, instruction set layout, model output layout.
 
-    %% ===== AGENTS =====
-    subgraph agents["agents"]
-        ag_usecases["designing-usecases"]
-        ag_coherence["evaluating-coherence"]
-        ag_references["evaluating-references"]
-        ag_structure["evaluating-structure"]
-        ag_style["evaluating-style"]
-    end
+contract.md
+  references: contract-structure.md
+contract-structure.md
+  references: model-structure.md
+model-structure.md
 
-    %% ===== /design command loads =====
-    DESIGN -->|"!cat"| facilitator
-    DESIGN -->|"!cat"| facilitation
-    DESIGN -.->|"conditional read"| onboarding
-    DESIGN -.->|"conditional read"| modeling_foundation
+## Contracts — principles (10)
 
-    %% ===== Meta cross-references =====
-    contract -.-> contract_structure
-    contract_structure -.-> model_structure
+Bind how agents think: facilitator role, three lenses, evaluation stance, editorial voice, durable capture, modeling vocabulary.
 
-    %% ===== Foundation feeds lenses =====
-    modeling_foundation -.-> actor_lens
-    modeling_foundation -.-> usecase_lens
-    modeling_foundation -.-> context_lens
+roles/facilitator.md
+roles/onboarding.md
+modeling-foundation.md
+  references: lenses/actor.md, lenses/usecase.md, lenses/context.md
+best-practices/evaluation.md
+best-practices/editorial.md
+best-practices/facilitation.md
+lenses/actor.md
+lenses/usecase.md
+lenses/context.md
+best-practices/durability.md
 
-    %% ===== Behavioral skills load principles =====
-    sk_grounding -->|"!cat"| modeling_foundation
-    sk_discovering -->|"!cat"| actor_lens
-    sk_modeling -->|"!cat"| usecase_lens
-    sk_mapping -->|"!cat"| context_lens
-    sk_evaluating -->|"!cat"| evaluation
-    sk_enforcing -->|"!cat"| editorial
-    sk_preserving -->|"!cat"| durability
-    sk_navigating -->|"!cat"| model_structure
+## Contracts — forms (10)
 
-    %% ===== Authoring skills load forms =====
-    sk_a_actor -->|"!cat"| f_actor
-    sk_a_catalog -->|"!cat"| f_catalog
-    sk_a_context -->|"!cat"| f_context
-    sk_a_eval -->|"!cat"| f_evaluation
-    sk_a_event -->|"!cat"| f_event
-    sk_a_glossary -->|"!cat"| f_glossary
-    sk_a_invariant -->|"!cat"| f_invariant
-    sk_a_note -->|"!cat"| f_note
-    sk_a_todo -->|"!cat"| f_todo
-    sk_a_usecase -->|"!cat"| f_usecase
+Bind what agents produce: one form per artifact type.
 
-    %% ===== designing-usecases agent =====
-    ag_usecases --> sk_grounding
-    ag_usecases --> sk_modeling
-    ag_usecases --> sk_navigating
-    ag_usecases --> sk_preserving
-    ag_usecases --> sk_enforcing
-    ag_usecases --> sk_a_actor
-    ag_usecases --> sk_a_catalog
-    ag_usecases --> sk_a_usecase
-    ag_usecases --> sk_a_event
-    ag_usecases --> sk_a_invariant
-    ag_usecases --> sk_a_note
-    ag_usecases --> sk_a_todo
+actor.md, catalog.md, context.md, evaluation.md, event.md,
+glossary.md, invariant.md, note.md, todo.md, usecase.md
 
-    %% ===== evaluating-coherence agent =====
-    ag_coherence --> sk_evaluating
-    ag_coherence --> sk_navigating
-    ag_coherence --> sk_grounding
-    ag_coherence --> sk_a_eval
-    ag_coherence --> sk_a_actor
-    ag_coherence --> sk_a_catalog
-    ag_coherence --> sk_a_context
-    ag_coherence --> sk_a_event
-    ag_coherence --> sk_a_glossary
-    ag_coherence --> sk_a_invariant
-    ag_coherence --> sk_a_note
-    ag_coherence --> sk_a_todo
-    ag_coherence --> sk_a_usecase
+## Skills — behavioral (8)
 
-    %% ===== evaluating-references agent =====
-    ag_references --> sk_evaluating
-    ag_references --> sk_navigating
-    ag_references --> sk_grounding
-    ag_references --> sk_a_eval
-    ag_references --> sk_a_actor
-    ag_references --> sk_a_catalog
-    ag_references --> sk_a_context
-    ag_references --> sk_a_event
-    ag_references --> sk_a_glossary
-    ag_references --> sk_a_invariant
-    ag_references --> sk_a_note
-    ag_references --> sk_a_todo
-    ag_references --> sk_a_usecase
+Each includes one principle contract. Injected into agents to shape reasoning.
 
-    %% ===== evaluating-structure agent =====
-    ag_structure --> sk_evaluating
-    ag_structure --> sk_navigating
-    ag_structure --> sk_a_eval
-    ag_structure --> sk_a_actor
-    ag_structure --> sk_a_catalog
-    ag_structure --> sk_a_context
-    ag_structure --> sk_a_event
-    ag_structure --> sk_a_glossary
-    ag_structure --> sk_a_invariant
-    ag_structure --> sk_a_note
-    ag_structure --> sk_a_todo
-    ag_structure --> sk_a_usecase
+grounding-models       includes: principles/modeling-foundation.md
+discovering-actors     includes: principles/lenses/actor.md
+modeling-usecases      includes: principles/lenses/usecase.md
+mapping-contexts       includes: principles/lenses/context.md
+evaluating-artifacts   includes: principles/best-practices/evaluation.md
+enforcing-style        includes: principles/best-practices/editorial.md
+preserving-discoveries includes: principles/best-practices/durability.md
+navigating-models      includes: meta/model-structure.md
 
-    %% ===== evaluating-style agent =====
-    ag_style --> sk_evaluating
-    ag_style --> sk_enforcing
-    ag_style --> sk_a_eval
-    ag_style --> sk_a_glossary
-    ag_style --> sk_a_actor
-```
+## Skills — standalone (4)
+
+User-invocable skills that load contracts directly. Not included in any agent.
+
+facilitating-discovery             includes: principles/best-practices/facilitation.md
+getting-started                    includes: principles/roles/onboarding.md
+understanding-contracts            includes: meta/contract.md
+understanding-contract-structure   includes: meta/contract-structure.md
+
+## Skills — authoring (10)
+
+Each authoring-{type} skill loads forms/{type}.md via inclusion, plus reading guidance and creation script.
+
+authoring-actors, authoring-catalogs, authoring-contexts,
+authoring-evaluations, authoring-events, authoring-glossaries,
+authoring-invariants, authoring-notes, authoring-todos, authoring-usecases
+
+## Agents — discovery (3)
+
+Socratic session agents. Each includes its own lens skill plus a shared core of behavioral and authoring skills.
+
+Shared across all three:
+  behavioral: grounding-models, navigating-models, preserving-discoveries, enforcing-style
+  authoring:  authoring-catalogs, authoring-events, authoring-invariants,
+              authoring-notes, authoring-todos
+
+discovering-actors
+  lens: discovering-actors
+  also: authoring-actors, authoring-contexts
+
+designing-usecases
+  lens: modeling-usecases
+  also: authoring-actors, authoring-usecases
+
+mapping-contexts
+  lens: mapping-contexts
+  also: authoring-contexts, authoring-glossaries
+
+## Agents — evaluation (4)
+
+Read-only verification agents. Each produces findings via authoring-evaluations.
+
+Shared across coherence, references, and structure:
+  behavioral: evaluating-artifacts, navigating-models
+  authoring:  authoring-evaluations, authoring-actors, authoring-catalogs,
+              authoring-contexts, authoring-events, authoring-glossaries,
+              authoring-invariants, authoring-notes, authoring-todos,
+              authoring-usecases
+
+evaluating-coherence
+  also: grounding-models
+
+evaluating-references
+  also: grounding-models
+
+evaluating-structure
+  (shared set only)
+
+evaluating-style
+  behavioral: evaluating-artifacts, enforcing-style
+  authoring:  authoring-evaluations, authoring-glossaries, authoring-actors
 
 ## Layer summary
 
 | Layer | Count | Role |
 |---|---|---|
-| /design command | 1 | Entry point. Loads facilitator and facilitation contracts via `!cat`, conditionally reads onboarding and modeling-foundation. |
+| /design command | 1 | Entry point. Loads facilitator and facilitation contracts via inclusion, conditionally reads onboarding and modeling-foundation. |
 | Contracts — meta | 3 | Self-description: what contracts are, instruction set layout, model output layout. |
-| Contracts — principles | 8 | Bind how agents think: facilitator role, three lenses, evaluation stance, editorial voice, durable capture, modeling vocabulary. |
+| Contracts — principles | 10 | Bind how agents think: facilitator role, three lenses, evaluation stance, editorial voice, durable capture, modeling vocabulary. |
 | Contracts — forms | 10 | Bind what agents produce: one form per artifact type. |
-| Skills — behavioral | 8 | Each loads one principle contract via `!cat`. Injected into agents to shape reasoning. |
-| Skills — authoring | 10 | Each loads one form contract via `!cat` plus reading guidance and creation script. Injected into agents that read or produce artifacts. |
-| Agents | 5 | Skill bundles: 1 modeling agent (designing-usecases), 4 evaluation agents. Each agent's skill list determines which contracts get injected. |
-
-## Edge types
-
-- **`!cat`** — Command or skill inlines the contract content when loaded.
-- **`-.->`** — Implicit or conditional dependency (prose references, conditional reads, not always loaded).
-- **`-->`** — Agent includes the skill in its skill list.
+| Skills — behavioral | 8 | Each loads one principle contract via inclusion. Injected into agents to shape reasoning. |
+| Skills — standalone | 4 | User-invocable skills that load contracts directly. Not included in any agent. |
+| Skills — authoring | 10 | Each loads one form contract via inclusion plus reading guidance and creation script. Injected into agents that read or produce artifacts. |
+| Agents — discovery | 3 | Socratic session agents: one per lens (actor, use case, context). Each agent's skill list determines which contracts get injected. |
+| Agents — evaluation | 4 | Read-only verification: structure, references, coherence, style. Each produces a findings report. |
