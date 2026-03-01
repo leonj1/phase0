@@ -16,7 +16,7 @@ Contexts live at `contexts/` within the model directory, with an `index.md` cata
 - **Events produced and consumed** — these are the integration contracts. Produced events flow outward; consumed events flow inward. Together they define how this context communicates.
 - **Integration points** — three relationship types: requires (depends on), feeds (provides to), shares with (bilateral). These map the dependency graph between contexts.
 
-## Creating contexts
+## Authoring contexts
 
 Use the `create-context.sh` script to create bounded context files. The script handles file naming, directory creation, and section scaffolding with TODO placeholders.
 

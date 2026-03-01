@@ -16,7 +16,7 @@ Notes have no index file. Discovery is manual.
 - **Follow references** — the `## References` section cross-links back into the model. Use it to find every note that touches a specific artifact.
 - **Staleness** — notes are raw captures. Some will have been formalized into artifacts since they were written. Check whether the referenced artifact already incorporates the note's content before acting on it.
 
-## Creating notes
+## Authoring notes
 
 Use the `create-note.sh` script to create note files. The script handles naming (ISO timestamp + slug), directory creation, and section scaffolding.
 

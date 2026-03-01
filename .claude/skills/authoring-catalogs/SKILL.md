@@ -16,7 +16,7 @@ Each topic folder (`actors/`, `contexts/`, `events/`, `invariants/`, `use-cases/
 - **Ordering** — entries are ordered by numeric prefix, matching the file ordering in the folder.
 - **Referencing style** — siblings use bare `{nn}-{slug}`. Cross-topic references use `{namespace}/{nn}-{slug}`. No markdown link syntax.
 
-## Creating catalogs
+## Authoring catalogs
 
 Use the `create-catalog.sh` script to create new catalog files. The script creates the topic directory and `index.md` skeleton. Does nothing if the index already exists.
 

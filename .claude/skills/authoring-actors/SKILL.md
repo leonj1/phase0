@@ -16,7 +16,7 @@ Actors live at `actors/` within the model directory, with an `index.md` catalog.
 - **Abstract parents and children** — some supporting actors are abstract types with concrete children. The Children section lists inheritors. The Abstract parent section links upward.
 - **Appears in / Used by** — cross-references to use cases. Use this to trace which interactions an actor participates in.
 
-## Creating actors
+## Authoring actors
 
 Use the `create-actor.sh` script to create actor files. The script handles file naming, directory creation, and category-specific section scaffolding.
 

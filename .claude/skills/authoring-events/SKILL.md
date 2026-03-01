@@ -16,7 +16,7 @@ Events live at `events/` within the model directory, with an `index.md` catalog.
 - **Context section** — names the bounded context, the producing use case, the consumers, and the materialization. This is the event's integration contract.
 - **Payload** — the data the event carries. Each item is a noun or noun phrase. The payload defines what downstream consumers can depend on.
 
-## Creating events
+## Authoring events
 
 Use the `create-event.sh` script to create domain event files. The script handles file naming, directory creation, and section scaffolding with TODO placeholders.
 

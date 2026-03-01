@@ -16,7 +16,7 @@ Todos live at `todos/` within the model directory. No index, no ordering. They a
 - **References** — cross-links to the artifacts this todo touches. Use these to understand what will change when the work is done.
 - **Absence is completion** — when a todo is done, it gets deleted. An empty `todos/` directory means all captured work has been addressed.
 
-## Creating todos
+## Authoring todos
 
 Use the `create-todo.sh` script to create todo files. The script handles file naming, directory creation, and section scaffolding.
 

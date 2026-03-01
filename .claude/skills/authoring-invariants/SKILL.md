@@ -16,7 +16,7 @@ Shared invariants live at `invariants/` within the model directory, with an `ind
 - **Scope** — lists every use case the invariant governs. Use this to understand the invariant's reach.
 - **Origin** — names the use case or design decision that established the invariant. Use this to trace why the rule exists.
 
-## Creating invariants
+## Authoring invariants
 
 Use the `create-invariant.sh` script to create shared invariant files. The script handles file naming, directory creation, and section scaffolding.
 

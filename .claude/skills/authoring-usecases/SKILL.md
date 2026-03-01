@@ -16,7 +16,7 @@ Use cases live at `use-cases/` within the model directory, with an `index.md` ca
 - **Scenario is the spine** — the numbered scenario steps tell the story. Each step names the actor and expresses intent. Domain events (marked with `-->`) are the meaningful state transitions.
 - **Obstacles branch from steps** — goal obstacles are keyed to scenario steps (e.g., "Step 3a"). Read them as threats to the goal, not alternate flows.
 
-## Creating use cases
+## Authoring use cases
 
 Use the `create-usecase.sh` script to create use case files. The script handles file naming, directory creation, and section scaffolding with TODO placeholders.
 

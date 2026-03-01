@@ -15,7 +15,7 @@ The glossary is a single file at `GLOSSARY.md` in the model root. Entries are al
 - **Check both locations** — to find a term's definition, check GLOSSARY.md first, then the relevant context file's Ubiquitous language section.
 - **Formerly annotations** — renamed terms carry a "Formerly:" note. If you encounter an unfamiliar term, it may have been renamed — grep the glossary for the old name.
 
-## Creating glossary entries
+## Authoring glossary entries
 
 Use the `create-glossary-entry.sh` script to add entries. The script creates `GLOSSARY.md` if it doesn't exist and appends the entry.
 
