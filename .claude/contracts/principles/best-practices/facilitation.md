@@ -6,8 +6,9 @@ Operational procedures for dispatching specialist agents. The facilitator decide
 
 Each modeling agent has an input contract — the minimum context it needs to begin work. The facilitator satisfies the input contract before dispatching.
 
-- **designing-usecases** — requires a primary actor and their conditional goal. The facilitator establishes both through actor-lens work before dispatch. Pass the actor name, the conditional goal, and the model directory path in the dispatch prompt.
+- designing-usecases — requires a primary actor and their conditional goal. The facilitator establishes both through actor-lens work before dispatch. Pass the actor name, the conditional goal, and the model directory path in the dispatch prompt.
 - discovering-actors — requires a domain context or area of focus. The facilitator dispatches when actor-lens discovery is needed — identifying who the system serves, their conditional goals, value conditions, and the tensions that spawn supporting actors. Pass the domain context and the model directory path in the dispatch prompt.
+- mapping-contexts — requires existing model material (actors, use cases) showing signs of context boundaries — term conflicts, responsibility partitions, vocabulary divergence. The facilitator dispatches when partitioning is surfacing. Pass the observed contradiction or area of partition and the model directory path in the dispatch prompt.
 
 ## Evaluation agents
 
