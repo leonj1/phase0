@@ -12,6 +12,54 @@ A Socratic facilitator guides you from the empty whiteboard to an implementation
 
 Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Grounded in Alan Cooper's goal-directed design and Eric Evans' domain-driven design.
 
+## Values over specs
+
+A spec says "the elevator must not free-fall." A value says "I don't want to lose my limbs." The spec is one implementation of the value. You can satisfy the value in ways the spec never imagined. Designing from values keeps the solution space open. Designing from specs closes it prematurely.
+
+This distinction runs through every layer of Phase0. Goals describe where an actor wants to be, not how they get there. Scenario steps express intent, not mechanics. Constraints hold as invariants — continuously, not just at entry and exit. Failures are threats to goals, not branch points in a flowchart.
+
+The gift test makes the distinction concrete. "I want to have a guitar" is a goal. "I want to buy a guitar" is a task disguised as a goal. If someone gifts you the guitar, you don't care that you skipped the purchase. The goal was having, not buying. If your goal statement would be satisfied by a shortcut that skips the described action, you wrote a task, not a goal. Phase0 insists on the goal.
+
+## Socratic extraction
+
+The domain expert knows the domain. The facilitator knows how to structure what the domain expert says. Phase0 uses Socratic questioning to draw out what the expert already knows but cannot articulate unprompted. Three techniques do the heavy lifting.
+
+The why-chain peels back assumptions. An expert says "we need to track shipments." Why? "Customers keep calling about late deliveries." Why can't you tell them? "Our warehouse doesn't know what's coming." The first statement was a solution disguised as a problem. The last is a system boundary — the actual shape of what needs to be built. Every "why" removes one layer of assumption until the domain's own structure appears.
+
+Noun refinement turns vague vocabulary into precise language. "Customer" is sloppy — it hides three actors with conflicting goals. Qualify: the customer who sends things, the customer who receives things, the customer who complains. Refine: Sender, Recipient, Complainant. Separate: each name now carries its own meaning without a qualifier. This is how ubiquitous language crystallizes — through dialogue, not dictionaries.
+
+Contradictions are gold. When Alice says "shipment" means what leaves the warehouse and Bob says "shipment" means what the customer ordered, most facilitators treat it as confusion. In Phase0, it is the most valuable signal in the room. That disagreement is a bounded context boundary — discovered through the natural friction of conversation, not declared by architects.
+
+## How it works
+
+Three lenses — actor, use case, bounded context — form a complete graph (K₃). Discovery through any lens can refocus to any other. The facilitator shifts between lenses freely, following discoveries wherever they lead.
+
+- **Actor lens** — Who does this system serve? What do they value? Primary actors have conditional goals — a desired end state plus value conditions. Value conditions meet reality and produce tensions. Tensions spawn supporting actors with drives. Every supporting actor traces back to a specific value condition on a specific primary actor's goal.
+- **Use case lens** — What interactions does the design demand? Use cases fall out of the actor lens — they are discovered, not invented. Each use case is walked as a scenario in terms of intent, not mechanism. Invariants hold continuously. Domain events mark meaningful state transitions.
+- **Bounded context lens** — Where do meanings partition? The same word means different things in different regions. Context boundaries are discovered through contradiction — when two experts use the same term differently, that's a boundary. Domain events are the published language at crossing points.
+
+The actor lens is foundational. Value conditions on primary actors' goals are where the entire system design comes from. The use case and bounded context lenses elaborate what the actor lens establishes. Even when the conversation enters through a different lens, the facilitator routes to actor discovery first.
+
+The cycle repeats until the model converges — until new passes through each lens stop producing discoveries that invalidate earlier work. Convergence, not completeness, is the termination condition.
+
+## Facilitator and specialists
+
+The main conversation is the facilitator — the role that conducts Socratic discovery with the domain expert. The facilitator handles fluid, adaptive, backtracking-heavy dialogue. When enough raw material accumulates around a particular lens, the facilitator dispatches a specialist agent to formalize it into structured artifacts.
+
+This mirrors the real world: the facilitator at the whiteboard is loose, adaptive, responsive. The person writing up the meeting notes into formal artifacts afterward is rigorous, structured, template-driven. These are different skills. Facilitation and formalization are kept separate.
+
+A third role runs alongside both: the historian. While the facilitator drives conversation and specialists formalize artifacts, the historian captures what neither would — contradictions that surfaced, decisions that crystallized, new terms that emerged, questions that were deferred, and raw insights that are not yet ready to become artifacts. The historian writes without being asked. When something significant happens in the conversation, it goes to file in that turn.
+
+Evaluation agents verify the model after production. Four independent lenses — structural conformance, referential integrity, semantic coherence, and editorial style — run in parallel. Each is read-only. Each produces a findings report. Nothing is modified without the domain expert's approval.
+
+## Nothing is lost
+
+Discoveries are perishable. Context windows end. Sessions expire. Three sessions in, nobody remembers exactly why the group decided to split Warehouse from Logistics.
+
+Phase0 writes every discovery to file in the turn it occurs — artifact refinements, new stubs, observations, open questions, and follow-up work. The model is a living document that evolves with each exchange, not a deliverable produced at the end. When a session resumes days later, the model is the memory.
+
+The historian is why nothing is lost. Raw insights, half-formed ideas, metaphors the domain expert used — these are the seeds that specialists eventually crystallize into formal constructs. Without the historian, they vanish when the context window compresses.
+
 ## Agents are people too
 
 Humans are error-prone. They have conflicting interests, lack information, make guesses, and fill gaps with assumptions. Organizations cope with human fallibility through oversight — reviewers who check producers, auditors who verify claims, inspectors who enforce standards. Since overseers are also fallible, the production-evaluation loop never terminates. It becomes continuous improvement.
@@ -26,41 +74,18 @@ An actor's drive becomes its system prompt — not a job description, but a beha
 
 Traditional design produces specs that developers interpret. Phase0 produces a model that *is* the agent architecture — the actors are the agents, the drives are the prompts, the events are the wire protocol. No translation step.
 
-## How it works
-
-Three lenses — actor, use case, bounded context — form a complete graph (K₃). Discovery through any lens can refocus to any other. The facilitator shifts between lenses freely, following discoveries wherever they lead.
-
-- **Actor lens** — Who does this system serve? What do they value? Primary actors have conditional goals — a desired end state plus value conditions. Value conditions meet reality and produce tensions. Tensions spawn supporting actors with drives. Every supporting actor traces back to a specific value condition on a specific primary actor's goal.
-- **Use case lens** — What interactions does the design demand? Use cases fall out of the actor lens — they are discovered, not invented. Each use case is walked as a scenario in terms of intent, not mechanism. Invariants hold continuously. Domain events mark meaningful state transitions.
-- **Bounded context lens** — Where do meanings partition? The same word means different things in different regions. Context boundaries are discovered through contradiction — when two experts use the same term differently, that's a boundary. Domain events are the published language at crossing points.
-
-The actor lens is foundational. Value conditions on primary actors' goals are where the entire system design comes from. The use case and bounded context lenses elaborate what the actor lens establishes. Even when the conversation enters through a different lens, the facilitator routes to actor discovery first.
-
-The cycle repeats until the model converges — until new passes through each lens stop producing discoveries that invalidate earlier work.
-
-## Facilitator and specialists
-
-The main conversation is the facilitator — the role that conducts Socratic discovery with the domain expert. The facilitator handles fluid, adaptive, backtracking-heavy dialogue. When enough raw material accumulates around a particular lens, the facilitator dispatches a specialist agent to formalize it into structured artifacts.
-
-This mirrors the real world: the facilitator at the whiteboard is loose, adaptive, responsive. The person writing up the meeting notes into formal artifacts afterward is rigorous, structured, template-driven. These are different skills. Facilitation and formalization are kept separate.
-
-Evaluation agents verify the model after production. Four independent lenses — structural conformance, referential integrity, semantic coherence, and editorial style — run in parallel. Each is read-only. Each produces a findings report. Nothing is modified without the domain expert's approval.
-
 ## What it produces
 
 An implementation-ready domain model: actors with goals and drives, use cases with scenarios and obstacles, bounded contexts with ubiquitous language, domain events that define integration contracts, invariants that hold continuously, and a glossary of canonical vocabulary. Discovery notes capture the observations, questions, and decisions that shaped the model as it evolved.
 
 Every element traces back to a primary actor's conditional goal through a derivation chain — nothing is invented, everything is extracted.
 
-## Nothing is lost
-
-Discoveries are perishable. Context windows end. Sessions expire. Phase0 writes every discovery to file in the turn it occurs — artifact refinements, new stubs, observations, open questions, and follow-up work. The model is a living document that evolves with each exchange, not a deliverable produced at the end. When a session resumes days later, the model is the memory.
-
 ## Key ideas
 
 - **Primary actors have goals; supporting actors have drives.** A primary actor has a conditional goal — a desired end state plus value conditions (what the actor values about being in that state). The system exists to serve it. A supporting actor has a drive — a reason to participate, born from tensions between value conditions and reality. Both make actors predictable in a modeling sense: you know what a primary actor wants to achieve, and you know what a supporting actor will optimize for.
 - **Tensions have causes.** Three sources: conflicts of interest (a supporting actor's drive obstructs a goal condition), environmental constraints (physical or systemic limits), and competing values (two value conditions on the same goal resist simultaneous satisfaction). Tensions produce supporting actors, use cases, invariants, and trade-off decisions.
-- **Goals over tasks.** A goal is a desired end state plus value conditions. Use the gift test: if a shortcut satisfies it, you wrote a task, not a goal. Value conditions are where system design comes from.
+- **Goals over tasks.** A goal is a desired end state plus value conditions. The gift test: "I want to have a guitar" is a goal. "I want to buy a guitar" is a task disguised as a goal. If someone gifts you the guitar, you don't care that you skipped the purchase. The goal was having, not buying. If a shortcut satisfies your goal statement, you wrote a task, not a goal.
+- **Values over specs.** A spec closes the solution space. A value keeps it open. Design from what the actor values, not from implementation constraints.
 - **Invariants over preconditions.** Domain rules hold continuously — not just at entry.
 - **Intent over mechanics.** Scenario steps say what is accomplished, not how.
 - **Extract, don't invent.** The user knows the domain. The agent knows how to structure it.
@@ -91,4 +116,3 @@ Phase0 is being used to discover its own actors, goals, and design. The primary 
 3. **Start designing.** Type `/design` to activate the facilitator — a Socratic guide that conducts domain discovery and dispatches specialist agents to formalize what the conversation reveals. Describe the problem, the people involved, what they care about. The facilitator will guide the discovery from there.
 
    Type `/getting-started` first if you want to learn how the process works before diving in.
-
