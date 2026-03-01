@@ -1,6 +1,6 @@
 # Dependency graph
 
-The full dependency graph of the Phase0 instruction set — from the /design command through contracts, skills, and agents. Expressed as grouped adjacency lists: each node appears once with all its connections, organized by layer. Shared dependencies are factored out to avoid repetition; per-node entries list only the delta.
+The full dependency graph of the Phase0 instruction set — from the /design command through contracts, skills, and agents. Expressed as grouped adjacency lists: each node appears once with all its connections, organized by layer. Each agent's skill list determines which contracts get injected at activation time.
 
 ## Edge types
 
@@ -70,7 +70,7 @@ understanding-contract-structure   includes: meta/contract-structure.md
 
 ## Skills — authoring (10)
 
-Each authoring-{type} skill loads forms/{type}.md via inclusion, plus reading guidance and creation script.
+Each authoring-{type} skill loads forms/{type}.md via inclusion, plus reading guidance and creation script. Injected into agents that read or produce artifacts.
 
 authoring-actors, authoring-catalogs, authoring-contexts,
 authoring-evaluations, authoring-events, authoring-glossaries,
@@ -78,59 +78,54 @@ authoring-invariants, authoring-notes, authoring-todos, authoring-usecases
 
 ## Agents — discovery (3)
 
-Socratic session agents. Each includes its own lens skill plus a shared core of behavioral and authoring skills.
-
-Shared across all three:
-  behavioral: grounding-models, navigating-models, preserving-discoveries, enforcing-style
-  authoring:  authoring-catalogs, authoring-events, authoring-invariants,
-              authoring-notes, authoring-todos
+Socratic session agents. All three share a common core (grounding-models, navigating-models, preserving-discoveries, enforcing-style, and authoring skills for catalogs, events, invariants, notes, and todos) plus their own lens skill and 2-3 additional authoring skills.
 
 discovering-actors
-  lens: discovering-actors
-  also: authoring-actors, authoring-contexts
+  includes: discovering-actors, grounding-models, navigating-models,
+            preserving-discoveries, enforcing-style,
+            authoring-actors, authoring-catalogs, authoring-contexts,
+            authoring-events, authoring-invariants, authoring-notes,
+            authoring-todos
 
 designing-usecases
-  lens: modeling-usecases
-  also: authoring-actors, authoring-usecases
+  includes: modeling-usecases, grounding-models, navigating-models,
+            preserving-discoveries, enforcing-style,
+            authoring-actors, authoring-catalogs, authoring-usecases,
+            authoring-events, authoring-invariants, authoring-notes,
+            authoring-todos
 
 mapping-contexts
-  lens: mapping-contexts
-  also: authoring-contexts, authoring-glossaries
+  includes: mapping-contexts, grounding-models, navigating-models,
+            preserving-discoveries, enforcing-style,
+            authoring-catalogs, authoring-contexts, authoring-events,
+            authoring-glossaries, authoring-invariants, authoring-notes,
+            authoring-todos
 
 ## Agents — evaluation (4)
 
-Read-only verification agents. Each produces findings via authoring-evaluations.
-
-Shared across coherence, references, and structure:
-  behavioral: evaluating-artifacts, navigating-models
-  authoring:  authoring-evaluations, authoring-actors, authoring-catalogs,
-              authoring-contexts, authoring-events, authoring-glossaries,
-              authoring-invariants, authoring-notes, authoring-todos,
-              authoring-usecases
+Read-only verification agents. Coherence, references, and structure share a common core (evaluating-artifacts, navigating-models, authoring-evaluations, and authoring skills for all artifact types). Coherence and references add grounding-models. Style is narrower — just evaluating-artifacts, enforcing-style, and authoring skills for evaluations, glossaries, and actors.
 
 evaluating-coherence
-  also: grounding-models
+  includes: evaluating-artifacts, grounding-models, navigating-models,
+            authoring-evaluations, authoring-actors, authoring-catalogs,
+            authoring-contexts, authoring-events, authoring-glossaries,
+            authoring-invariants, authoring-notes, authoring-todos,
+            authoring-usecases
 
 evaluating-references
-  also: grounding-models
+  includes: evaluating-artifacts, grounding-models, navigating-models,
+            authoring-evaluations, authoring-actors, authoring-catalogs,
+            authoring-contexts, authoring-events, authoring-glossaries,
+            authoring-invariants, authoring-notes, authoring-todos,
+            authoring-usecases
 
 evaluating-structure
-  (shared set only)
+  includes: evaluating-artifacts, navigating-models,
+            authoring-evaluations, authoring-actors, authoring-catalogs,
+            authoring-contexts, authoring-events, authoring-glossaries,
+            authoring-invariants, authoring-notes, authoring-todos,
+            authoring-usecases
 
 evaluating-style
-  behavioral: evaluating-artifacts, enforcing-style
-  authoring:  authoring-evaluations, authoring-glossaries, authoring-actors
-
-## Layer summary
-
-| Layer | Count | Role |
-|---|---|---|
-| /design command | 1 | Entry point. Loads facilitator and facilitation contracts via inclusion, conditionally reads onboarding and modeling-foundation. |
-| Contracts — meta | 3 | Self-description: what contracts are, instruction set layout, model output layout. |
-| Contracts — principles | 10 | Bind how agents think: facilitator role, three lenses, evaluation stance, editorial voice, durable capture, modeling vocabulary. |
-| Contracts — forms | 10 | Bind what agents produce: one form per artifact type. |
-| Skills — behavioral | 8 | Each loads one principle contract via inclusion. Injected into agents to shape reasoning. |
-| Skills — standalone | 4 | User-invocable skills that load contracts directly. Not included in any agent. |
-| Skills — authoring | 10 | Each loads one form contract via inclusion plus reading guidance and creation script. Injected into agents that read or produce artifacts. |
-| Agents — discovery | 3 | Socratic session agents: one per lens (actor, use case, context). Each agent's skill list determines which contracts get injected. |
-| Agents — evaluation | 4 | Read-only verification: structure, references, coherence, style. Each produces a findings report. |
+  includes: evaluating-artifacts, enforcing-style,
+            authoring-evaluations, authoring-glossaries, authoring-actors
