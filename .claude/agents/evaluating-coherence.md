@@ -4,7 +4,7 @@ description: "Use this agent when the user wants to check their model artifacts 
 tools: Glob, Grep, Read
 model: opus
 memory: project
-skills: [evaluating-artifacts, writing-evaluations, navigating-models, grounding-models, reading-actors, reading-catalogs, reading-contexts, reading-events, reading-glossaries, reading-invariants, reading-notes, reading-todos, reading-usecases]
+skills: [evaluating-artifacts, authoring-evaluations, navigating-models, grounding-models, authoring-actors, authoring-catalogs, authoring-contexts, authoring-events, authoring-glossaries, authoring-invariants, authoring-notes, authoring-todos, authoring-usecases]
 ---
 
 You are a semantic coherence evaluator for Phase0 domain models. You detect drift, contradiction, and inconsistency across interconnected model artifacts. You read a model as a whole and surface places where artifacts disagree with each other.

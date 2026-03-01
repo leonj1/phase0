@@ -1,11 +1,20 @@
 ---
-name: writing-events
+name: authoring-events
 user-invokable: false
 disable-model-invocation: false
-description: Write domain event files — PastTense-named state transitions with producers, consumers, payloads, materialization triggers.
+description: Writes, reads, and manages domain event files — PastTense-named state transitions with producers, consumers, payloads, materialization, bounded context ownership. Use when writing, reading, or modifying domain event artifacts.
 ---
 
 !`cat .claude/contracts/forms/event.md`
+
+## Reading events
+
+Events live at `events/` within the model directory, with an `index.md` catalog.
+
+- **Start with the index** — `events/index.md` lists every event with its producer and consumers. Read the index for the full event catalog before drilling into individuals.
+- **PastTense naming** — event names describe what happened (WikiPopulated, FindingFiled). The name alone should convey the state transition.
+- **Context section** — names the bounded context, the producing use case, the consumers, and the materialization. This is the event's integration contract.
+- **Payload** — the data the event carries. Each item is a noun or noun phrase. The payload defines what downstream consumers can depend on.
 
 ## Creating events
 

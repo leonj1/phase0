@@ -52,30 +52,17 @@ graph TD
         sk_navigating["navigating-models"]
     end
 
-    subgraph skills_reading["skills — reading"]
-        sk_r_actor["reading-actors"]
-        sk_r_catalog["reading-catalogs"]
-        sk_r_context["reading-contexts"]
-        sk_r_eval["reading-evaluations"]
-        sk_r_event["reading-events"]
-        sk_r_glossary["reading-glossaries"]
-        sk_r_invariant["reading-invariants"]
-        sk_r_note["reading-notes"]
-        sk_r_todo["reading-todos"]
-        sk_r_usecase["reading-usecases"]
-    end
-
-    subgraph skills_writing["skills — writing"]
-        sk_w_actor["writing-actors"]
-        sk_w_catalog["writing-catalogs"]
-        sk_w_context["writing-contexts"]
-        sk_w_eval["writing-evaluations"]
-        sk_w_event["writing-events"]
-        sk_w_glossary["writing-glossaries"]
-        sk_w_invariant["writing-invariants"]
-        sk_w_note["writing-notes"]
-        sk_w_todo["writing-todos"]
-        sk_w_usecase["writing-usecases"]
+    subgraph skills_authoring["skills — authoring"]
+        sk_a_actor["authoring-actors"]
+        sk_a_catalog["authoring-catalogs"]
+        sk_a_context["authoring-contexts"]
+        sk_a_eval["authoring-evaluations"]
+        sk_a_event["authoring-events"]
+        sk_a_glossary["authoring-glossaries"]
+        sk_a_invariant["authoring-invariants"]
+        sk_a_note["authoring-notes"]
+        sk_a_todo["authoring-todos"]
+        sk_a_usecase["authoring-usecases"]
     end
 
     %% ===== AGENTS =====
@@ -115,29 +102,17 @@ graph TD
     sk_preserving -->|"!cat"| durable_capture
     sk_navigating -->|"!cat"| model_structure
 
-    %% ===== Reading skills reference forms =====
-    sk_r_actor -->|"ref"| f_actor
-    sk_r_catalog -->|"ref"| f_catalog
-    sk_r_context -->|"ref"| f_context
-    sk_r_eval -->|"!cat"| f_evaluation
-    sk_r_event -->|"ref"| f_event
-    sk_r_glossary -->|"ref"| f_glossary
-    sk_r_invariant -->|"ref"| f_invariant
-    sk_r_note -->|"ref"| f_note
-    sk_r_todo -->|"ref"| f_todo
-    sk_r_usecase -->|"ref"| f_usecase
-
-    %% ===== Writing skills load forms =====
-    sk_w_actor -->|"!cat"| f_actor
-    sk_w_catalog -->|"!cat"| f_catalog
-    sk_w_context -->|"!cat"| f_context
-    sk_w_eval -->|"!cat"| f_evaluation
-    sk_w_event -->|"!cat"| f_event
-    sk_w_glossary -->|"!cat"| f_glossary
-    sk_w_invariant -->|"!cat"| f_invariant
-    sk_w_note -->|"!cat"| f_note
-    sk_w_todo -->|"!cat"| f_todo
-    sk_w_usecase -->|"!cat"| f_usecase
+    %% ===== Authoring skills load forms =====
+    sk_a_actor -->|"!cat"| f_actor
+    sk_a_catalog -->|"!cat"| f_catalog
+    sk_a_context -->|"!cat"| f_context
+    sk_a_eval -->|"!cat"| f_evaluation
+    sk_a_event -->|"!cat"| f_event
+    sk_a_glossary -->|"!cat"| f_glossary
+    sk_a_invariant -->|"!cat"| f_invariant
+    sk_a_note -->|"!cat"| f_note
+    sk_a_todo -->|"!cat"| f_todo
+    sk_a_usecase -->|"!cat"| f_usecase
 
     %% ===== designing-usecases agent =====
     ag_usecases --> sk_grounding
@@ -145,64 +120,64 @@ graph TD
     ag_usecases --> sk_navigating
     ag_usecases --> sk_preserving
     ag_usecases --> sk_composing
-    ag_usecases --> sk_r_actor
-    ag_usecases --> sk_r_catalog
-    ag_usecases --> sk_w_usecase
-    ag_usecases --> sk_w_event
-    ag_usecases --> sk_w_invariant
-    ag_usecases --> sk_w_note
-    ag_usecases --> sk_w_todo
+    ag_usecases --> sk_a_actor
+    ag_usecases --> sk_a_catalog
+    ag_usecases --> sk_a_usecase
+    ag_usecases --> sk_a_event
+    ag_usecases --> sk_a_invariant
+    ag_usecases --> sk_a_note
+    ag_usecases --> sk_a_todo
 
     %% ===== evaluating-coherence agent =====
     ag_coherence --> sk_evaluating
     ag_coherence --> sk_navigating
     ag_coherence --> sk_grounding
-    ag_coherence --> sk_w_eval
-    ag_coherence --> sk_r_actor
-    ag_coherence --> sk_r_catalog
-    ag_coherence --> sk_r_context
-    ag_coherence --> sk_r_event
-    ag_coherence --> sk_r_glossary
-    ag_coherence --> sk_r_invariant
-    ag_coherence --> sk_r_note
-    ag_coherence --> sk_r_todo
-    ag_coherence --> sk_r_usecase
+    ag_coherence --> sk_a_eval
+    ag_coherence --> sk_a_actor
+    ag_coherence --> sk_a_catalog
+    ag_coherence --> sk_a_context
+    ag_coherence --> sk_a_event
+    ag_coherence --> sk_a_glossary
+    ag_coherence --> sk_a_invariant
+    ag_coherence --> sk_a_note
+    ag_coherence --> sk_a_todo
+    ag_coherence --> sk_a_usecase
 
     %% ===== evaluating-references agent =====
     ag_references --> sk_evaluating
     ag_references --> sk_navigating
     ag_references --> sk_grounding
-    ag_references --> sk_w_eval
-    ag_references --> sk_r_actor
-    ag_references --> sk_r_catalog
-    ag_references --> sk_r_context
-    ag_references --> sk_r_event
-    ag_references --> sk_r_glossary
-    ag_references --> sk_r_invariant
-    ag_references --> sk_r_note
-    ag_references --> sk_r_todo
-    ag_references --> sk_r_usecase
+    ag_references --> sk_a_eval
+    ag_references --> sk_a_actor
+    ag_references --> sk_a_catalog
+    ag_references --> sk_a_context
+    ag_references --> sk_a_event
+    ag_references --> sk_a_glossary
+    ag_references --> sk_a_invariant
+    ag_references --> sk_a_note
+    ag_references --> sk_a_todo
+    ag_references --> sk_a_usecase
 
     %% ===== evaluating-structure agent =====
     ag_structure --> sk_evaluating
     ag_structure --> sk_navigating
-    ag_structure --> sk_w_eval
-    ag_structure --> sk_r_actor
-    ag_structure --> sk_r_catalog
-    ag_structure --> sk_r_context
-    ag_structure --> sk_r_event
-    ag_structure --> sk_r_glossary
-    ag_structure --> sk_r_invariant
-    ag_structure --> sk_r_note
-    ag_structure --> sk_r_todo
-    ag_structure --> sk_r_usecase
+    ag_structure --> sk_a_eval
+    ag_structure --> sk_a_actor
+    ag_structure --> sk_a_catalog
+    ag_structure --> sk_a_context
+    ag_structure --> sk_a_event
+    ag_structure --> sk_a_glossary
+    ag_structure --> sk_a_invariant
+    ag_structure --> sk_a_note
+    ag_structure --> sk_a_todo
+    ag_structure --> sk_a_usecase
 
     %% ===== evaluating-style agent =====
     ag_style --> sk_evaluating
     ag_style --> sk_composing
-    ag_style --> sk_w_eval
-    ag_style --> sk_r_glossary
-    ag_style --> sk_r_actor
+    ag_style --> sk_a_eval
+    ag_style --> sk_a_glossary
+    ag_style --> sk_a_actor
 ```
 
 ## Layer summary
@@ -214,14 +189,12 @@ graph TD
 | Contracts — principles | 8 | Bind how agents think: facilitator role, three lenses, evaluation stance, editorial voice, durable capture, modeling vocabulary. |
 | Contracts — forms | 10 | Bind what agents produce: one form per artifact type. |
 | Skills — behavioral | 8 | Each loads one principle contract via `!cat`. Injected into agents to shape reasoning. |
-| Skills — reading | 10 | Each references one form contract. Injected into agents that need to read artifacts. |
-| Skills — writing | 10 | Each loads one form contract via `!cat` plus a creation script. Injected into agents that produce artifacts. |
+| Skills — authoring | 10 | Each loads one form contract via `!cat` plus reading guidance and creation script. Injected into agents that read or produce artifacts. |
 | Agents | 5 | Skill bundles: 1 modeling agent (designing-usecases), 4 evaluation agents. Each agent's skill list determines which contracts get injected. |
 
 ## Edge types
 
 - **`@`** — CLAUDE.md auto-includes the contract into every conversation.
 - **`!cat`** — Skill inlines the contract content when the skill is loaded.
-- **`ref`** — Skill tells the agent where to find the form on demand (lazy load).
 - **`-.->`** — Implicit conceptual dependency (prose references, not mechanical loading).
 - **`-->`** — Agent includes the skill in its skill list.

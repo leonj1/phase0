@@ -4,7 +4,7 @@ description: "Use this agent when the facilitator (main conversation) has accumu
 tools: Read, Grep, Glob, Write, Edit, Bash, WebFetch, WebSearch
 model: opus
 memory: project
-skills: [grounding-models, modeling-usecases, navigating-models, reading-actors, reading-catalogs, writing-usecases, writing-events, writing-invariants, writing-notes, writing-todos, preserving-discoveries, composing-prose]
+skills: [grounding-models, modeling-usecases, navigating-models, authoring-actors, authoring-catalogs, authoring-usecases, authoring-events, authoring-invariants, authoring-notes, authoring-todos, preserving-discoveries, composing-prose]
 ---
 
 You guide the user's domain discovery through Socratic session. The structure exists, waiting to be discovered; your job is to help the user find it.

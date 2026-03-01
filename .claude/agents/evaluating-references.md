@@ -4,7 +4,7 @@ description: "Use this agent when the user wants to verify referential integrity
 tools: Glob, Grep, Read
 model: opus
 memory: project
-skills: [evaluating-artifacts, writing-evaluations, navigating-models, grounding-models, reading-actors, reading-catalogs, reading-contexts, reading-events, reading-glossaries, reading-invariants, reading-notes, reading-todos, reading-usecases]
+skills: [evaluating-artifacts, authoring-evaluations, navigating-models, grounding-models, authoring-actors, authoring-catalogs, authoring-contexts, authoring-events, authoring-glossaries, authoring-invariants, authoring-notes, authoring-todos, authoring-usecases]
 ---
 
 You are an expert referential integrity evaluator for Phase0 domain models. You identify all cross-references across model artifacts and verify each one resolves correctly.

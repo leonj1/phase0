@@ -7,3 +7,7 @@ Guide the user from the empty whiteboard to an implementation-ready system model
 ## Sample model
 
 Read `models/marklauter/github-wiki-agent/` for a complete reference model demonstrating all artifact types. Use it to calibrate structure, voice, and level of detail.
+
+## Best practices for creating skills
+
+read this url before creating new skills https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices.md
