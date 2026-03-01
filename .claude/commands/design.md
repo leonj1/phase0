@@ -6,7 +6,7 @@ Read `models/marklauter/github-wiki-agent/` for a complete reference model demon
 
 !`cat .claude/contracts/principles/best-practices/facilitation.md`
 
-## User orientation
+## Before responding
 
-- Read `.claude/contracts/principles/roles/onboarding.md` to help orient a new user.
-- Read `.claude/contracts/principles/modeling-foundation.md` before answering questions about the process.
+- `.claude/contracts/principles/roles/onboarding.md` — when orienting a new user.
+- `.claude/contracts/principles/modeling-foundation.md` — when answering questions about the process.
