@@ -6,11 +6,11 @@ Discovered after generating the governing-artifacts agent with a one-sentence pr
 
 ## Body
 
-The /agents "Generate with Claude" path runs in the main conversation context. That context already includes the full CLAUDE.md (project instructions), MEMORY.md (auto-memory), and any files pulled in via @ references (e.g., facilitating-design.md). A one-sentence prompt is therefore augmented by hundreds of lines of rich project instructions already in the context window.
+The /agents "Generate with Claude" path runs in the main conversation context. That context already includes the full project instructions, MEMORY.md (auto-memory), and any files pulled in via @ references (e.g., facilitating-design.md). A one-sentence prompt is therefore augmented by hundreds of lines of rich project instructions already in the context window.
 
-The quality of a generated agent directly reflects the quality of the project's CLAUDE.md and memory files. Well-structured project instructions act as a force multiplier — minimal user input produces high-fidelity agents because the context does the heavy lifting.
+The quality of a generated agent directly reflects the quality of the project's instructions and memory files. Well-structured project instructions act as a force multiplier — minimal user input produces high-fidelity agents because the context does the heavy lifting.
 
-This has a practical implication: investing in CLAUDE.md and memory quality pays compound returns every time a new agent is generated.
+This has a practical implication: investing in project instruction and memory quality pays compound returns every time a new agent is generated.
 
 ## References
 

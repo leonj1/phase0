@@ -2,7 +2,7 @@
 
 ## Context
 
-Discovered while renaming 'Ideas' in CLAUDE.md. The reframe from 'idea' to 'contract' revealed a three-layer structure that was already latent in the architecture.
+Discovered while renaming 'Ideas' in project instructions. The reframe from 'idea' to 'contract' revealed a three-layer structure that was already latent in the architecture.
 
 ## Body
 
@@ -16,4 +16,4 @@ These insights are recorded in DOMAIN-IMPLEMENTATION-PRINCIPLES.md under 'Contra
 
 ## References
 
-- cross-cutting (CLAUDE.md, DOMAIN-IMPLEMENTATION-PRINCIPLES.md, agent-architecture.md)
+- cross-cutting (DOMAIN-IMPLEMENTATION-PRINCIPLES.md, agent-architecture.md)

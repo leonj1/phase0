@@ -4,7 +4,7 @@
 
 ### Facilitator (main conversation)
 
-The main conversation in Claude Code terms. Talks to the user. Knows the lenses, knows when to switch, knows when to pull a thread vs queue it. Guides the progression but the user makes the final call. This is the conductor. Shaped by CLAUDE.md and skills — not a subagent.
+The main conversation in Claude Code terms. Talks to the user. Knows the lenses, knows when to switch, knows when to pull a thread vs queue it. Guides the progression but the user makes the final call. This is the conductor. Shaped by the /design command, skills, and contracts — not a subagent.
 
 ### Socratic lens agents (3)
 

@@ -14,7 +14,7 @@ The main Claude Code conversation already does everything a facilitator does:
 - Decides what to explore next
 - Invokes specialist agents when the conversation is ready for them
 
-The facilitator does not need to be *built*. It needs to be **equipped** — with guidance on how to conduct a Phase0 discovery session, and with specialist agents it can dispatch. The CLAUDE.md and guidance files are already the mechanism for equipping it.
+The facilitator does not need to be *built*. It needs to be **equipped** — with guidance on how to conduct a Phase0 discovery session, and with specialist agents it can dispatch. The /design command, skills, and contracts are already the mechanism for equipping it.
 
 ---
 

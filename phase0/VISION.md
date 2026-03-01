@@ -89,7 +89,7 @@ A key realization: the main Claude Code conversation **is** the facilitator. It 
 
 The use-case-designer agent was initially conceived as a facilitator, but it's actually a **specialist** — it gets called in when facilitation has progressed far enough that a use case is ready to be designed. The same is true for every other agent in the pipeline. They're all specialists. The facilitator is the thing orchestrating them: the main conversation itself.
 
-This means the facilitator doesn't need to be *built*. It needs to be **equipped** — with guidance on how to conduct a Phase0 discovery session, and with specialist agents it can dispatch. The CLAUDE.md and guidance files are already the mechanism for equipping it.
+This means the facilitator doesn't need to be *built*. It needs to be **equipped** — with guidance on how to conduct a Phase0 discovery session, and with specialist agents it can dispatch. The /design command, skills, and contracts are already the mechanism for equipping it.
 
 ### The Lenses (Not a Pipeline)
 

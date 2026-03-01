@@ -6,17 +6,17 @@ Review of skills, descriptions, agents, and contracts — three concrete improve
 
 ## Body
 
-## 1. CLAUDE.md got too thin — the facilitator lost its floor
+## 1. The project instructions got too thin — the facilitator lost its floor
 
-Three commits ago, CLAUDE.md loaded 7 contracts via @ references: modeling-foundation, contract, contract-structure, model-structure, durable-capture, editorial-standards. Now it loads one: facilitator-role.
+Three commits ago, the project instructions loaded 7 contracts via @ references: modeling-foundation, contract, contract-structure, model-structure, durability, editorial. Then it was reduced to one: facilitator.
 
 The theory is sound — skills bring in context on demand. But it creates a circular dependency: the facilitator needs the modeling vocabulary to recognize when to activate a skill, and the vocabulary lives inside the skill. A facilitator that doesn't know what a conditional goal is can't recognize that the user is describing one, so discovering-actors never fires.
 
-The fix isn't reverting to the old CLAUDE.md. It's identifying the minimum grounding layer — the context the facilitator needs before any skill activates:
+The fix isn't reverting to the old approach. It's identifying the minimum grounding layer — the context the facilitator needs before any skill activates:
 
 - modeling-foundation.md — vocabulary (goals, drives, tensions, events, contexts). Without this, the facilitator can't parse domain conversation.
 - model-structure.md — where things go. Without this, the facilitator can't orient in the model or judge what artifacts exist.
-- durable-capture.md — preservation discipline. Without this, discoveries evaporate between skill activations.
+- durability.md — preservation discipline. Without this, discoveries evaporate between skill activations.
 
 Everything else (lens depth, forms, editorial standards) works through skills. These three are the floor.
 

@@ -1,11 +1,11 @@
 # Dependency graph
 
-The full dependency graph of the Phase0 instruction set — from CLAUDE.md through contracts, skills, and agents.
+The full dependency graph of the Phase0 instruction set — from the /design command through contracts, skills, and agents.
 
 ```mermaid
 graph TD
     %% ===== ENTRY POINT =====
-    CLAUDE["CLAUDE.md"]
+    DESIGN["/design command"]
 
     %% ===== CONTRACTS: META =====
     subgraph meta["contracts/meta"]
@@ -82,14 +82,11 @@ graph TD
         ag_style["evaluating-style"]
     end
 
-    %% ===== CLAUDE.md @ references =====
-    CLAUDE -->|"@"| facilitator
-    CLAUDE -->|"@"| modeling_foundation
-    CLAUDE -->|"@"| contract
-    CLAUDE -->|"@"| contract_structure
-    CLAUDE -->|"@"| model_structure
-    CLAUDE -->|"@"| durability
-    CLAUDE -->|"@"| editorial
+    %% ===== /design command loads =====
+    DESIGN -->|"!cat"| facilitator
+    DESIGN -->|"!cat"| facilitation
+    DESIGN -.->|"conditional read"| onboarding
+    DESIGN -.->|"conditional read"| modeling_foundation
 
     %% ===== Meta cross-references =====
     contract -.-> contract_structure
@@ -192,7 +189,7 @@ graph TD
 
 | Layer | Count | Role |
 |---|---|---|
-| CLAUDE.md | 1 | Entry point. Loads 7 principle/meta contracts via `@` references. |
+| /design command | 1 | Entry point. Loads facilitator and facilitation contracts via `!cat`, conditionally reads onboarding and modeling-foundation. |
 | Contracts — meta | 3 | Self-description: what contracts are, instruction set layout, model output layout. |
 | Contracts — principles | 8 | Bind how agents think: facilitator role, three lenses, evaluation stance, editorial voice, durable capture, modeling vocabulary. |
 | Contracts — forms | 10 | Bind what agents produce: one form per artifact type. |
@@ -202,7 +199,6 @@ graph TD
 
 ## Edge types
 
-- **`@`** — CLAUDE.md auto-includes the contract into every conversation.
-- **`!cat`** — Skill inlines the contract content when the skill is loaded.
-- **`-.->`** — Implicit conceptual dependency (prose references, not mechanical loading).
+- **`!cat`** — Command or skill inlines the contract content when loaded.
+- **`-.->`** — Implicit or conditional dependency (prose references, conditional reads, not always loaded).
 - **`-->`** — Agent includes the skill in its skill list.

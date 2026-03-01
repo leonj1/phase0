@@ -38,7 +38,7 @@ Systematic editorial sweeps across documentation files to enforce positive-langu
 Auditing and fixing drift between skill files and their modeling counterparts, eliminating duplication via a DRY injection mechanism (!`cat` syntax), adding YAML front matter to skill files, consolidating philosophy docs, and ensuring referential integrity across all project artifacts. Claude Code's Read, Edit, and Grep tools were used extensively to compare file pairs, detect staleness, and apply synchronized updates across 14+ file pairs.
 
 **Project Hygiene & Refactoring** (~5 sessions)
-Renaming directories and files with full reference updates (e.g., renaming 9 form files with 32 edits across 28+ files), running staleness audits to find broken links and deprecated references, verifying legacy-to-modern model migrations with no data loss, and cleaning up stale CLAUDE.md references. Claude Code handled systematic search-and-replace operations and verification passes.
+Renaming directories and files with full reference updates (e.g., renaming 9 form files with 32 edits across 28+ files), running staleness audits to find broken links and deprecated references, verifying legacy-to-modern model migrations with no data loss, and cleaning up stale project instruction references. Claude Code handled systematic search-and-replace operations and verification passes.
 
 **Vision & Thesis Refinement** (~4 sessions)
 Iterative refinement of the Phase0 project's thesis statement and manifesto, eliminating outdated 'discovery process' / 'four rounds' concepts from vision docs, updating design-cycle.md wiring, and restoring key framing elements like the Cooper reference. Claude Code was used for targeted edits to vision and manifesto files and for verifying cross-document consistency.
@@ -177,7 +177,7 @@ Claude frequently misunderstood what you were asking for -- confusing artifact t
 
 ### Overly Broad or Incorrect File Targeting
 
-Claude repeatedly applied changes to file types that shouldn't have been touched, particularly confusing your skill files with form files. You had to interrupt and revert multiple times. Explicitly stating exclusion rules up front (e.g., 'only skill files, never form files') or codifying these constraints in CLAUDE.md could prevent this recurring mistake.
+Claude repeatedly applied changes to file types that shouldn't have been touched, particularly confusing your skill files with form files. You had to interrupt and revert multiple times. Explicitly stating exclusion rules up front (e.g., 'only skill files, never form files') or codifying these constraints in project instructions could prevent this recurring mistake.
 
 - When you asked for YAML front matter to be added to skill files, Claude also incorrectly added it to form files -- which should remain free of front matter -- requiring you to catch the error, explain the distinction, and have it reverted.
 - During a merge operation, Claude dropped the agent memory section and output conventions entirely, and you had to call it out directly ('why did you remove memory section and all that good output stuff?'), indicating it wasn't preserving the full scope of content it should have retained.
@@ -211,7 +211,7 @@ When Claude was uncertain about tooling or configuration, it fell back on unreli
 
 ## Existing CC Features to Try
 
-### Suggested CLAUDE.md additions
+### Suggested project instruction additions
 
 **File Type Conventions**
 ```
@@ -232,7 +232,7 @@ When Claude was uncertain about tooling or configuration, it fell back on unreli
 **Artifacts & Notes**
 ```
 ## Artifacts & Notes
-- When the user says 'add a note' or 'capture this as a note', create a structured note artifact file in the project's notes directory -- do NOT add a memory entry or CLAUDE.md entry unless explicitly asked.
+- When the user says 'add a note' or 'capture this as a note', create a structured note artifact file in the project's notes directory -- do NOT add a memory entry unless explicitly asked.
 ```
 *Why:* Claude misinterpreted 'add a note' as a memory entry instead of a project note artifact, requiring manual correction.
 
@@ -311,11 +311,11 @@ Across 36 sessions, at least 10 were dedicated to auditing and fixing drift, sta
 
 ### Misunderstanding friction clusters around ambiguous terms
 
-Define project-specific vocabulary in CLAUDE.md to prevent recurring misinterpretations.
+Define project-specific vocabulary in project instructions to prevent recurring misinterpretations.
 
-9 of your friction events involved Claude misunderstanding requests -- 'add a note' vs memory entry, 'skill' vs built-in feature, which files get front matter. These aren't code bugs; they're terminology gaps. Your project has specific meanings for 'idea', 'skill', 'form', 'note', and 'principle' that differ from Claude's defaults. A glossary in CLAUDE.md would eliminate most of these.
+9 of your friction events involved Claude misunderstanding requests -- 'add a note' vs memory entry, 'skill' vs built-in feature, which files get front matter. These aren't code bugs; they're terminology gaps. Your project has specific meanings for 'idea', 'skill', 'form', 'note', and 'principle' that differ from Claude's defaults. A glossary in the project instructions would eliminate most of these.
 
-> **Paste into Claude Code:** Add a ## Glossary section to CLAUDE.md with these definitions: 'idea' = a modeling file + skill file pair; 'skill' = a .claude/skills/ markdown file with front matter; 'form' = a modeling/ markdown file without front matter; 'note' = a structured artifact file in the notes directory; 'principle' = a governing rule document. Always use these definitions in this project.
+> **Paste into Claude Code:** Add a ## Glossary section to the project instructions with these definitions: 'idea' = a modeling file + skill file pair; 'skill' = a .claude/skills/ markdown file with front matter; 'form' = a modeling/ markdown file without front matter; 'note' = a structured artifact file in the notes directory; 'principle' = a governing rule document. Always use these definitions in this project.
 
 ### Zero commits across 36 sessions -- consider automating
 
@@ -362,7 +362,7 @@ Your contracts-based modeling architecture (structuring-todos, structuring-notes
 > 1. Create tests/doc-architecture.sh with these test cases:
 >    - Every file in skills/ has a corresponding file in modeling/ (and vice versa)
 >    - No structuring-* contract file contains routing/dispatch logic keywords
->    - Every file referenced in CLAUDE.md actually exists
+>    - Every file referenced in project instructions actually exists
 >    - Every agent definition in .claude/ resolves all its skill file paths
 >    - No form file contains YAML front matter
 >    - All .md files pass positive-language check (no 'don\'t', 'avoid', 'never', 'you lack' patterns)
@@ -373,7 +373,7 @@ Your contracts-based modeling architecture (structuring-todos, structuring-notes
 >
 > 3. Run the test suite, then iteratively fix every failure. After each fix, re-run to confirm the fix didn't break other tests. Continue until all tests pass.
 >
-> 4. Document the test suite in CLAUDE.md so future sessions can run it before any PR.
+> 4. Document the test suite in project instructions so future sessions can run it before any PR.
 
 ### Parallel Agents for Bulk Editorial Sweeps
 
@@ -385,7 +385,7 @@ Sessions like your 24-file positive-language sweep and 12-file editorial review 
 >
 > Perform a parallelized editorial review and revision of all documentation files:
 >
-> First, read the writing principles from the principles/ directory and CLAUDE.md editorial standards to build a shared rubric.
+> First, read the writing principles from the principles/ directory and editorial standards to build a shared rubric.
 >
 > Then spawn parallel sub-tasks, one per directory (skills/, modeling/, principles/, vision/, agents/), each with these instructions:
 > - Review every .md file in your assigned directory against the editorial rubric
