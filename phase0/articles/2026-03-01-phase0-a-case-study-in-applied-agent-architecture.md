@@ -1,8 +1,8 @@
 # Phase0: A Case Study in Applied Agent Architecture
 
-In December 2024, Anthropic's engineering team published ["Building Effective Agents"](https://www.anthropic.com/engineering/building-effective-agents) — a taxonomy of workflow patterns for LLM-based systems and practical guidance on agent design. This article is a case study of Phase0, a domain discovery tool built on Claude Code that applies that guidance to a concrete problem: extracting domain models from human experts through Socratic dialogue.
+*Contracts, specialists, and the durability discipline inside an AI-facilitated domain discovery tool*
 
-Phase0 is an agentic system that produces the specifications from which other agentic systems are built. Its architecture composes three of Anthropic's five workflow patterns — routing, prompt chaining, and parallelization — within a contract system that governs what every agent knows, produces, and preserves. This case study describes that architecture: the contract system, the facilitator, the specialist agents, the evaluation pipeline, and the durability discipline that holds it all together.
+The [companion article]() described which of Anthropic's ["Building Effective Agents"](https://www.anthropic.com/engineering/building-effective-agents) patterns Phase0 uses and why. This case study describes how — the contract system that governs what every agent knows and produces, the specialist agents that formalize discoveries, the evaluation pipeline that verifies artifacts, and the durability discipline that ensures nothing gets lost.
 
 The [Phase0 repository](https://github.com/marklauter/phase0) is open. This article describes the architecture at a conceptual level; the repo contains the full implementation.
 
@@ -22,7 +22,7 @@ The only structural constraint is an invariant: establish the primary actor and 
 
 ## The contract system
 
-Phase0's instruction set lives in `.claude/contracts/` — a directory of markdown files organized into three subdirectories that separate concerns cleanly.
+Phase0's instruction set lives in `.claude/contracts/` — a directory of markdown files organized into three subdirectories: principles, forms, and meta.
 
 **Principles** teach how agents think. The modeling foundation defines the shared vocabulary — goals, drives, tensions, conditional goals, invariants, domain events. Lens-specific principles add depth: the actor lens teaches derivation chains and noun refinement; the use case lens teaches goal-directed scenarios and continuous invariants; the bounded context lens teaches term ownership and integration protocols. The durability principle teaches every agent to write as it goes.
 
@@ -34,7 +34,7 @@ The three layers compose. An agent loads a stack of contracts, and the stack has
 
 ### The matched-pair convention
 
-Contracts reach agents through skills — Claude Code's mechanism for injecting context at activation time. Each contract has a matched skill file in `.claude/skills/`. The skill file is a thin loader: YAML front matter describing when the skill activates, plus a `!cat` directive that injects the contract file's content. The contract file owns the content. The skill file owns the injection. Together they form one logical unit.
+Contracts reach agents through skills — Claude Code's mechanism for injecting context at activation time. Each contract has a matched skill file in `.claude/skills/`. The skill file is a thin loader: YAML front matter describing when the skill activates, plus a `!cat` directive — Claude Code's mechanism for including file content at activation time — that injects the contract file's content. The contract file owns the content. The skill file owns the injection. Together they form one logical unit.
 
 This convention enforces a single source of truth. When a form is revised, the revision happens in one place — the contract file. Every agent that loads the matching skill receives the updated content automatically. No content is duplicated between contracts and skills.
 
@@ -48,15 +48,19 @@ The agent cannot produce a structurally malformed artifact because the script ha
 
 ## The facilitator as router
 
-Anthropic describes routing as classifying inputs and directing them to specialized handlers. Phase0's facilitator is a router, but it classifies conversation state rather than discrete inputs.
+Phase0's facilitator is a router — but unlike Anthropic's textbook examples, it does not classify discrete inputs. It classifies the accumulated state of a conversation.
 
-The facilitator is not a purpose-built agent. It is the main Claude Code conversation — the thing running when a user opens a terminal and starts talking — equipped with a skill that teaches it how to conduct a discovery session. The `facilitating-discovery` skill gives the facilitator three capabilities: it knows the three lenses and when to shift between them, it knows the dispatch mechanics for each specialist agent, and it enforces the actor-first invariant.
+The facilitator is not a purpose-built agent. It is the main Claude Code conversation — the session that begins when a user starts talking to the agent — equipped with a skill that teaches it how to conduct a discovery session. The `facilitating-discovery` skill gives the facilitator three capabilities: it knows the three lenses and when to shift between them, it knows the dispatch mechanics for each specialist agent, and it enforces the actor-first invariant.
 
 The routing decision is a judgment about readiness. As the conversation progresses, raw material accumulates around one lens or another — observations about who the system serves (actor lens), descriptions of interactions that need to happen (use case lens), or vocabulary conflicts that suggest partitioning (bounded context lens). The facilitator monitors this accumulation and dispatches a specialist when enough material is present for the specialist to do meaningful work.
 
-Each specialist has an input contract — the minimum context it needs to begin. The actor discovery agent requires a domain context and an area of focus. The use case designer requires a primary actor and their conditional goal. The context mapping agent requires an observed contradiction or area of partition. The facilitator satisfies the input contract before dispatching, passing the required context in the dispatch prompt.
+Each specialist has an input contract — the minimum context it needs to begin:
 
-This is routing in Anthropic's sense — classification followed by dispatch to a known specialist — but the classification criterion is accumulated conversational context rather than a single message. The facilitator does not invent new specialists or dynamically decompose tasks. It routes to predefined agents with documented contracts. The specialist set is stable. The domain content varies.
+- The actor discovery agent requires a domain context and an area of focus.
+- The use case designer requires a primary actor and their conditional goal.
+- The context mapping agent requires an observed contradiction or area of partition.
+
+The facilitator satisfies the input contract before dispatching, passing the required context in the dispatch prompt. It does not invent new specialists or dynamically decompose tasks. It routes to predefined agents with documented contracts. The specialist set is stable. The domain content varies.
 
 ---
 
@@ -72,7 +76,15 @@ The use case designer operates in four phases: anchor the use case (confirm the 
 
 The agent creates the artifact file early — in phase one, using the creation script — populated with what it knows and TODO placeholders for what it does not. As the session progresses through phases, the agent updates the file in place: filling in sections, revising earlier content, removing placeholders. The four phases are Anthropic's prompt chaining pattern at the agent level — each phase builds on the output of the previous one, with soft gates that allow discoveries to pull the agent back to earlier phases when needed.
 
-The agent loads a specific skill stack: the modeling foundation (shared vocabulary), the use case lens (scenario design, goal obstacles, continuous invariants), form contracts for the artifact types it can produce (use cases, events, invariants), the durability contract (write-as-you-go discipline), and the editorial standards contract. The stack gives the agent exactly the knowledge it needs — no more. It does not load the actor lens or bounded context lens because those belong to other specialists.
+The agent loads a specific skill stack:
+
+- The modeling foundation — shared vocabulary
+- The use case lens — scenario design, goal obstacles, continuous invariants
+- Form contracts for the artifact types it produces — use cases, events, invariants
+- The durability contract — write-as-you-go discipline
+- The editorial standards contract
+
+The stack gives the agent exactly the knowledge it needs — no more. It does not load the actor lens or bounded context lens because those belong to other specialists.
 
 ### The actor discovery agent
 
@@ -86,7 +98,7 @@ The context mapping agent watches for the signals that context boundaries produc
 
 Each specialist operates within its own lens, but discoveries routinely cross lens boundaries. A use case designer discovers a new supporting actor. An actor discovery session reveals a context boundary. A context mapping session exposes a missing use case.
 
-Agents do not do each other's work. This is a structural rule, not a guideline. Each agent has lens ownership — a defined scope of artifact types it can formalize, determined by the skills it loads. The use case designer loads use case, event, and invariant forms. It does not load the actor form. It *cannot* write an actor file because it does not carry the contract that governs actor artifacts.
+Agents do not do each other's work. This is a structural rule, not a guideline. Each agent has lens ownership — a defined scope of artifact types it can formalize, determined by the skills it loads. The use case designer loads use case, event, and invariant forms. It does not load the actor form. It lacks the form contract for actor artifacts — it does not know the required structure, so the durability discipline directs it to write a note instead.
 
 When a discovery crosses a lens boundary, the agent writes a note and a todo. The note captures the observation durably — "discovered a supporting actor whose drive is visibility; the Tracker exists because no primary actor's goal alone produces package tracking." The todo captures the action — "stub actor file for Tracker in actors/." The note preserves *why*. The todo drives *what happens next*.
 
@@ -117,13 +129,13 @@ The evaluation agents inherit the same contract stack as the modeling agents —
 
 ## Tool design and the agent-computer interface
 
-Anthropic's article reports spending "more time optimizing our tools than the overall prompt." Phase0's experience confirms this. The creation scripts, the contract injection mechanism, and the model directory structure collectively function as the agent-computer interface — the surface through which agents interact with the system's state.
+The creation scripts described earlier are the most direct example of what Anthropic calls the agent-computer interface — but they are not the only one. Three design decisions collectively define the surface through which agents interact with the system's state.
 
-The creation scripts are the most direct example. When an agent needs to create a use case file, it calls a shell script that handles file naming (zero-padded sequence number plus slug), directory placement, and section scaffolding. The agent provides the semantic inputs — what to name it, which bounded context it belongs to, who the primary actor is. The script handles everything structural. The agent cannot place a file in the wrong directory or produce a file with missing sections because the script does not allow it.
+**Creation scripts** separate judgment from mechanics. The agent decides what to name a use case and which invariants apply. The script handles file naming, directory placement, and section scaffolding. The agent cannot produce a malformed artifact because the tool handles the structure.
 
-The contract injection mechanism is another example. An agent does not need to know where form contracts are stored or how to load them. The skill system handles injection. When the agent activates, its skill stack is loaded automatically, and the relevant contracts appear in its context. The agent sees the rules; it does not manage the loading machinery.
+**Contract injection** separates knowledge from loading. An agent does not need to know where form contracts are stored, how to read them, or when to load them. The skill system handles injection automatically. When the agent activates, its skill stack appears in context — the right knowledge at the right moment. The agent sees the rules; it does not manage the loading machinery. When a contract is revised, the revision happens in one file and propagates automatically to every agent that loads the matching skill.
 
-The model directory structure itself is a tool design decision. Each artifact type gets its own directory, its own naming convention, its own catalog, and its own form. An agent navigating the model can predict where any artifact lives based on its type. An evaluation agent can inventory all artifacts by globbing for markdown files in known directories. The structure makes correct navigation trivial and incorrect navigation obvious.
+**Model directory structure** separates navigation from search. Each artifact type gets its own directory, its own naming convention, its own catalog, and its own form. An agent can predict where any artifact lives based on its type alone. An evaluation agent can inventory all artifacts by globbing for markdown files in known directories. The structure makes correct navigation trivial and incorrect navigation obvious — an actor file in the events directory is a visible error, not a silent one.
 
 ---
 
@@ -159,7 +171,7 @@ When a system has twenty skills with overlapping vocabulary in their description
 
 ### The facilitator needs a floor
 
-Skills inject context on demand, which is elegant until you realize the facilitator needs baseline vocabulary to recognize *when* to activate a skill. If the facilitator does not know what a conditional goal is, it cannot recognize that the user is describing one, and the actor discovery skill never fires. The fix was identifying the minimum grounding layer — the vocabulary and structural knowledge the facilitator needs before any skill activates — and ensuring it loads at session start. Everything else arrives through skills. These three contracts are the floor.
+Skills inject context on demand, which is elegant until you realize the facilitator needs baseline vocabulary to recognize *when* to activate a skill. If the facilitator does not know what a conditional goal is, it cannot recognize that the user is describing one, and the actor discovery skill never fires. The fix was identifying the minimum grounding layer and ensuring it loads at session start: the modeling foundation (vocabulary), the model structure (where things go), and the durability principle (preservation discipline). Everything else arrives through skills. These three contracts are the floor.
 
 ### Agent memory as institutional knowledge
 
@@ -177,6 +189,6 @@ Phase0 models its own domain using its own tools. The actors, use cases, bounded
 
 This recursion is more than a curiosity. It is the primary test of the methodology. If the discovery process cannot model itself — if its own architecture cannot be expressed in its own artifact language — then the language is incomplete. Every gap in the model is a gap in the tool.
 
-The architecture composes Anthropic's patterns deliberately: routing as the decision spine, prompt chaining for prerequisite discipline, parallelization for independent evaluation. The excluded pattern — orchestrator-workers, where the central agent dynamically invents subtasks — was excluded because the problem does not require it. The specialist set is stable. The process is known. What varies is the domain content, and the architecture is designed to hold the process stable while the content changes.
+The architecture holds the process stable while the content changes. Routing provides the decision spine. Prompt chaining enforces prerequisite discipline. Parallelization enables independent evaluation. The patterns compose because each addresses a different concern — and the one pattern deliberately excluded (dynamic task decomposition) was excluded because architectural predictability is a feature of a tool whose purpose is to bring structure to ambiguity.
 
-Anthropic's closing principle applies: "Success in the LLM space isn't about building the most sophisticated system. It's about building the right system for your needs." Phase0 is the right system for domain discovery — structured enough to produce rigorous artifacts, flexible enough to follow a conversation wherever it leads, and durable enough to remember what it found.
+Phase0 is structured enough to produce rigorous artifacts, flexible enough to follow a conversation wherever it leads, and durable enough to remember what it found.
